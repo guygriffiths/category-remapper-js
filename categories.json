@@ -1,0 +1,43 @@
+{
+    "from": [
+        {
+            "name": "Nice upmarket area of a city",
+            "color": "#00ffff"
+        },
+        {
+            "name": "Post-industrial wasteland",
+            "color": "#ff00ff"
+        },
+        {
+            "name": "Friendly little village",
+            "color": "#0000ff"
+        },
+        {
+            "name": "Desecrated countryside",
+            "color": "#ffff00"
+        },
+        {
+            "name": "The Sea",
+            "color": "#abcdef"
+        },
+        {
+            "name": "A river",
+            "color": "#bada55"
+        },
+        {
+            "name": "Lake",
+            "color": "#00aaff"
+        }],
+    "to": [{
+            "name": "Rural",
+            "color": "#00aa10"
+        },
+        {
+            "name": "Urban",
+            "color": "#aaaaaa"
+        },
+        {
+            "name": "Water",
+            "color": "#0000ff"
+        }]
+}
