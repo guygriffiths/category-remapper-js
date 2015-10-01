@@ -6,6 +6,8 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+
 </head>
 
 
@@ -13,10 +15,9 @@
 
 <body>
 
+    <div id="map"></div>
     <button id="show_remapper" onclick="show_remapper()">
         Remap Categories</button>
-    sfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh sfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl asfhdl askh asfklhsjkh asdlkjhasd kfjashd fljkshdf lkasdfhl skdfh slkfjh sdlkfhadlfkashfklajfh lasdkfjhasd fklhflkashfksdfh asdkl a lasdkfjhasd fklhflkashfksdfh asdkl a
-    <div id="blanket" style="display:none"></div>
     <div id="remapper" style="display:none">
         <div id="froms">
         </div>
@@ -27,12 +28,14 @@
         <div id="centrecontent">
         </div>
         <div id="buttonholder">
-            <button id="submit-button">Apply mapping</button>
+            <button id="remap-button">Apply mapping</button>
         </div>
     </div>
-
+    <script src="leaflet.js"></script>
+    <script src="leaflet-coverage.src.js"></script>
     <script src="jsPlumb-1.7.10.js"></script>
     <script src="jquery-1.11.3.min.js"></script>
+    <script src="covjson-reader.src.js"></script>
     <script src="remap.js"></script>
 </body>
 

@@ -1,43 +1,140 @@
 {
     "from": [
         {
-            "name": "Nice upmarket area of a city",
-            "color": "#00ffff"
+            "name": "Water",
+            "color": "#000080"
         },
         {
-            "name": "Post-industrial wasteland",
-            "color": "#ff00ff"
+            "name": "Evergreen Needleleaf Forest",
+            "color": "#008000"
         },
         {
-            "name": "Friendly little village",
-            "color": "#0000ff"
+            "name": "Evergreen Broadleaf Forest",
+            "color": "#00FF00"
         },
         {
-            "name": "Desecrated countryside",
-            "color": "#ffff00"
+            "name": "Deciduous Needleleaf Forest",
+            "color": "#99CC00"
         },
         {
-            "name": "The Sea",
-            "color": "#abcdef"
+            "name": "Deciduous Broadleaf Forest",
+            "color": "#99FF99"
         },
         {
-            "name": "A river",
-            "color": "#bada55"
+            "name": "Mixed Forest",
+            "color": "#339966"
         },
         {
-            "name": "Lake",
-            "color": "#00aaff"
+            "name": "Closed Shrubland",
+            "color": "#993366"
+        },
+        {
+            "name": "Open Shrubland",
+            "color": "#FFCC99"
+        },
+        {
+            "name": "Woody Savannas",
+            "color": "#CCFFCC"
+        },
+        {
+            "name": "Savannas",
+            "color": "#FFCC00"
+        },
+        {
+            "name": "Grasslands",
+            "color": "#FF9900"
+        },
+        {
+            "name": "Permanent Wetlands",
+            "color": "#006699"
+        },
+        {
+            "name": "Croplands",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "Urban and Built-Up",
+            "color": "#FF0000"
+        },
+        {
+            "name": "Cropland/Natural Vegetation Mosaic",
+            "color": "#999966"
+        },
+        {
+            "name": "Snow and Ice",
+            "color": "#FFFFFF"
+        },
+        {
+            "name": "Barren or Sparsely Vegetated",
+            "color": "#808080"
         }],
-    "to": [{
-            "name": "Rural",
-            "color": "#00aa10"
-        },
-        {
-            "name": "Urban",
-            "color": "#aaaaaa"
-        },
+    "to": [
         {
             "name": "Water",
-            "color": "#0000ff"
+            "color": "#000080"
+        },
+        {
+            "name": "Evergreen Needleleaf Forest",
+            "color": "#008000"
+        },
+        {
+            "name": "Evergreen Broadleaf Forest",
+            "color": "#00FF00"
+        },
+        {
+            "name": "Deciduous Needleleaf Forest",
+            "color": "#99CC00"
+        },
+        {
+            "name": "Deciduous Broadleaf Forest",
+            "color": "#99FF99"
+        },
+        {
+            "name": "Mixed Forest",
+            "color": "#339966"
+        },
+        {
+            "name": "Closed Shrubland",
+            "color": "#993366"
+        },
+        {
+            "name": "Open Shrubland",
+            "color": "#FFCC99"
+        },
+        {
+            "name": "Woody Savannas",
+            "color": "#CCFFCC"
+        },
+        {
+            "name": "Savannas",
+            "color": "#FFCC00"
+        },
+        {
+            "name": "Grasslands",
+            "color": "#FF9900"
+        },
+        {
+            "name": "Permanent Wetlands",
+            "color": "#006699"
+        },
+        {
+            "name": "Croplands",
+            "color": "#FFFF00"
+        },
+        {
+            "name": "Urban and Built-Up",
+            "color": "#FF0000"
+        },
+        {
+            "name": "Cropland/Natural Vegetation Mosaic",
+            "color": "#999966"
+        },
+        {
+            "name": "Snow and Ice",
+            "color": "#FFFFFF"
+        },
+        {
+            "name": "Barren or Sparsely Vegetated",
+            "color": "#808080"
         }]
 }
