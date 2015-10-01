@@ -5,7 +5,8 @@
     <title>Land use category remapper</title>
 
     <meta charset="utf-8">
-    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="css/remapper.css">
+    <link rel="stylesheet" href="css/remap_categories.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
 
 </head>
@@ -18,25 +19,14 @@
     <div id="map"></div>
     <button id="show_remapper" onclick="show_remapper()">
         Remap Categories</button>
-    <div id="remapper" style="display:none">
-        <div id="froms">
-        </div>
 
-        <div id="tos">
-        </div>
-
-        <div id="centrecontent">
-        </div>
-        <div id="buttonholder">
-            <button id="remap-button">Apply mapping</button>
-        </div>
-    </div>
-    <script src="leaflet.js"></script>
-    <script src="leaflet-coverage.src.js"></script>
-    <script src="jsPlumb-1.7.10.js"></script>
-    <script src="jquery-1.11.3.min.js"></script>
-    <script src="covjson-reader.src.js"></script>
-    <script src="remap.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-coverage.src.js"></script>
+    <script src="js/jsPlumb-1.7.10.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/covjson-reader.src.js"></script>
+    <script src="js/remapper.js"></script>
+    <script src="js/remap_categories.js"></script>
 </body>
 
 </html>

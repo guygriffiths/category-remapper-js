@@ -1,0 +1,117 @@
+{
+    "melodies": [{
+            "name": "Broadleaf Woodland",
+            "value": 1,
+            "color": "#FF0000"
+        },
+        {
+            "name": "Coniferous Woodland",
+            "value": 2,
+            "color": "#006600"
+        },
+        {
+            "name": "Arable and Horticulture",
+            "value": 3,
+            "color": "#732600"
+        },
+        {
+            "name": "Improved Grassland",
+            "value": 4,
+            "color": "#00FF00"
+        },
+        {
+            "name": "Rough Grassland",
+            "value": 5,
+            "color": "#FAAA00"
+        },
+        {
+            "name": "Neutral Grassland",
+            "value": 6,
+            "color": "#7FE57F"
+        },
+        {
+            "name": "Calcareous Grassland",
+            "value": 7,
+            "color": "#70A800"
+        },
+        {
+            "name": "Acid Grassland",
+            "value": 8,
+            "color": "#998100"
+        },
+        {
+            "name": "Fen, Marsh and Swamp",
+            "value": 9,
+            "color": "#FFFF00"
+        },
+        {
+            "name": "Heather",
+            "value": 10,
+            "color": "#801A80"
+        },
+        {
+            "name": "Heather Grassland",
+            "value": 11,
+            "color": "#E68CA6"
+        },
+        {
+            "name": "Bog",
+            "value": 12,
+            "color": "#008073"
+        },
+        {
+            "name": "Montane Habitats",
+            "value": 13,
+            "color": "#00FFFF"
+        },
+        {
+            "name": "Inland Rock",
+            "value": 14,
+            "color": "#D2D2FF"
+        },
+        {
+            "name": "Saltwater",
+            "value": 15,
+            "color": "#000080"
+        },
+        {
+            "name": "Freshwater",
+            "value": 16,
+            "color": "#0000FF"
+        },
+        {
+            "name": "Supra-littoral Rock",
+            "value": 17,
+            "color": "#CCB300"
+        },
+        {
+            "name": "Supra-littoral Sediment",
+            "value": 18,
+            "color": "#CCB300"
+        },
+        {
+            "name": "Littoral Rock",
+            "value": 19,
+            "color": "#FFFF80"
+        },
+        {
+            "name": "Littoral Sediment",
+            "value": 20,
+            "color": "#FFFF80"
+        },
+        {
+            "name": "Saltmarsh",
+            "value": 21,
+            "color": "#8080FF"
+        },
+        {
+            "name": "Urban",
+            "value": 22,
+            "color": "#000000"
+        },
+        {
+            "name": "Suburban",
+            "value": 23,
+            "color": "#808080"
+        }]
+}
