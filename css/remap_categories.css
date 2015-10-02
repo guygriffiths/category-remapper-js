@@ -8,7 +8,15 @@ body {
 }
 
 #map {
+    width: 48%;
     height: 700px;
+    float: left;
+}
+
+#map2 {
+    width: 48%;
+    height: 700px;
+    float: right;
 }
 
 .popuptext {
