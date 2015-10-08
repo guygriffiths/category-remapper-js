@@ -1,5 +1,6 @@
 {
-    "categories": [{
+    "categories": [
+        {
             "name": "Broadleaf Woodland",
             "value": 1,
             "color": "#FF0000"

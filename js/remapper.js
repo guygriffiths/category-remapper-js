@@ -16,6 +16,7 @@ function set_remap_function(f) {
 
 function remap(f) {
     $('#remapper')[0].style.display = 'block';
+    jsPlumb.repaintEverything();
     $('#remap-button').click(function () {
         var mapping = {};
         var connections = jsPlumb.select();

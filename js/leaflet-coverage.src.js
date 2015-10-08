@@ -1,4 +1,6 @@
 "format global";
+"globals.c3 c3";
+"globals.d3 d3";
 "globals.L leaflet";
 (function(global) {
 
@@ -434,7 +436,7 @@
   // etc UMD / module pattern
 })*/
 
-(['0', '1'], ["1","1","1","1","1","1"], function($__System) {
+(['0', '1', '2', '3'], ["1","1","1","1","1","1","1","1","1","3"], function($__System) {
 
 (function(__global) {
   var loader = $__System;
@@ -784,65 +786,53 @@
 })(typeof self != 'undefined' ? self : global);
 
 "bundle";
-$__System.registerDynamic("5", [], false, function(__require, __exports, __module) {
+$__System.registerDynamic("8", [], false, function(__require, __exports, __module) {
   var _retrieveGlobal = $__System.get("@@global-helpers").prepareGlobal(__module.id, null, null);
   (function() {})();
   return _retrieveGlobal();
 });
 
-$__System.registerDynamic("b", ["1c"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = {
-    "default": require("1c"),
-    __esModule: true
-  };
-  global.define = __define;
-  return module.exports;
+(function() {
+var _removeDefine = $__System.get("@@amd-helpers").createDefine();
+define("f", ["27"], function(main) {
+  return main;
 });
 
-$__System.registerDynamic("a", ["1d"], true, function(require, exports, module) {
+_removeDefine();
+})();
+$__System.registerDynamic("13", ["28", "29"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   "use strict";
-  var _Object$defineProperty = require("1d")["default"];
-  exports["default"] = function(obj, key, value) {
-    if (key in obj) {
-      _Object$defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
+  var _Object$create = require("28")["default"];
+  var _Object$setPrototypeOf = require("29")["default"];
+  exports["default"] = function(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
     }
-    return obj;
+    subClass.prototype = _Object$create(superClass && superClass.prototype, {constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }});
+    if (superClass)
+      _Object$setPrototypeOf ? _Object$setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   };
   exports.__esModule = true;
   global.define = __define;
   return module.exports;
 });
 
-(function() {
-var _removeDefine = $__System.get("@@amd-helpers").createDefine();
-define("c", ["1e"], function(main) {
-  return main;
-});
-
-_removeDefine();
-})();
-$__System.registerDynamic("e", ["1f"], true, function(require, exports, module) {
+$__System.registerDynamic("12", ["2a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   "use strict";
-  var _Object$getOwnPropertyDescriptor = require("1f")["default"];
+  var _Object$getOwnPropertyDescriptor = require("2a")["default"];
   exports["default"] = function get(_x, _x2, _x3) {
     var _again = true;
     _function: while (_again) {
@@ -881,7 +871,38 @@ $__System.registerDynamic("e", ["1f"], true, function(require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("11", [], true, function(require, exports, module) {
+$__System.registerDynamic("14", ["25"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  "use strict";
+  var _Object$defineProperty = require("25")["default"];
+  exports["default"] = (function() {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor)
+          descriptor.writable = true;
+        _Object$defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+    return function(Constructor, protoProps, staticProps) {
+      if (protoProps)
+        defineProperties(Constructor.prototype, protoProps);
+      if (staticProps)
+        defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  })();
+  exports.__esModule = true;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("15", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -897,14 +918,14 @@ $__System.registerDynamic("11", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("12", ["18", "20"], true, function(require, exports, module) {
+$__System.registerDynamic("16", ["1e", "2b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   "use strict";
-  var _getIterator = require("18")["default"];
-  var _isIterable = require("20")["default"];
+  var _getIterator = require("1e")["default"];
+  var _isIterable = require("2b")["default"];
   exports["default"] = (function() {
     function sliceIterator(arr, i) {
       var _arr = [];
@@ -947,93 +968,100 @@ $__System.registerDynamic("12", ["18", "20"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("10", ["1d"], true, function(require, exports, module) {
+$__System.registerDynamic("17", ["25"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   "use strict";
-  var _Object$defineProperty = require("1d")["default"];
-  exports["default"] = (function() {
-    function defineProperties(target, props) {
-      for (var i = 0; i < props.length; i++) {
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor)
-          descriptor.writable = true;
-        _Object$defineProperty(target, descriptor.key, descriptor);
-      }
+  var _Object$defineProperty = require("25")["default"];
+  exports["default"] = function(obj, key, value) {
+    if (key in obj) {
+      _Object$defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
     }
-    return function(Constructor, protoProps, staticProps) {
-      if (protoProps)
-        defineProperties(Constructor.prototype, protoProps);
-      if (staticProps)
-        defineProperties(Constructor, staticProps);
-      return Constructor;
-    };
-  })();
-  exports.__esModule = true;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("f", ["21", "22"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  "use strict";
-  var _Object$create = require("21")["default"];
-  var _Object$setPrototypeOf = require("22")["default"];
-  exports["default"] = function(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-    subClass.prototype = _Object$create(superClass && superClass.prototype, {constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }});
-    if (superClass)
-      _Object$setPrototypeOf ? _Object$setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+    return obj;
   };
   exports.__esModule = true;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("13", ["23"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = require("23");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("17", ["24"], true, function(require, exports, module) {
+$__System.registerDynamic("18", ["2c"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("24"),
+    "default": require("2c"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("16", ["25"], true, function(require, exports, module) {
+$__System.registerDynamic("19", ["2d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("2d");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1d", ["2f"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = {
+    "default": require("2f"),
+    __esModule: true
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1e", ["30"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = {
+    "default": require("30"),
+    __esModule: true
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1f", ["31"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = {
+    "default": require("31"),
+    __esModule: true
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1c", ["24"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   "use strict";
-  var _Array$from = require("25")["default"];
+  var _Array$from = require("24")["default"];
   exports["default"] = function(arr) {
     if (Array.isArray(arr)) {
       for (var i = 0,
@@ -1049,102 +1077,101 @@ $__System.registerDynamic("16", ["25"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("18", ["26"], true, function(require, exports, module) {
+$__System.registerDynamic("20", ["32"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("26"),
+    "default": require("32"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("1a", ["28"], true, function(require, exports, module) {
+$__System.registerDynamic("22", ["33"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("33");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("21", ["34"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("28"),
+    "default": require("34"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("19", ["29"], true, function(require, exports, module) {
+$__System.registerDynamic("23", ["35"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("29"),
+    "default": require("35"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("1c", ["2a", "2b"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("2a");
-  module.exports = require("2b").Object.keys;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("1d", ["2c"], true, function(require, exports, module) {
+$__System.registerDynamic("24", ["36"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("2c"),
+    "default": require("36"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("20", ["2d"], true, function(require, exports, module) {
+$__System.registerDynamic("25", ["37"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("2d"),
+    "default": require("37"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("1f", ["2e"], true, function(require, exports, module) {
+$__System.registerDynamic("28", ["38"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("2e"),
+    "default": require("38"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("22", ["2f"], true, function(require, exports, module) {
+$__System.registerDynamic("29", ["39"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("2f"),
+    "default": require("39"),
     __esModule: true
   };
   global.define = __define;
@@ -1160,7 +1187,7 @@ var _removeDefine = $__System.get("@@amd-helpers").createDefine();
   this.define = function(c, d) {
     a[c] = a[c] || d(b);
   };
-}({}), define("1e", [], function() {
+}({}), define("27", [], function() {
   function a(a) {
     return a.substr(0, 3);
   }
@@ -2252,26 +2279,60 @@ var _removeDefine = $__System.get("@@amd-helpers").createDefine();
 
 _removeDefine();
 })();
-$__System.registerDynamic("21", ["30"], true, function(require, exports, module) {
+$__System.registerDynamic("2a", ["3a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("30"),
+    "default": require("3a"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("23", ["31", "32"], true, function(require, exports, module) {
+$__System.registerDynamic("2b", ["3b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var iota = require("31");
-  var isBuffer = require("32");
+  module.exports = {
+    "default": require("3b"),
+    __esModule: true
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("2c", ["3c", "3d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("3c");
+  module.exports = require("3d").Object.keys;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("2e", ["3e"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("3e");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("2d", ["3f", "40"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var iota = require("3f");
+  var isBuffer = require("40");
   var hasTypedArrays = ((typeof Float64Array) !== "undefined");
   function compare1st(a, b) {
     return a[0] - b[0];
@@ -2562,101 +2623,4445 @@ b" + i + "*=d\
   return module.exports;
 });
 
-$__System.registerDynamic("26", ["33", "34", "35"], true, function(require, exports, module) {
+$__System.registerDynamic("2f", ["41", "42", "43", "44", "3d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("33");
-  require("34");
-  module.exports = require("35");
+  require("41");
+  require("42");
+  require("43");
+  require("44");
+  module.exports = require("3d").Promise;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("25", ["36"], true, function(require, exports, module) {
+$__System.registerDynamic("31", ["41", "42", "43", "45", "46", "3d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = {
-    "default": require("36"),
-    __esModule: true
+  require("41");
+  require("42");
+  require("43");
+  require("45");
+  require("46");
+  module.exports = require("3d").Map;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("30", ["43", "42", "47"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("43");
+  require("42");
+  module.exports = require("47");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("32", ["48", "3d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("48");
+  module.exports = require("3d").Math.trunc;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("33", ["49"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  "format cjs";
+  (function(process) {
+    (function webpackUniversalModuleDefinition(root, factory) {
+      if (typeof exports === 'object' && typeof module === 'object')
+        module.exports = factory();
+      else if (typeof define === 'function' && define.amd)
+        define([], factory);
+      else if (typeof exports === 'object')
+        exports["wu"] = factory();
+      else
+        root["wu"] = factory();
+    })(this, function() {
+      return (function(modules) {
+        var installedModules = {};
+        function __webpack_require__(moduleId) {
+          if (installedModules[moduleId])
+            return installedModules[moduleId].exports;
+          var module = installedModules[moduleId] = {
+            exports: {},
+            id: moduleId,
+            loaded: false
+          };
+          modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+          module.loaded = true;
+          return module.exports;
+        }
+        __webpack_require__.m = modules;
+        __webpack_require__.c = installedModules;
+        __webpack_require__.p = "";
+        return __webpack_require__(0);
+      })([function(module, exports, __webpack_require__) {
+        "use strict";
+        var _toConsumableArray = __webpack_require__(1)["default"];
+        var _slicedToArray = __webpack_require__(39)["default"];
+        var _Symbol$iterator = __webpack_require__(52)["default"];
+        var _getIterator = __webpack_require__(40)["default"];
+        var _regeneratorRuntime = __webpack_require__(54)["default"];
+        var _Object$keys = __webpack_require__(80)["default"];
+        var _Set = __webpack_require__(84)["default"];
+        var _Promise = __webpack_require__(65)["default"];
+        var wu = module.exports = function wu(iterable) {
+          if (!isIterable(iterable)) {
+            throw new Error("wu: `" + iterable + "` is not iterable!");
+          }
+          return new Wu(iterable);
+        };
+        function Wu(iterable) {
+          var iterator = getIterator(iterable);
+          this.next = iterator.next.bind(iterator);
+        }
+        wu.prototype = Wu.prototype;
+        wu.prototype[_Symbol$iterator] = function() {
+          return this;
+        };
+        var MISSING = {};
+        var isIterable = function isIterable(thing) {
+          return thing && typeof thing[_Symbol$iterator] === "function";
+        };
+        var getIterator = function getIterator(thing) {
+          if (isIterable(thing)) {
+            return _getIterator(thing);
+          }
+          throw new TypeError("Not iterable: " + thing);
+        };
+        var staticMethod = function staticMethod(name, fn) {
+          fn.prototype = Wu.prototype;
+          wu[name] = fn;
+        };
+        var prototypeAndStatic = function prototypeAndStatic(name, fn) {
+          var expectedArgs = arguments.length <= 2 || arguments[2] === undefined ? fn.length : arguments[2];
+          return (function() {
+            fn.prototype = Wu.prototype;
+            Wu.prototype[name] = fn;
+            expectedArgs += 1;
+            wu[name] = wu.curryable(function() {
+              var _wu;
+              for (var _len = arguments.length,
+                  args = Array(_len),
+                  _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+              var iterable = args.pop();
+              return (_wu = wu(iterable))[name].apply(_wu, args);
+            }, expectedArgs);
+          })();
+        };
+        var rewrap = function rewrap(fn) {
+          return function() {
+            for (var _len2 = arguments.length,
+                args = Array(_len2),
+                _key2 = 0; _key2 < _len2; _key2++) {
+              args[_key2] = arguments[_key2];
+            }
+            return wu(fn.call.apply(fn, [this].concat(args)));
+          };
+        };
+        var rewrapStaticMethod = function rewrapStaticMethod(name, fn) {
+          return staticMethod(name, rewrap(fn));
+        };
+        var rewrapPrototypeAndStatic = function rewrapPrototypeAndStatic(name, fn, expectedArgs) {
+          return prototypeAndStatic(name, rewrap(fn), expectedArgs);
+        };
+        function curry(fn, args) {
+          return function() {
+            for (var _len3 = arguments.length,
+                moreArgs = Array(_len3),
+                _key3 = 0; _key3 < _len3; _key3++) {
+              moreArgs[_key3] = arguments[_key3];
+            }
+            return fn.call.apply(fn, [this].concat(_toConsumableArray(args), moreArgs));
+          };
+        }
+        staticMethod("curryable", function(fn) {
+          var expected = arguments.length <= 1 || arguments[1] === undefined ? fn.length : arguments[1];
+          return (function() {
+            return function f() {
+              for (var _len4 = arguments.length,
+                  args = Array(_len4),
+                  _key4 = 0; _key4 < _len4; _key4++) {
+                args[_key4] = arguments[_key4];
+              }
+              return args.length >= expected ? fn.apply(this, args) : curry(f, args);
+            };
+          })();
+        });
+        rewrapStaticMethod("entries", _regeneratorRuntime.mark(function callee$0$0(obj) {
+          var _iteratorNormalCompletion,
+              _didIteratorError,
+              _iteratorError,
+              _iterator,
+              _step,
+              k;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion = true;
+                  _didIteratorError = false;
+                  _iteratorError = undefined;
+                  context$1$0.prev = 3;
+                  _iterator = _getIterator(_Object$keys(obj));
+                case 5:
+                  if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
+                    context$1$0.next = 12;
+                    break;
+                  }
+                  k = _step.value;
+                  context$1$0.next = 9;
+                  return [k, obj[k]];
+                case 9:
+                  _iteratorNormalCompletion = true;
+                  context$1$0.next = 5;
+                  break;
+                case 12:
+                  context$1$0.next = 18;
+                  break;
+                case 14:
+                  context$1$0.prev = 14;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError = true;
+                  _iteratorError = context$1$0.t0;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.prev = 19;
+                  if (!_iteratorNormalCompletion && _iterator["return"]) {
+                    _iterator["return"]();
+                  }
+                case 21:
+                  context$1$0.prev = 21;
+                  if (!_didIteratorError) {
+                    context$1$0.next = 24;
+                    break;
+                  }
+                  throw _iteratorError;
+                case 24:
+                  return context$1$0.finish(21);
+                case 25:
+                  return context$1$0.finish(18);
+                case 26:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 14, 18, 26], [19, , 21, 25]]);
+        }));
+        rewrapStaticMethod("keys", _regeneratorRuntime.mark(function callee$0$0(obj) {
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  return context$1$0.delegateYield(_Object$keys(obj), "t0", 1);
+                case 1:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        rewrapStaticMethod("values", _regeneratorRuntime.mark(function callee$0$0(obj) {
+          var _iteratorNormalCompletion2,
+              _didIteratorError2,
+              _iteratorError2,
+              _iterator2,
+              _step2,
+              k;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion2 = true;
+                  _didIteratorError2 = false;
+                  _iteratorError2 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator2 = _getIterator(_Object$keys(obj));
+                case 5:
+                  if (_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done) {
+                    context$1$0.next = 12;
+                    break;
+                  }
+                  k = _step2.value;
+                  context$1$0.next = 9;
+                  return obj[k];
+                case 9:
+                  _iteratorNormalCompletion2 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 12:
+                  context$1$0.next = 18;
+                  break;
+                case 14:
+                  context$1$0.prev = 14;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError2 = true;
+                  _iteratorError2 = context$1$0.t0;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.prev = 19;
+                  if (!_iteratorNormalCompletion2 && _iterator2["return"]) {
+                    _iterator2["return"]();
+                  }
+                case 21:
+                  context$1$0.prev = 21;
+                  if (!_didIteratorError2) {
+                    context$1$0.next = 24;
+                    break;
+                  }
+                  throw _iteratorError2;
+                case 24:
+                  return context$1$0.finish(21);
+                case 25:
+                  return context$1$0.finish(18);
+                case 26:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 14, 18, 26], [19, , 21, 25]]);
+        }));
+        rewrapPrototypeAndStatic("cycle", _regeneratorRuntime.mark(function callee$0$0() {
+          var saved,
+              _iteratorNormalCompletion3,
+              _didIteratorError3,
+              _iteratorError3,
+              _iterator3,
+              _step3,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  saved = [];
+                  _iteratorNormalCompletion3 = true;
+                  _didIteratorError3 = false;
+                  _iteratorError3 = undefined;
+                  context$1$0.prev = 4;
+                  _iterator3 = _getIterator(this);
+                case 6:
+                  if (_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done) {
+                    context$1$0.next = 14;
+                    break;
+                  }
+                  x = _step3.value;
+                  context$1$0.next = 10;
+                  return x;
+                case 10:
+                  saved.push(x);
+                case 11:
+                  _iteratorNormalCompletion3 = true;
+                  context$1$0.next = 6;
+                  break;
+                case 14:
+                  context$1$0.next = 20;
+                  break;
+                case 16:
+                  context$1$0.prev = 16;
+                  context$1$0.t0 = context$1$0["catch"](4);
+                  _didIteratorError3 = true;
+                  _iteratorError3 = context$1$0.t0;
+                case 20:
+                  context$1$0.prev = 20;
+                  context$1$0.prev = 21;
+                  if (!_iteratorNormalCompletion3 && _iterator3["return"]) {
+                    _iterator3["return"]();
+                  }
+                case 23:
+                  context$1$0.prev = 23;
+                  if (!_didIteratorError3) {
+                    context$1$0.next = 26;
+                    break;
+                  }
+                  throw _iteratorError3;
+                case 26:
+                  return context$1$0.finish(23);
+                case 27:
+                  return context$1$0.finish(20);
+                case 28:
+                  if (!saved) {
+                    context$1$0.next = 32;
+                    break;
+                  }
+                  return context$1$0.delegateYield(saved, "t1", 30);
+                case 30:
+                  context$1$0.next = 28;
+                  break;
+                case 32:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[4, 16, 20, 28], [21, , 23, 27]]);
+        }));
+        rewrapStaticMethod("count", _regeneratorRuntime.mark(function callee$0$0() {
+          var start = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
+          var step = arguments.length <= 1 || arguments[1] === undefined ? 1 : arguments[1];
+          var n;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  n = start;
+                case 1:
+                  if (false) {
+                    context$1$0.next = 7;
+                    break;
+                  }
+                  context$1$0.next = 4;
+                  return n;
+                case 4:
+                  n += step;
+                  context$1$0.next = 1;
+                  break;
+                case 7:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        rewrapStaticMethod("repeat", _regeneratorRuntime.mark(function callee$0$0(thing) {
+          var times = arguments.length <= 1 || arguments[1] === undefined ? Infinity : arguments[1];
+          var i;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  if (!(times === Infinity)) {
+                    context$1$0.next = 8;
+                    break;
+                  }
+                case 1:
+                  if (false) {
+                    context$1$0.next = 6;
+                    break;
+                  }
+                  context$1$0.next = 4;
+                  return thing;
+                case 4:
+                  context$1$0.next = 1;
+                  break;
+                case 6:
+                  context$1$0.next = 15;
+                  break;
+                case 8:
+                  i = 0;
+                case 9:
+                  if (!(i < times)) {
+                    context$1$0.next = 15;
+                    break;
+                  }
+                  context$1$0.next = 12;
+                  return thing;
+                case 12:
+                  i++;
+                  context$1$0.next = 9;
+                  break;
+                case 15:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        rewrapStaticMethod("chain", _regeneratorRuntime.mark(function callee$0$0() {
+          var _iteratorNormalCompletion4,
+              _didIteratorError4,
+              _iteratorError4,
+              _len5,
+              iterables,
+              _key5,
+              _iterator4,
+              _step4,
+              it,
+              args$1$0 = arguments;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion4 = true;
+                  _didIteratorError4 = false;
+                  _iteratorError4 = undefined;
+                  context$1$0.prev = 3;
+                  for (_len5 = args$1$0.length, iterables = Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+                    iterables[_key5] = args$1$0[_key5];
+                  }
+                  _iterator4 = _getIterator(iterables);
+                case 6:
+                  if (_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done) {
+                    context$1$0.next = 12;
+                    break;
+                  }
+                  it = _step4.value;
+                  return context$1$0.delegateYield(it, "t0", 9);
+                case 9:
+                  _iteratorNormalCompletion4 = true;
+                  context$1$0.next = 6;
+                  break;
+                case 12:
+                  context$1$0.next = 18;
+                  break;
+                case 14:
+                  context$1$0.prev = 14;
+                  context$1$0.t1 = context$1$0["catch"](3);
+                  _didIteratorError4 = true;
+                  _iteratorError4 = context$1$0.t1;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.prev = 19;
+                  if (!_iteratorNormalCompletion4 && _iterator4["return"]) {
+                    _iterator4["return"]();
+                  }
+                case 21:
+                  context$1$0.prev = 21;
+                  if (!_didIteratorError4) {
+                    context$1$0.next = 24;
+                    break;
+                  }
+                  throw _iteratorError4;
+                case 24:
+                  return context$1$0.finish(21);
+                case 25:
+                  return context$1$0.finish(18);
+                case 26:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 14, 18, 26], [19, , 21, 25]]);
+        }));
+        rewrapPrototypeAndStatic("chunk", _regeneratorRuntime.mark(function callee$0$0() {
+          var n = arguments.length <= 0 || arguments[0] === undefined ? 2 : arguments[0];
+          var items,
+              index,
+              _iteratorNormalCompletion5,
+              _didIteratorError5,
+              _iteratorError5,
+              _iterator5,
+              _step5,
+              item;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  items = [];
+                  index = 0;
+                  _iteratorNormalCompletion5 = true;
+                  _didIteratorError5 = false;
+                  _iteratorError5 = undefined;
+                  context$1$0.prev = 5;
+                  _iterator5 = _getIterator(this);
+                case 7:
+                  if (_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done) {
+                    context$1$0.next = 18;
+                    break;
+                  }
+                  item = _step5.value;
+                  items[index++] = item;
+                  if (!(index === n)) {
+                    context$1$0.next = 15;
+                    break;
+                  }
+                  context$1$0.next = 13;
+                  return items;
+                case 13:
+                  items = [];
+                  index = 0;
+                case 15:
+                  _iteratorNormalCompletion5 = true;
+                  context$1$0.next = 7;
+                  break;
+                case 18:
+                  context$1$0.next = 24;
+                  break;
+                case 20:
+                  context$1$0.prev = 20;
+                  context$1$0.t0 = context$1$0["catch"](5);
+                  _didIteratorError5 = true;
+                  _iteratorError5 = context$1$0.t0;
+                case 24:
+                  context$1$0.prev = 24;
+                  context$1$0.prev = 25;
+                  if (!_iteratorNormalCompletion5 && _iterator5["return"]) {
+                    _iterator5["return"]();
+                  }
+                case 27:
+                  context$1$0.prev = 27;
+                  if (!_didIteratorError5) {
+                    context$1$0.next = 30;
+                    break;
+                  }
+                  throw _iteratorError5;
+                case 30:
+                  return context$1$0.finish(27);
+                case 31:
+                  return context$1$0.finish(24);
+                case 32:
+                  if (!index) {
+                    context$1$0.next = 35;
+                    break;
+                  }
+                  context$1$0.next = 35;
+                  return items;
+                case 35:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[5, 20, 24, 32], [25, , 27, 31]]);
+        }), 1);
+        rewrapPrototypeAndStatic("concatMap", _regeneratorRuntime.mark(function callee$0$0(fn) {
+          var _iteratorNormalCompletion6,
+              _didIteratorError6,
+              _iteratorError6,
+              _iterator6,
+              _step6,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion6 = true;
+                  _didIteratorError6 = false;
+                  _iteratorError6 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator6 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done) {
+                    context$1$0.next = 11;
+                    break;
+                  }
+                  x = _step6.value;
+                  return context$1$0.delegateYield(fn(x), "t0", 8);
+                case 8:
+                  _iteratorNormalCompletion6 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 11:
+                  context$1$0.next = 17;
+                  break;
+                case 13:
+                  context$1$0.prev = 13;
+                  context$1$0.t1 = context$1$0["catch"](3);
+                  _didIteratorError6 = true;
+                  _iteratorError6 = context$1$0.t1;
+                case 17:
+                  context$1$0.prev = 17;
+                  context$1$0.prev = 18;
+                  if (!_iteratorNormalCompletion6 && _iterator6["return"]) {
+                    _iterator6["return"]();
+                  }
+                case 20:
+                  context$1$0.prev = 20;
+                  if (!_didIteratorError6) {
+                    context$1$0.next = 23;
+                    break;
+                  }
+                  throw _iteratorError6;
+                case 23:
+                  return context$1$0.finish(20);
+                case 24:
+                  return context$1$0.finish(17);
+                case 25:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 13, 17, 25], [18, , 20, 24]]);
+        }));
+        rewrapPrototypeAndStatic("drop", _regeneratorRuntime.mark(function callee$0$0(n) {
+          var i,
+              _iteratorNormalCompletion7,
+              _didIteratorError7,
+              _iteratorError7,
+              _iterator7,
+              _step7,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  i = 0;
+                  _iteratorNormalCompletion7 = true;
+                  _didIteratorError7 = false;
+                  _iteratorError7 = undefined;
+                  context$1$0.prev = 4;
+                  _iterator7 = _getIterator(this);
+                case 6:
+                  if (_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done) {
+                    context$1$0.next = 16;
+                    break;
+                  }
+                  x = _step7.value;
+                  if (!(i++ < n)) {
+                    context$1$0.next = 10;
+                    break;
+                  }
+                  return context$1$0.abrupt("continue", 13);
+                case 10:
+                  context$1$0.next = 12;
+                  return x;
+                case 12:
+                  return context$1$0.abrupt("break", 16);
+                case 13:
+                  _iteratorNormalCompletion7 = true;
+                  context$1$0.next = 6;
+                  break;
+                case 16:
+                  context$1$0.next = 22;
+                  break;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.t0 = context$1$0["catch"](4);
+                  _didIteratorError7 = true;
+                  _iteratorError7 = context$1$0.t0;
+                case 22:
+                  context$1$0.prev = 22;
+                  context$1$0.prev = 23;
+                  if (!_iteratorNormalCompletion7 && _iterator7["return"]) {
+                    _iterator7["return"]();
+                  }
+                case 25:
+                  context$1$0.prev = 25;
+                  if (!_didIteratorError7) {
+                    context$1$0.next = 28;
+                    break;
+                  }
+                  throw _iteratorError7;
+                case 28:
+                  return context$1$0.finish(25);
+                case 29:
+                  return context$1$0.finish(22);
+                case 30:
+                  return context$1$0.delegateYield(this, "t1", 31);
+                case 31:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[4, 18, 22, 30], [23, , 25, 29]]);
+        }));
+        rewrapPrototypeAndStatic("dropWhile", _regeneratorRuntime.mark(function callee$0$0() {
+          var fn = arguments.length <= 0 || arguments[0] === undefined ? Boolean : arguments[0];
+          var _iteratorNormalCompletion8,
+              _didIteratorError8,
+              _iteratorError8,
+              _iterator8,
+              _step8,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion8 = true;
+                  _didIteratorError8 = false;
+                  _iteratorError8 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator8 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done) {
+                    context$1$0.next = 15;
+                    break;
+                  }
+                  x = _step8.value;
+                  if (!fn(x)) {
+                    context$1$0.next = 9;
+                    break;
+                  }
+                  return context$1$0.abrupt("continue", 12);
+                case 9:
+                  context$1$0.next = 11;
+                  return x;
+                case 11:
+                  return context$1$0.abrupt("break", 15);
+                case 12:
+                  _iteratorNormalCompletion8 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 15:
+                  context$1$0.next = 21;
+                  break;
+                case 17:
+                  context$1$0.prev = 17;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError8 = true;
+                  _iteratorError8 = context$1$0.t0;
+                case 21:
+                  context$1$0.prev = 21;
+                  context$1$0.prev = 22;
+                  if (!_iteratorNormalCompletion8 && _iterator8["return"]) {
+                    _iterator8["return"]();
+                  }
+                case 24:
+                  context$1$0.prev = 24;
+                  if (!_didIteratorError8) {
+                    context$1$0.next = 27;
+                    break;
+                  }
+                  throw _iteratorError8;
+                case 27:
+                  return context$1$0.finish(24);
+                case 28:
+                  return context$1$0.finish(21);
+                case 29:
+                  return context$1$0.delegateYield(this, "t1", 30);
+                case 30:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 17, 21, 29], [22, , 24, 28]]);
+        }), 1);
+        rewrapPrototypeAndStatic("enumerate", _regeneratorRuntime.mark(function callee$0$0() {
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  return context$1$0.delegateYield(_zip([this, wu.count()]), "t0", 1);
+                case 1:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        rewrapPrototypeAndStatic("filter", _regeneratorRuntime.mark(function callee$0$0() {
+          var fn = arguments.length <= 0 || arguments[0] === undefined ? Boolean : arguments[0];
+          var _iteratorNormalCompletion9,
+              _didIteratorError9,
+              _iteratorError9,
+              _iterator9,
+              _step9,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion9 = true;
+                  _didIteratorError9 = false;
+                  _iteratorError9 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator9 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done) {
+                    context$1$0.next = 13;
+                    break;
+                  }
+                  x = _step9.value;
+                  if (!fn(x)) {
+                    context$1$0.next = 10;
+                    break;
+                  }
+                  context$1$0.next = 10;
+                  return x;
+                case 10:
+                  _iteratorNormalCompletion9 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 13:
+                  context$1$0.next = 19;
+                  break;
+                case 15:
+                  context$1$0.prev = 15;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError9 = true;
+                  _iteratorError9 = context$1$0.t0;
+                case 19:
+                  context$1$0.prev = 19;
+                  context$1$0.prev = 20;
+                  if (!_iteratorNormalCompletion9 && _iterator9["return"]) {
+                    _iterator9["return"]();
+                  }
+                case 22:
+                  context$1$0.prev = 22;
+                  if (!_didIteratorError9) {
+                    context$1$0.next = 25;
+                    break;
+                  }
+                  throw _iteratorError9;
+                case 25:
+                  return context$1$0.finish(22);
+                case 26:
+                  return context$1$0.finish(19);
+                case 27:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 15, 19, 27], [20, , 22, 26]]);
+        }), 1);
+        rewrapPrototypeAndStatic("flatten", _regeneratorRuntime.mark(function callee$0$0() {
+          var shallow = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+          var _iteratorNormalCompletion10,
+              _didIteratorError10,
+              _iteratorError10,
+              _iterator10,
+              _step10,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion10 = true;
+                  _didIteratorError10 = false;
+                  _iteratorError10 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator10 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done) {
+                    context$1$0.next = 16;
+                    break;
+                  }
+                  x = _step10.value;
+                  if (!(typeof x !== "string" && isIterable(x))) {
+                    context$1$0.next = 11;
+                    break;
+                  }
+                  return context$1$0.delegateYield(shallow ? x : wu(x).flatten(), "t0", 9);
+                case 9:
+                  context$1$0.next = 13;
+                  break;
+                case 11:
+                  context$1$0.next = 13;
+                  return x;
+                case 13:
+                  _iteratorNormalCompletion10 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 16:
+                  context$1$0.next = 22;
+                  break;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.t1 = context$1$0["catch"](3);
+                  _didIteratorError10 = true;
+                  _iteratorError10 = context$1$0.t1;
+                case 22:
+                  context$1$0.prev = 22;
+                  context$1$0.prev = 23;
+                  if (!_iteratorNormalCompletion10 && _iterator10["return"]) {
+                    _iterator10["return"]();
+                  }
+                case 25:
+                  context$1$0.prev = 25;
+                  if (!_didIteratorError10) {
+                    context$1$0.next = 28;
+                    break;
+                  }
+                  throw _iteratorError10;
+                case 28:
+                  return context$1$0.finish(25);
+                case 29:
+                  return context$1$0.finish(22);
+                case 30:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 18, 22, 30], [23, , 25, 29]]);
+        }), 1);
+        rewrapPrototypeAndStatic("invoke", _regeneratorRuntime.mark(function callee$0$0(name) {
+          var _iteratorNormalCompletion11,
+              _didIteratorError11,
+              _iteratorError11,
+              _len6,
+              args,
+              _key6,
+              _iterator11,
+              _step11,
+              x,
+              args$1$0 = arguments;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion11 = true;
+                  _didIteratorError11 = false;
+                  _iteratorError11 = undefined;
+                  context$1$0.prev = 3;
+                  for (_len6 = args$1$0.length, args = Array(_len6 > 1 ? _len6 - 1 : 0), _key6 = 1; _key6 < _len6; _key6++) {
+                    args[_key6 - 1] = args$1$0[_key6];
+                  }
+                  _iterator11 = _getIterator(this);
+                case 6:
+                  if (_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done) {
+                    context$1$0.next = 13;
+                    break;
+                  }
+                  x = _step11.value;
+                  context$1$0.next = 10;
+                  return x[name].apply(x, args);
+                case 10:
+                  _iteratorNormalCompletion11 = true;
+                  context$1$0.next = 6;
+                  break;
+                case 13:
+                  context$1$0.next = 19;
+                  break;
+                case 15:
+                  context$1$0.prev = 15;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError11 = true;
+                  _iteratorError11 = context$1$0.t0;
+                case 19:
+                  context$1$0.prev = 19;
+                  context$1$0.prev = 20;
+                  if (!_iteratorNormalCompletion11 && _iterator11["return"]) {
+                    _iterator11["return"]();
+                  }
+                case 22:
+                  context$1$0.prev = 22;
+                  if (!_didIteratorError11) {
+                    context$1$0.next = 25;
+                    break;
+                  }
+                  throw _iteratorError11;
+                case 25:
+                  return context$1$0.finish(22);
+                case 26:
+                  return context$1$0.finish(19);
+                case 27:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 15, 19, 27], [20, , 22, 26]]);
+        }));
+        rewrapPrototypeAndStatic("map", _regeneratorRuntime.mark(function callee$0$0(fn) {
+          var _iteratorNormalCompletion12,
+              _didIteratorError12,
+              _iteratorError12,
+              _iterator12,
+              _step12,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion12 = true;
+                  _didIteratorError12 = false;
+                  _iteratorError12 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator12 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done) {
+                    context$1$0.next = 12;
+                    break;
+                  }
+                  x = _step12.value;
+                  context$1$0.next = 9;
+                  return fn(x);
+                case 9:
+                  _iteratorNormalCompletion12 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 12:
+                  context$1$0.next = 18;
+                  break;
+                case 14:
+                  context$1$0.prev = 14;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError12 = true;
+                  _iteratorError12 = context$1$0.t0;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.prev = 19;
+                  if (!_iteratorNormalCompletion12 && _iterator12["return"]) {
+                    _iterator12["return"]();
+                  }
+                case 21:
+                  context$1$0.prev = 21;
+                  if (!_didIteratorError12) {
+                    context$1$0.next = 24;
+                    break;
+                  }
+                  throw _iteratorError12;
+                case 24:
+                  return context$1$0.finish(21);
+                case 25:
+                  return context$1$0.finish(18);
+                case 26:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 14, 18, 26], [19, , 21, 25]]);
+        }));
+        rewrapPrototypeAndStatic("pluck", _regeneratorRuntime.mark(function callee$0$0(name) {
+          var _iteratorNormalCompletion13,
+              _didIteratorError13,
+              _iteratorError13,
+              _iterator13,
+              _step13,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion13 = true;
+                  _didIteratorError13 = false;
+                  _iteratorError13 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator13 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done) {
+                    context$1$0.next = 12;
+                    break;
+                  }
+                  x = _step13.value;
+                  context$1$0.next = 9;
+                  return x[name];
+                case 9:
+                  _iteratorNormalCompletion13 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 12:
+                  context$1$0.next = 18;
+                  break;
+                case 14:
+                  context$1$0.prev = 14;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError13 = true;
+                  _iteratorError13 = context$1$0.t0;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.prev = 19;
+                  if (!_iteratorNormalCompletion13 && _iterator13["return"]) {
+                    _iterator13["return"]();
+                  }
+                case 21:
+                  context$1$0.prev = 21;
+                  if (!_didIteratorError13) {
+                    context$1$0.next = 24;
+                    break;
+                  }
+                  throw _iteratorError13;
+                case 24:
+                  return context$1$0.finish(21);
+                case 25:
+                  return context$1$0.finish(18);
+                case 26:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 14, 18, 26], [19, , 21, 25]]);
+        }));
+        rewrapPrototypeAndStatic("reductions", _regeneratorRuntime.mark(function callee$0$0(fn) {
+          var initial = arguments.length <= 1 || arguments[1] === undefined ? undefined : arguments[1];
+          var val,
+              _iteratorNormalCompletion14,
+              _didIteratorError14,
+              _iteratorError14,
+              _iterator14,
+              _step14,
+              x,
+              _iteratorNormalCompletion15,
+              _didIteratorError15,
+              _iteratorError15,
+              _iterator15,
+              _step15;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  val = initial;
+                  if (!(val === undefined)) {
+                    context$1$0.next = 28;
+                    break;
+                  }
+                  _iteratorNormalCompletion14 = true;
+                  _didIteratorError14 = false;
+                  _iteratorError14 = undefined;
+                  context$1$0.prev = 5;
+                  _iterator14 = _getIterator(this);
+                case 7:
+                  if (_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done) {
+                    context$1$0.next = 14;
+                    break;
+                  }
+                  x = _step14.value;
+                  val = x;
+                  return context$1$0.abrupt("break", 14);
+                case 11:
+                  _iteratorNormalCompletion14 = true;
+                  context$1$0.next = 7;
+                  break;
+                case 14:
+                  context$1$0.next = 20;
+                  break;
+                case 16:
+                  context$1$0.prev = 16;
+                  context$1$0.t0 = context$1$0["catch"](5);
+                  _didIteratorError14 = true;
+                  _iteratorError14 = context$1$0.t0;
+                case 20:
+                  context$1$0.prev = 20;
+                  context$1$0.prev = 21;
+                  if (!_iteratorNormalCompletion14 && _iterator14["return"]) {
+                    _iterator14["return"]();
+                  }
+                case 23:
+                  context$1$0.prev = 23;
+                  if (!_didIteratorError14) {
+                    context$1$0.next = 26;
+                    break;
+                  }
+                  throw _iteratorError14;
+                case 26:
+                  return context$1$0.finish(23);
+                case 27:
+                  return context$1$0.finish(20);
+                case 28:
+                  context$1$0.next = 30;
+                  return val;
+                case 30:
+                  _iteratorNormalCompletion15 = true;
+                  _didIteratorError15 = false;
+                  _iteratorError15 = undefined;
+                  context$1$0.prev = 33;
+                  _iterator15 = _getIterator(this);
+                case 35:
+                  if (_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done) {
+                    context$1$0.next = 42;
+                    break;
+                  }
+                  x = _step15.value;
+                  context$1$0.next = 39;
+                  return val = fn(val, x);
+                case 39:
+                  _iteratorNormalCompletion15 = true;
+                  context$1$0.next = 35;
+                  break;
+                case 42:
+                  context$1$0.next = 48;
+                  break;
+                case 44:
+                  context$1$0.prev = 44;
+                  context$1$0.t1 = context$1$0["catch"](33);
+                  _didIteratorError15 = true;
+                  _iteratorError15 = context$1$0.t1;
+                case 48:
+                  context$1$0.prev = 48;
+                  context$1$0.prev = 49;
+                  if (!_iteratorNormalCompletion15 && _iterator15["return"]) {
+                    _iterator15["return"]();
+                  }
+                case 51:
+                  context$1$0.prev = 51;
+                  if (!_didIteratorError15) {
+                    context$1$0.next = 54;
+                    break;
+                  }
+                  throw _iteratorError15;
+                case 54:
+                  return context$1$0.finish(51);
+                case 55:
+                  return context$1$0.finish(48);
+                case 56:
+                  return context$1$0.abrupt("return", val);
+                case 57:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[5, 16, 20, 28], [21, , 23, 27], [33, 44, 48, 56], [49, , 51, 55]]);
+        }), 2);
+        rewrapPrototypeAndStatic("reject", _regeneratorRuntime.mark(function callee$0$0() {
+          var fn = arguments.length <= 0 || arguments[0] === undefined ? Boolean : arguments[0];
+          var _iteratorNormalCompletion16,
+              _didIteratorError16,
+              _iteratorError16,
+              _iterator16,
+              _step16,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion16 = true;
+                  _didIteratorError16 = false;
+                  _iteratorError16 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator16 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done) {
+                    context$1$0.next = 13;
+                    break;
+                  }
+                  x = _step16.value;
+                  if (fn(x)) {
+                    context$1$0.next = 10;
+                    break;
+                  }
+                  context$1$0.next = 10;
+                  return x;
+                case 10:
+                  _iteratorNormalCompletion16 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 13:
+                  context$1$0.next = 19;
+                  break;
+                case 15:
+                  context$1$0.prev = 15;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError16 = true;
+                  _iteratorError16 = context$1$0.t0;
+                case 19:
+                  context$1$0.prev = 19;
+                  context$1$0.prev = 20;
+                  if (!_iteratorNormalCompletion16 && _iterator16["return"]) {
+                    _iterator16["return"]();
+                  }
+                case 22:
+                  context$1$0.prev = 22;
+                  if (!_didIteratorError16) {
+                    context$1$0.next = 25;
+                    break;
+                  }
+                  throw _iteratorError16;
+                case 25:
+                  return context$1$0.finish(22);
+                case 26:
+                  return context$1$0.finish(19);
+                case 27:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 15, 19, 27], [20, , 22, 26]]);
+        }), 1);
+        rewrapPrototypeAndStatic("slice", _regeneratorRuntime.mark(function callee$0$0() {
+          var start = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
+          var stop = arguments.length <= 1 || arguments[1] === undefined ? Infinity : arguments[1];
+          var _iteratorNormalCompletion17,
+              _didIteratorError17,
+              _iteratorError17,
+              _iterator17,
+              _step17,
+              _step17$value,
+              x,
+              i;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  if (!(stop < start)) {
+                    context$1$0.next = 2;
+                    break;
+                  }
+                  throw new RangeError("parameter `stop` (= " + stop + ") must be >= `start` (= " + start + ")");
+                case 2:
+                  _iteratorNormalCompletion17 = true;
+                  _didIteratorError17 = false;
+                  _iteratorError17 = undefined;
+                  context$1$0.prev = 5;
+                  _iterator17 = _getIterator(this.enumerate());
+                case 7:
+                  if (_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done) {
+                    context$1$0.next = 20;
+                    break;
+                  }
+                  _step17$value = _slicedToArray(_step17.value, 2);
+                  x = _step17$value[0];
+                  i = _step17$value[1];
+                  if (!(i < start)) {
+                    context$1$0.next = 13;
+                    break;
+                  }
+                  return context$1$0.abrupt("continue", 17);
+                case 13:
+                  if (!(i >= stop)) {
+                    context$1$0.next = 15;
+                    break;
+                  }
+                  return context$1$0.abrupt("break", 20);
+                case 15:
+                  context$1$0.next = 17;
+                  return x;
+                case 17:
+                  _iteratorNormalCompletion17 = true;
+                  context$1$0.next = 7;
+                  break;
+                case 20:
+                  context$1$0.next = 26;
+                  break;
+                case 22:
+                  context$1$0.prev = 22;
+                  context$1$0.t0 = context$1$0["catch"](5);
+                  _didIteratorError17 = true;
+                  _iteratorError17 = context$1$0.t0;
+                case 26:
+                  context$1$0.prev = 26;
+                  context$1$0.prev = 27;
+                  if (!_iteratorNormalCompletion17 && _iterator17["return"]) {
+                    _iterator17["return"]();
+                  }
+                case 29:
+                  context$1$0.prev = 29;
+                  if (!_didIteratorError17) {
+                    context$1$0.next = 32;
+                    break;
+                  }
+                  throw _iteratorError17;
+                case 32:
+                  return context$1$0.finish(29);
+                case 33:
+                  return context$1$0.finish(26);
+                case 34:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[5, 22, 26, 34], [27, , 29, 33]]);
+        }), 2);
+        rewrapPrototypeAndStatic("spreadMap", _regeneratorRuntime.mark(function callee$0$0(fn) {
+          var _iteratorNormalCompletion18,
+              _didIteratorError18,
+              _iteratorError18,
+              _iterator18,
+              _step18,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion18 = true;
+                  _didIteratorError18 = false;
+                  _iteratorError18 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator18 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done) {
+                    context$1$0.next = 12;
+                    break;
+                  }
+                  x = _step18.value;
+                  context$1$0.next = 9;
+                  return fn.apply(undefined, _toConsumableArray(x));
+                case 9:
+                  _iteratorNormalCompletion18 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 12:
+                  context$1$0.next = 18;
+                  break;
+                case 14:
+                  context$1$0.prev = 14;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError18 = true;
+                  _iteratorError18 = context$1$0.t0;
+                case 18:
+                  context$1$0.prev = 18;
+                  context$1$0.prev = 19;
+                  if (!_iteratorNormalCompletion18 && _iterator18["return"]) {
+                    _iterator18["return"]();
+                  }
+                case 21:
+                  context$1$0.prev = 21;
+                  if (!_didIteratorError18) {
+                    context$1$0.next = 24;
+                    break;
+                  }
+                  throw _iteratorError18;
+                case 24:
+                  return context$1$0.finish(21);
+                case 25:
+                  return context$1$0.finish(18);
+                case 26:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 14, 18, 26], [19, , 21, 25]]);
+        }));
+        rewrapPrototypeAndStatic("take", _regeneratorRuntime.mark(function callee$0$0(n) {
+          var i,
+              _iteratorNormalCompletion19,
+              _didIteratorError19,
+              _iteratorError19,
+              _iterator19,
+              _step19,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  if (!(n < 1)) {
+                    context$1$0.next = 2;
+                    break;
+                  }
+                  return context$1$0.abrupt("return");
+                case 2:
+                  i = 0;
+                  _iteratorNormalCompletion19 = true;
+                  _didIteratorError19 = false;
+                  _iteratorError19 = undefined;
+                  context$1$0.prev = 6;
+                  _iterator19 = _getIterator(this);
+                case 8:
+                  if (_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done) {
+                    context$1$0.next = 17;
+                    break;
+                  }
+                  x = _step19.value;
+                  context$1$0.next = 12;
+                  return x;
+                case 12:
+                  if (!(++i >= n)) {
+                    context$1$0.next = 14;
+                    break;
+                  }
+                  return context$1$0.abrupt("break", 17);
+                case 14:
+                  _iteratorNormalCompletion19 = true;
+                  context$1$0.next = 8;
+                  break;
+                case 17:
+                  context$1$0.next = 23;
+                  break;
+                case 19:
+                  context$1$0.prev = 19;
+                  context$1$0.t0 = context$1$0["catch"](6);
+                  _didIteratorError19 = true;
+                  _iteratorError19 = context$1$0.t0;
+                case 23:
+                  context$1$0.prev = 23;
+                  context$1$0.prev = 24;
+                  if (!_iteratorNormalCompletion19 && _iterator19["return"]) {
+                    _iterator19["return"]();
+                  }
+                case 26:
+                  context$1$0.prev = 26;
+                  if (!_didIteratorError19) {
+                    context$1$0.next = 29;
+                    break;
+                  }
+                  throw _iteratorError19;
+                case 29:
+                  return context$1$0.finish(26);
+                case 30:
+                  return context$1$0.finish(23);
+                case 31:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[6, 19, 23, 31], [24, , 26, 30]]);
+        }));
+        rewrapPrototypeAndStatic("takeWhile", _regeneratorRuntime.mark(function callee$0$0() {
+          var fn = arguments.length <= 0 || arguments[0] === undefined ? Boolean : arguments[0];
+          var _iteratorNormalCompletion20,
+              _didIteratorError20,
+              _iteratorError20,
+              _iterator20,
+              _step20,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion20 = true;
+                  _didIteratorError20 = false;
+                  _iteratorError20 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator20 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done) {
+                    context$1$0.next = 14;
+                    break;
+                  }
+                  x = _step20.value;
+                  if (fn(x)) {
+                    context$1$0.next = 9;
+                    break;
+                  }
+                  return context$1$0.abrupt("break", 14);
+                case 9:
+                  context$1$0.next = 11;
+                  return x;
+                case 11:
+                  _iteratorNormalCompletion20 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 14:
+                  context$1$0.next = 20;
+                  break;
+                case 16:
+                  context$1$0.prev = 16;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError20 = true;
+                  _iteratorError20 = context$1$0.t0;
+                case 20:
+                  context$1$0.prev = 20;
+                  context$1$0.prev = 21;
+                  if (!_iteratorNormalCompletion20 && _iterator20["return"]) {
+                    _iterator20["return"]();
+                  }
+                case 23:
+                  context$1$0.prev = 23;
+                  if (!_didIteratorError20) {
+                    context$1$0.next = 26;
+                    break;
+                  }
+                  throw _iteratorError20;
+                case 26:
+                  return context$1$0.finish(23);
+                case 27:
+                  return context$1$0.finish(20);
+                case 28:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 16, 20, 28], [21, , 23, 27]]);
+        }), 1);
+        rewrapPrototypeAndStatic("tap", _regeneratorRuntime.mark(function callee$0$0() {
+          var fn = arguments.length <= 0 || arguments[0] === undefined ? console.log.bind(console) : arguments[0];
+          var _iteratorNormalCompletion21,
+              _didIteratorError21,
+              _iteratorError21,
+              _iterator21,
+              _step21,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  _iteratorNormalCompletion21 = true;
+                  _didIteratorError21 = false;
+                  _iteratorError21 = undefined;
+                  context$1$0.prev = 3;
+                  _iterator21 = _getIterator(this);
+                case 5:
+                  if (_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done) {
+                    context$1$0.next = 13;
+                    break;
+                  }
+                  x = _step21.value;
+                  fn(x);
+                  context$1$0.next = 10;
+                  return x;
+                case 10:
+                  _iteratorNormalCompletion21 = true;
+                  context$1$0.next = 5;
+                  break;
+                case 13:
+                  context$1$0.next = 19;
+                  break;
+                case 15:
+                  context$1$0.prev = 15;
+                  context$1$0.t0 = context$1$0["catch"](3);
+                  _didIteratorError21 = true;
+                  _iteratorError21 = context$1$0.t0;
+                case 19:
+                  context$1$0.prev = 19;
+                  context$1$0.prev = 20;
+                  if (!_iteratorNormalCompletion21 && _iterator21["return"]) {
+                    _iterator21["return"]();
+                  }
+                case 22:
+                  context$1$0.prev = 22;
+                  if (!_didIteratorError21) {
+                    context$1$0.next = 25;
+                    break;
+                  }
+                  throw _iteratorError21;
+                case 25:
+                  return context$1$0.finish(22);
+                case 26:
+                  return context$1$0.finish(19);
+                case 27:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[3, 15, 19, 27], [20, , 22, 26]]);
+        }), 1);
+        rewrapPrototypeAndStatic("unique", _regeneratorRuntime.mark(function callee$0$0() {
+          var seen,
+              _iteratorNormalCompletion22,
+              _didIteratorError22,
+              _iteratorError22,
+              _iterator22,
+              _step22,
+              x;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  seen = new _Set();
+                  _iteratorNormalCompletion22 = true;
+                  _didIteratorError22 = false;
+                  _iteratorError22 = undefined;
+                  context$1$0.prev = 4;
+                  _iterator22 = _getIterator(this);
+                case 6:
+                  if (_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done) {
+                    context$1$0.next = 15;
+                    break;
+                  }
+                  x = _step22.value;
+                  if (seen.has(x)) {
+                    context$1$0.next = 12;
+                    break;
+                  }
+                  context$1$0.next = 11;
+                  return x;
+                case 11:
+                  seen.add(x);
+                case 12:
+                  _iteratorNormalCompletion22 = true;
+                  context$1$0.next = 6;
+                  break;
+                case 15:
+                  context$1$0.next = 21;
+                  break;
+                case 17:
+                  context$1$0.prev = 17;
+                  context$1$0.t0 = context$1$0["catch"](4);
+                  _didIteratorError22 = true;
+                  _iteratorError22 = context$1$0.t0;
+                case 21:
+                  context$1$0.prev = 21;
+                  context$1$0.prev = 22;
+                  if (!_iteratorNormalCompletion22 && _iterator22["return"]) {
+                    _iterator22["return"]();
+                  }
+                case 24:
+                  context$1$0.prev = 24;
+                  if (!_didIteratorError22) {
+                    context$1$0.next = 27;
+                    break;
+                  }
+                  throw _iteratorError22;
+                case 27:
+                  return context$1$0.finish(24);
+                case 28:
+                  return context$1$0.finish(21);
+                case 29:
+                  seen.clear();
+                case 30:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[4, 17, 21, 29], [22, , 24, 28]]);
+        }));
+        var _zip = rewrap(_regeneratorRuntime.mark(function callee$0$0(iterables) {
+          var longest = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
+          var iters,
+              numIters,
+              numFinished,
+              finished,
+              zipped,
+              _iteratorNormalCompletion23,
+              _didIteratorError23,
+              _iteratorError23,
+              _iterator23,
+              _step23,
+              it,
+              _it$next,
+              value,
+              done;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  if (iterables.length) {
+                    context$1$0.next = 2;
+                    break;
+                  }
+                  return context$1$0.abrupt("return");
+                case 2:
+                  iters = iterables.map(getIterator);
+                  numIters = iterables.length;
+                  numFinished = 0;
+                  finished = false;
+                case 6:
+                  if (finished) {
+                    context$1$0.next = 44;
+                    break;
+                  }
+                  zipped = [];
+                  _iteratorNormalCompletion23 = true;
+                  _didIteratorError23 = false;
+                  _iteratorError23 = undefined;
+                  context$1$0.prev = 11;
+                  _iterator23 = _getIterator(iters);
+                case 13:
+                  if (_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done) {
+                    context$1$0.next = 26;
+                    break;
+                  }
+                  it = _step23.value;
+                  _it$next = it.next();
+                  value = _it$next.value;
+                  done = _it$next.done;
+                  if (!done) {
+                    context$1$0.next = 22;
+                    break;
+                  }
+                  if (longest) {
+                    context$1$0.next = 21;
+                    break;
+                  }
+                  return context$1$0.abrupt("return");
+                case 21:
+                  if (++numFinished == numIters) {
+                    finished = true;
+                  }
+                case 22:
+                  if (value === undefined) {
+                    zipped.length++;
+                  } else {
+                    zipped.push(value);
+                  }
+                case 23:
+                  _iteratorNormalCompletion23 = true;
+                  context$1$0.next = 13;
+                  break;
+                case 26:
+                  context$1$0.next = 32;
+                  break;
+                case 28:
+                  context$1$0.prev = 28;
+                  context$1$0.t0 = context$1$0["catch"](11);
+                  _didIteratorError23 = true;
+                  _iteratorError23 = context$1$0.t0;
+                case 32:
+                  context$1$0.prev = 32;
+                  context$1$0.prev = 33;
+                  if (!_iteratorNormalCompletion23 && _iterator23["return"]) {
+                    _iterator23["return"]();
+                  }
+                case 35:
+                  context$1$0.prev = 35;
+                  if (!_didIteratorError23) {
+                    context$1$0.next = 38;
+                    break;
+                  }
+                  throw _iteratorError23;
+                case 38:
+                  return context$1$0.finish(35);
+                case 39:
+                  return context$1$0.finish(32);
+                case 40:
+                  context$1$0.next = 42;
+                  return zipped;
+                case 42:
+                  context$1$0.next = 6;
+                  break;
+                case 44:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this, [[11, 28, 32, 40], [33, , 35, 39]]);
+        }));
+        rewrapStaticMethod("zip", _regeneratorRuntime.mark(function callee$0$0() {
+          for (var _len7 = arguments.length,
+              iterables = Array(_len7),
+              _key7 = 0; _key7 < _len7; _key7++) {
+            iterables[_key7] = arguments[_key7];
+          }
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  return context$1$0.delegateYield(_zip(iterables), "t0", 1);
+                case 1:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        rewrapStaticMethod("zipLongest", _regeneratorRuntime.mark(function callee$0$0() {
+          for (var _len8 = arguments.length,
+              iterables = Array(_len8),
+              _key8 = 0; _key8 < _len8; _key8++) {
+            iterables[_key8] = arguments[_key8];
+          }
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  return context$1$0.delegateYield(_zip(iterables, true), "t0", 1);
+                case 1:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        rewrapStaticMethod("zipWith", _regeneratorRuntime.mark(function callee$0$0(fn) {
+          for (var _len9 = arguments.length,
+              iterables = Array(_len9 > 1 ? _len9 - 1 : 0),
+              _key9 = 1; _key9 < _len9; _key9++) {
+            iterables[_key9 - 1] = arguments[_key9];
+          }
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  return context$1$0.delegateYield(_zip(iterables).spreadMap(fn), "t0", 1);
+                case 1:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        wu.MAX_BLOCK = 15;
+        wu.TIMEOUT = 1;
+        prototypeAndStatic("asyncEach", function(fn) {
+          var maxBlock = arguments.length <= 1 || arguments[1] === undefined ? wu.MAX_BLOCK : arguments[1];
+          var timeout = arguments.length <= 2 || arguments[2] === undefined ? wu.TIMEOUT : arguments[2];
+          var iter = getIterator(this);
+          return new _Promise(function(resolve, reject) {
+            (function loop() {
+              var start = Date.now();
+              var _iteratorNormalCompletion24 = true;
+              var _didIteratorError24 = false;
+              var _iteratorError24 = undefined;
+              try {
+                for (var _iterator24 = _getIterator(iter),
+                    _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
+                  var x = _step24.value;
+                  try {
+                    fn(x);
+                  } catch (e) {
+                    reject(e);
+                    return;
+                  }
+                  if (Date.now() - start > maxBlock) {
+                    setTimeout(loop, timeout);
+                    return;
+                  }
+                }
+              } catch (err) {
+                _didIteratorError24 = true;
+                _iteratorError24 = err;
+              } finally {
+                try {
+                  if (!_iteratorNormalCompletion24 && _iterator24["return"]) {
+                    _iterator24["return"]();
+                  }
+                } finally {
+                  if (_didIteratorError24) {
+                    throw _iteratorError24;
+                  }
+                }
+              }
+              resolve();
+            })();
+          });
+        }, 3);
+        prototypeAndStatic("every", function() {
+          var fn = arguments.length <= 0 || arguments[0] === undefined ? Boolean : arguments[0];
+          var _iteratorNormalCompletion25 = true;
+          var _didIteratorError25 = false;
+          var _iteratorError25 = undefined;
+          try {
+            for (var _iterator25 = _getIterator(this),
+                _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
+              var x = _step25.value;
+              if (!fn(x)) {
+                return false;
+              }
+            }
+          } catch (err) {
+            _didIteratorError25 = true;
+            _iteratorError25 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion25 && _iterator25["return"]) {
+                _iterator25["return"]();
+              }
+            } finally {
+              if (_didIteratorError25) {
+                throw _iteratorError25;
+              }
+            }
+          }
+          return true;
+        }, 1);
+        prototypeAndStatic("find", function(fn) {
+          var _iteratorNormalCompletion26 = true;
+          var _didIteratorError26 = false;
+          var _iteratorError26 = undefined;
+          try {
+            for (var _iterator26 = _getIterator(this),
+                _step26; !(_iteratorNormalCompletion26 = (_step26 = _iterator26.next()).done); _iteratorNormalCompletion26 = true) {
+              var x = _step26.value;
+              if (fn(x)) {
+                return x;
+              }
+            }
+          } catch (err) {
+            _didIteratorError26 = true;
+            _iteratorError26 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion26 && _iterator26["return"]) {
+                _iterator26["return"]();
+              }
+            } finally {
+              if (_didIteratorError26) {
+                throw _iteratorError26;
+              }
+            }
+          }
+        });
+        prototypeAndStatic("forEach", function(fn) {
+          var _iteratorNormalCompletion27 = true;
+          var _didIteratorError27 = false;
+          var _iteratorError27 = undefined;
+          try {
+            for (var _iterator27 = _getIterator(this),
+                _step27; !(_iteratorNormalCompletion27 = (_step27 = _iterator27.next()).done); _iteratorNormalCompletion27 = true) {
+              var x = _step27.value;
+              fn(x);
+            }
+          } catch (err) {
+            _didIteratorError27 = true;
+            _iteratorError27 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion27 && _iterator27["return"]) {
+                _iterator27["return"]();
+              }
+            } finally {
+              if (_didIteratorError27) {
+                throw _iteratorError27;
+              }
+            }
+          }
+        });
+        prototypeAndStatic("has", function(thing) {
+          return this.some(function(x) {
+            return x === thing;
+          });
+        });
+        prototypeAndStatic("reduce", function(fn) {
+          var initial = arguments.length <= 1 || arguments[1] === undefined ? undefined : arguments[1];
+          var val = initial;
+          if (val === undefined) {
+            var _iteratorNormalCompletion28 = true;
+            var _didIteratorError28 = false;
+            var _iteratorError28 = undefined;
+            try {
+              for (var _iterator28 = _getIterator(this),
+                  _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
+                var x = _step28.value;
+                val = x;
+                break;
+              }
+            } catch (err) {
+              _didIteratorError28 = true;
+              _iteratorError28 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion28 && _iterator28["return"]) {
+                  _iterator28["return"]();
+                }
+              } finally {
+                if (_didIteratorError28) {
+                  throw _iteratorError28;
+                }
+              }
+            }
+          }
+          var _iteratorNormalCompletion29 = true;
+          var _didIteratorError29 = false;
+          var _iteratorError29 = undefined;
+          try {
+            for (var _iterator29 = _getIterator(this),
+                _step29; !(_iteratorNormalCompletion29 = (_step29 = _iterator29.next()).done); _iteratorNormalCompletion29 = true) {
+              var x = _step29.value;
+              val = fn(val, x);
+            }
+          } catch (err) {
+            _didIteratorError29 = true;
+            _iteratorError29 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion29 && _iterator29["return"]) {
+                _iterator29["return"]();
+              }
+            } finally {
+              if (_didIteratorError29) {
+                throw _iteratorError29;
+              }
+            }
+          }
+          return val;
+        }, 2);
+        prototypeAndStatic("some", function() {
+          var fn = arguments.length <= 0 || arguments[0] === undefined ? Boolean : arguments[0];
+          var _iteratorNormalCompletion30 = true;
+          var _didIteratorError30 = false;
+          var _iteratorError30 = undefined;
+          try {
+            for (var _iterator30 = _getIterator(this),
+                _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
+              var x = _step30.value;
+              if (fn(x)) {
+                return true;
+              }
+            }
+          } catch (err) {
+            _didIteratorError30 = true;
+            _iteratorError30 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion30 && _iterator30["return"]) {
+                _iterator30["return"]();
+              }
+            } finally {
+              if (_didIteratorError30) {
+                throw _iteratorError30;
+              }
+            }
+          }
+          return false;
+        }, 1);
+        prototypeAndStatic("toArray", function() {
+          return [].concat(_toConsumableArray(this));
+        });
+        var MAX_CACHE = 500;
+        var _tee = rewrap(_regeneratorRuntime.mark(function callee$0$0(iterator, cache) {
+          var items,
+              index,
+              _iterator$next,
+              done,
+              value;
+          return _regeneratorRuntime.wrap(function callee$0$0$(context$1$0) {
+            while (1)
+              switch (context$1$0.prev = context$1$0.next) {
+                case 0:
+                  items = cache.items;
+                  index = 0;
+                case 2:
+                  if (false) {
+                    context$1$0.next = 25;
+                    break;
+                  }
+                  if (!(index === items.length)) {
+                    context$1$0.next = 14;
+                    break;
+                  }
+                  _iterator$next = iterator.next();
+                  done = _iterator$next.done;
+                  value = _iterator$next.value;
+                  if (!done) {
+                    context$1$0.next = 10;
+                    break;
+                  }
+                  if (cache.returned === MISSING) {
+                    cache.returned = value;
+                  }
+                  return context$1$0.abrupt("break", 25);
+                case 10:
+                  context$1$0.next = 12;
+                  return items[index++] = value;
+                case 12:
+                  context$1$0.next = 23;
+                  break;
+                case 14:
+                  if (!(index === cache.tail)) {
+                    context$1$0.next = 21;
+                    break;
+                  }
+                  value = items[index];
+                  if (index === MAX_CACHE) {
+                    items = cache.items = items.slice(index);
+                    index = 0;
+                    cache.tail = 0;
+                  } else {
+                    items[index] = undefined;
+                    cache.tail = ++index;
+                  }
+                  context$1$0.next = 19;
+                  return value;
+                case 19:
+                  context$1$0.next = 23;
+                  break;
+                case 21:
+                  context$1$0.next = 23;
+                  return items[index++];
+                case 23:
+                  context$1$0.next = 2;
+                  break;
+                case 25:
+                  if (cache.tail === index) {
+                    items.length = 0;
+                  }
+                  return context$1$0.abrupt("return", cache.returned);
+                case 27:
+                case "end":
+                  return context$1$0.stop();
+              }
+          }, callee$0$0, this);
+        }));
+        _tee.prototype = Wu.prototype;
+        prototypeAndStatic("tee", function() {
+          var n = arguments.length <= 0 || arguments[0] === undefined ? 2 : arguments[0];
+          var iterables = new Array(n);
+          var cache = {
+            tail: 0,
+            items: [],
+            returned: MISSING
+          };
+          while (n--) {
+            iterables[n] = _tee(this, cache);
+          }
+          return iterables;
+        }, 1);
+        prototypeAndStatic("unzip", function() {
+          var n = arguments.length <= 0 || arguments[0] === undefined ? 2 : arguments[0];
+          return this.tee(n).map(function(iter, i) {
+            return iter.pluck(i);
+          });
+        }, 1);
+        wu.tang = {clan: 36};
+      }, function(module, exports, __webpack_require__) {
+        "use strict";
+        var _Array$from = __webpack_require__(2)["default"];
+        exports["default"] = function(arr) {
+          if (Array.isArray(arr)) {
+            for (var i = 0,
+                arr2 = Array(arr.length); i < arr.length; i++)
+              arr2[i] = arr[i];
+            return arr2;
+          } else {
+            return _Array$from(arr);
+          }
+        };
+        exports.__esModule = true;
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(3),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(4);
+        __webpack_require__(26);
+        module.exports = __webpack_require__(12).Array.from;
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var $at = __webpack_require__(5)(true);
+        __webpack_require__(8)(String, 'String', function(iterated) {
+          this._t = String(iterated);
+          this._i = 0;
+        }, function() {
+          var O = this._t,
+              index = this._i,
+              point;
+          if (index >= O.length)
+            return {
+              value: undefined,
+              done: true
+            };
+          point = $at(O, index);
+          this._i += point.length;
+          return {
+            value: point,
+            done: false
+          };
+        });
+      }, function(module, exports, __webpack_require__) {
+        var toInteger = __webpack_require__(6),
+            defined = __webpack_require__(7);
+        module.exports = function(TO_STRING) {
+          return function(that, pos) {
+            var s = String(defined(that)),
+                i = toInteger(pos),
+                l = s.length,
+                a,
+                b;
+            if (i < 0 || i >= l)
+              return TO_STRING ? '' : undefined;
+            a = s.charCodeAt(i);
+            return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff ? TO_STRING ? s.charAt(i) : a : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+          };
+        };
+      }, function(module, exports) {
+        var ceil = Math.ceil,
+            floor = Math.floor;
+        module.exports = function(it) {
+          return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+        };
+      }, function(module, exports) {
+        module.exports = function(it) {
+          if (it == undefined)
+            throw TypeError("Can't call method on  " + it);
+          return it;
+        };
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var LIBRARY = __webpack_require__(9),
+            $def = __webpack_require__(10),
+            $redef = __webpack_require__(13),
+            hide = __webpack_require__(14),
+            has = __webpack_require__(19),
+            SYMBOL_ITERATOR = __webpack_require__(20)('iterator'),
+            Iterators = __webpack_require__(23),
+            BUGGY = !([].keys && 'next' in [].keys()),
+            FF_ITERATOR = '@@iterator',
+            KEYS = 'keys',
+            VALUES = 'values';
+        var returnThis = function() {
+          return this;
+        };
+        module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE) {
+          __webpack_require__(24)(Constructor, NAME, next);
+          var createMethod = function(kind) {
+            switch (kind) {
+              case KEYS:
+                return function keys() {
+                  return new Constructor(this, kind);
+                };
+              case VALUES:
+                return function values() {
+                  return new Constructor(this, kind);
+                };
+            }
+            return function entries() {
+              return new Constructor(this, kind);
+            };
+          };
+          var TAG = NAME + ' Iterator',
+              proto = Base.prototype,
+              _native = proto[SYMBOL_ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT],
+              _default = _native || createMethod(DEFAULT),
+              methods,
+              key;
+          if (_native) {
+            var IteratorPrototype = __webpack_require__(15).getProto(_default.call(new Base));
+            __webpack_require__(25)(IteratorPrototype, TAG, true);
+            if (!LIBRARY && has(proto, FF_ITERATOR))
+              hide(IteratorPrototype, SYMBOL_ITERATOR, returnThis);
+          }
+          if (!LIBRARY || FORCE)
+            hide(proto, SYMBOL_ITERATOR, _default);
+          Iterators[NAME] = _default;
+          Iterators[TAG] = returnThis;
+          if (DEFAULT) {
+            methods = {
+              keys: IS_SET ? _default : createMethod(KEYS),
+              values: DEFAULT == VALUES ? _default : createMethod(VALUES),
+              entries: DEFAULT != VALUES ? _default : createMethod('entries')
+            };
+            if (FORCE)
+              for (key in methods) {
+                if (!(key in proto))
+                  $redef(proto, key, methods[key]);
+              }
+            else
+              $def($def.P + $def.F * BUGGY, NAME, methods);
+          }
+        };
+      }, function(module, exports) {
+        module.exports = true;
+      }, function(module, exports, __webpack_require__) {
+        var global = __webpack_require__(11),
+            core = __webpack_require__(12),
+            PROTOTYPE = 'prototype';
+        var ctx = function(fn, that) {
+          return function() {
+            return fn.apply(that, arguments);
+          };
+        };
+        var $def = function(type, name, source) {
+          var key,
+              own,
+              out,
+              exp,
+              isGlobal = type & $def.G,
+              isProto = type & $def.P,
+              target = isGlobal ? global : type & $def.S ? global[name] : (global[name] || {})[PROTOTYPE],
+              exports = isGlobal ? core : core[name] || (core[name] = {});
+          if (isGlobal)
+            source = name;
+          for (key in source) {
+            own = !(type & $def.F) && target && key in target;
+            if (own && key in exports)
+              continue;
+            out = own ? target[key] : source[key];
+            if (isGlobal && typeof target[key] != 'function')
+              exp = source[key];
+            else if (type & $def.B && own)
+              exp = ctx(out, global);
+            else if (type & $def.W && target[key] == out)
+              !function(C) {
+                exp = function(param) {
+                  return this instanceof C ? new C(param) : C(param);
+                };
+                exp[PROTOTYPE] = C[PROTOTYPE];
+              }(out);
+            else
+              exp = isProto && typeof out == 'function' ? ctx(Function.call, out) : out;
+            exports[key] = exp;
+            if (isProto)
+              (exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
+          }
+        };
+        $def.F = 1;
+        $def.G = 2;
+        $def.S = 4;
+        $def.P = 8;
+        $def.B = 16;
+        $def.W = 32;
+        module.exports = $def;
+      }, function(module, exports) {
+        var UNDEFINED = 'undefined';
+        var global = module.exports = typeof window != UNDEFINED && window.Math == Math ? window : typeof self != UNDEFINED && self.Math == Math ? self : Function('return this')();
+        if (typeof __g == 'number')
+          __g = global;
+      }, function(module, exports) {
+        var core = module.exports = {version: '1.2.0'};
+        if (typeof __e == 'number')
+          __e = core;
+      }, function(module, exports, __webpack_require__) {
+        module.exports = __webpack_require__(14);
+      }, function(module, exports, __webpack_require__) {
+        var $ = __webpack_require__(15),
+            createDesc = __webpack_require__(16);
+        module.exports = __webpack_require__(17) ? function(object, key, value) {
+          return $.setDesc(object, key, createDesc(1, value));
+        } : function(object, key, value) {
+          object[key] = value;
+          return object;
+        };
+      }, function(module, exports) {
+        var $Object = Object;
+        module.exports = {
+          create: $Object.create,
+          getProto: $Object.getPrototypeOf,
+          isEnum: {}.propertyIsEnumerable,
+          getDesc: $Object.getOwnPropertyDescriptor,
+          setDesc: $Object.defineProperty,
+          setDescs: $Object.defineProperties,
+          getKeys: $Object.keys,
+          getNames: $Object.getOwnPropertyNames,
+          getSymbols: $Object.getOwnPropertySymbols,
+          each: [].forEach
+        };
+      }, function(module, exports) {
+        module.exports = function(bitmap, value) {
+          return {
+            enumerable: !(bitmap & 1),
+            configurable: !(bitmap & 2),
+            writable: !(bitmap & 4),
+            value: value
+          };
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = !__webpack_require__(18)(function() {
+          return Object.defineProperty({}, 'a', {get: function() {
+              return 7;
+            }}).a != 7;
+        });
+      }, function(module, exports) {
+        module.exports = function(exec) {
+          try {
+            return !!exec();
+          } catch (e) {
+            return true;
+          }
+        };
+      }, function(module, exports) {
+        var hasOwnProperty = {}.hasOwnProperty;
+        module.exports = function(it, key) {
+          return hasOwnProperty.call(it, key);
+        };
+      }, function(module, exports, __webpack_require__) {
+        var store = __webpack_require__(21)('wks'),
+            Symbol = __webpack_require__(11).Symbol;
+        module.exports = function(name) {
+          return store[name] || (store[name] = Symbol && Symbol[name] || (Symbol || __webpack_require__(22))('Symbol.' + name));
+        };
+      }, function(module, exports, __webpack_require__) {
+        var global = __webpack_require__(11),
+            SHARED = '__core-js_shared__',
+            store = global[SHARED] || (global[SHARED] = {});
+        module.exports = function(key) {
+          return store[key] || (store[key] = {});
+        };
+      }, function(module, exports) {
+        var id = 0,
+            px = Math.random();
+        module.exports = function(key) {
+          return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+        };
+      }, function(module, exports) {
+        module.exports = {};
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var $ = __webpack_require__(15),
+            IteratorPrototype = {};
+        __webpack_require__(14)(IteratorPrototype, __webpack_require__(20)('iterator'), function() {
+          return this;
+        });
+        module.exports = function(Constructor, NAME, next) {
+          Constructor.prototype = $.create(IteratorPrototype, {next: __webpack_require__(16)(1, next)});
+          __webpack_require__(25)(Constructor, NAME + ' Iterator');
+        };
+      }, function(module, exports, __webpack_require__) {
+        var has = __webpack_require__(19),
+            hide = __webpack_require__(14),
+            TAG = __webpack_require__(20)('toStringTag');
+        module.exports = function(it, tag, stat) {
+          if (it && !has(it = stat ? it : it.prototype, TAG))
+            hide(it, TAG, tag);
+        };
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var ctx = __webpack_require__(27),
+            $def = __webpack_require__(10),
+            toObject = __webpack_require__(29),
+            call = __webpack_require__(30),
+            isArrayIter = __webpack_require__(33),
+            toLength = __webpack_require__(34),
+            getIterFn = __webpack_require__(35);
+        $def($def.S + $def.F * !__webpack_require__(38)(function(iter) {
+          Array.from(iter);
+        }), 'Array', {from: function from(arrayLike) {
+            var O = toObject(arrayLike),
+                C = typeof this == 'function' ? this : Array,
+                mapfn = arguments[1],
+                mapping = mapfn !== undefined,
+                index = 0,
+                iterFn = getIterFn(O),
+                length,
+                result,
+                step,
+                iterator;
+            if (mapping)
+              mapfn = ctx(mapfn, arguments[2], 2);
+            if (iterFn != undefined && !(C == Array && isArrayIter(iterFn))) {
+              for (iterator = iterFn.call(O), result = new C; !(step = iterator.next()).done; index++) {
+                result[index] = mapping ? call(iterator, mapfn, [step.value, index], true) : step.value;
+              }
+            } else {
+              length = toLength(O.length);
+              for (result = new C(length); length > index; index++) {
+                result[index] = mapping ? mapfn(O[index], index) : O[index];
+              }
+            }
+            result.length = index;
+            return result;
+          }});
+      }, function(module, exports, __webpack_require__) {
+        var aFunction = __webpack_require__(28);
+        module.exports = function(fn, that, length) {
+          aFunction(fn);
+          if (that === undefined)
+            return fn;
+          switch (length) {
+            case 1:
+              return function(a) {
+                return fn.call(that, a);
+              };
+            case 2:
+              return function(a, b) {
+                return fn.call(that, a, b);
+              };
+            case 3:
+              return function(a, b, c) {
+                return fn.call(that, a, b, c);
+              };
+          }
+          return function() {
+            return fn.apply(that, arguments);
+          };
+        };
+      }, function(module, exports) {
+        module.exports = function(it) {
+          if (typeof it != 'function')
+            throw TypeError(it + ' is not a function!');
+          return it;
+        };
+      }, function(module, exports, __webpack_require__) {
+        var defined = __webpack_require__(7);
+        module.exports = function(it) {
+          return Object(defined(it));
+        };
+      }, function(module, exports, __webpack_require__) {
+        var anObject = __webpack_require__(31);
+        module.exports = function(iterator, fn, value, entries) {
+          try {
+            return entries ? fn(anObject(value)[0], value[1]) : fn(value);
+          } catch (e) {
+            var ret = iterator['return'];
+            if (ret !== undefined)
+              anObject(ret.call(iterator));
+            throw e;
+          }
+        };
+      }, function(module, exports, __webpack_require__) {
+        var isObject = __webpack_require__(32);
+        module.exports = function(it) {
+          if (!isObject(it))
+            throw TypeError(it + ' is not an object!');
+          return it;
+        };
+      }, function(module, exports) {
+        module.exports = function(it) {
+          return typeof it === 'object' ? it !== null : typeof it === 'function';
+        };
+      }, function(module, exports, __webpack_require__) {
+        var Iterators = __webpack_require__(23),
+            ITERATOR = __webpack_require__(20)('iterator');
+        module.exports = function(it) {
+          return (Iterators.Array || Array.prototype[ITERATOR]) === it;
+        };
+      }, function(module, exports, __webpack_require__) {
+        var toInteger = __webpack_require__(6),
+            min = Math.min;
+        module.exports = function(it) {
+          return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0;
+        };
+      }, function(module, exports, __webpack_require__) {
+        var classof = __webpack_require__(36),
+            ITERATOR = __webpack_require__(20)('iterator'),
+            Iterators = __webpack_require__(23);
+        module.exports = __webpack_require__(12).getIteratorMethod = function(it) {
+          if (it != undefined)
+            return it[ITERATOR] || it['@@iterator'] || Iterators[classof(it)];
+        };
+      }, function(module, exports, __webpack_require__) {
+        var cof = __webpack_require__(37),
+            TAG = __webpack_require__(20)('toStringTag'),
+            ARG = cof(function() {
+              return arguments;
+            }()) == 'Arguments';
+        module.exports = function(it) {
+          var O,
+              T,
+              B;
+          return it === undefined ? 'Undefined' : it === null ? 'Null' : typeof(T = (O = Object(it))[TAG]) == 'string' ? T : ARG ? cof(O) : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+        };
+      }, function(module, exports) {
+        var toString = {}.toString;
+        module.exports = function(it) {
+          return toString.call(it).slice(8, -1);
+        };
+      }, function(module, exports, __webpack_require__) {
+        var SYMBOL_ITERATOR = __webpack_require__(20)('iterator'),
+            SAFE_CLOSING = false;
+        try {
+          var riter = [7][SYMBOL_ITERATOR]();
+          riter['return'] = function() {
+            SAFE_CLOSING = true;
+          };
+          Array.from(riter, function() {
+            throw 2;
+          });
+        } catch (e) {}
+        module.exports = function(exec) {
+          if (!SAFE_CLOSING)
+            return false;
+          var safe = false;
+          try {
+            var arr = [7],
+                iter = arr[SYMBOL_ITERATOR]();
+            iter.next = function() {
+              safe = true;
+            };
+            arr[SYMBOL_ITERATOR] = function() {
+              return iter;
+            };
+            exec(arr);
+          } catch (e) {}
+          return safe;
+        };
+      }, function(module, exports, __webpack_require__) {
+        "use strict";
+        var _getIterator = __webpack_require__(40)["default"];
+        var _isIterable = __webpack_require__(49)["default"];
+        exports["default"] = (function() {
+          function sliceIterator(arr, i) {
+            var _arr = [];
+            var _n = true;
+            var _d = false;
+            var _e = undefined;
+            try {
+              for (var _i = _getIterator(arr),
+                  _s; !(_n = (_s = _i.next()).done); _n = true) {
+                _arr.push(_s.value);
+                if (i && _arr.length === i)
+                  break;
+              }
+            } catch (err) {
+              _d = true;
+              _e = err;
+            } finally {
+              try {
+                if (!_n && _i["return"])
+                  _i["return"]();
+              } finally {
+                if (_d)
+                  throw _e;
+              }
+            }
+            return _arr;
+          }
+          return function(arr, i) {
+            if (Array.isArray(arr)) {
+              return arr;
+            } else if (_isIterable(Object(arr))) {
+              return sliceIterator(arr, i);
+            } else {
+              throw new TypeError("Invalid attempt to destructure non-iterable instance");
+            }
+          };
+        })();
+        exports.__esModule = true;
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(41),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(42);
+        __webpack_require__(4);
+        module.exports = __webpack_require__(48);
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(43);
+        var Iterators = __webpack_require__(23);
+        Iterators.NodeList = Iterators.HTMLCollection = Iterators.Array;
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var setUnscope = __webpack_require__(44),
+            step = __webpack_require__(45),
+            Iterators = __webpack_require__(23),
+            toIObject = __webpack_require__(46);
+        __webpack_require__(8)(Array, 'Array', function(iterated, kind) {
+          this._t = toIObject(iterated);
+          this._i = 0;
+          this._k = kind;
+        }, function() {
+          var O = this._t,
+              kind = this._k,
+              index = this._i++;
+          if (!O || index >= O.length) {
+            this._t = undefined;
+            return step(1);
+          }
+          if (kind == 'keys')
+            return step(0, index);
+          if (kind == 'values')
+            return step(0, O[index]);
+          return step(0, [index, O[index]]);
+        }, 'values');
+        Iterators.Arguments = Iterators.Array;
+        setUnscope('keys');
+        setUnscope('values');
+        setUnscope('entries');
+      }, function(module, exports) {
+        module.exports = function() {};
+      }, function(module, exports) {
+        module.exports = function(done, value) {
+          return {
+            value: value,
+            done: !!done
+          };
+        };
+      }, function(module, exports, __webpack_require__) {
+        var IObject = __webpack_require__(47),
+            defined = __webpack_require__(7);
+        module.exports = function(it) {
+          return IObject(defined(it));
+        };
+      }, function(module, exports, __webpack_require__) {
+        var cof = __webpack_require__(37);
+        module.exports = 0 in Object('z') ? Object : function(it) {
+          return cof(it) == 'String' ? it.split('') : Object(it);
+        };
+      }, function(module, exports, __webpack_require__) {
+        var anObject = __webpack_require__(31),
+            get = __webpack_require__(35);
+        module.exports = __webpack_require__(12).getIterator = function(it) {
+          var iterFn = get(it);
+          if (typeof iterFn != 'function')
+            throw TypeError(it + ' is not iterable!');
+          return anObject(iterFn.call(it));
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(50),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(42);
+        __webpack_require__(4);
+        module.exports = __webpack_require__(51);
+      }, function(module, exports, __webpack_require__) {
+        var classof = __webpack_require__(36),
+            ITERATOR = __webpack_require__(20)('iterator'),
+            Iterators = __webpack_require__(23);
+        module.exports = __webpack_require__(12).isIterable = function(it) {
+          var O = Object(it);
+          return ITERATOR in O || '@@iterator' in O || Iterators.hasOwnProperty(classof(O));
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(53),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(4);
+        __webpack_require__(42);
+        module.exports = __webpack_require__(20)('iterator');
+      }, function(module, exports, __webpack_require__) {
+        (function(global) {
+          var g = typeof global === "object" ? global : typeof window === "object" ? window : typeof self === "object" ? self : this;
+          var hadRuntime = g.regeneratorRuntime && Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+          var oldRuntime = hadRuntime && g.regeneratorRuntime;
+          g.regeneratorRuntime = undefined;
+          module.exports = __webpack_require__(55);
+          if (hadRuntime) {
+            g.regeneratorRuntime = oldRuntime;
+          } else {
+            try {
+              delete g.regeneratorRuntime;
+            } catch (e) {
+              g.regeneratorRuntime = undefined;
+            }
+          }
+          module.exports = {
+            "default": module.exports,
+            __esModule: true
+          };
+        }.call(exports, (function() {
+          return this;
+        }())));
+      }, function(module, exports, __webpack_require__) {
+        (function(global, process) {
+          "use strict";
+          var _Symbol = __webpack_require__(57)["default"];
+          var _Symbol$iterator = __webpack_require__(52)["default"];
+          var _Object$create = __webpack_require__(63)["default"];
+          var _Promise = __webpack_require__(65)["default"];
+          !(function(global) {
+            "use strict";
+            var hasOwn = Object.prototype.hasOwnProperty;
+            var undefined;
+            var iteratorSymbol = typeof _Symbol === "function" && _Symbol$iterator || "@@iterator";
+            var inModule = typeof module === "object";
+            var runtime = global.regeneratorRuntime;
+            if (runtime) {
+              if (inModule) {
+                module.exports = runtime;
+              }
+              return;
+            }
+            runtime = global.regeneratorRuntime = inModule ? module.exports : {};
+            function wrap(innerFn, outerFn, self, tryLocsList) {
+              var generator = _Object$create((outerFn || Generator).prototype);
+              generator._invoke = makeInvokeMethod(innerFn, self || null, new Context(tryLocsList || []));
+              return generator;
+            }
+            runtime.wrap = wrap;
+            function tryCatch(fn, obj, arg) {
+              try {
+                return {
+                  type: "normal",
+                  arg: fn.call(obj, arg)
+                };
+              } catch (err) {
+                return {
+                  type: "throw",
+                  arg: err
+                };
+              }
+            }
+            var GenStateSuspendedStart = "suspendedStart";
+            var GenStateSuspendedYield = "suspendedYield";
+            var GenStateExecuting = "executing";
+            var GenStateCompleted = "completed";
+            var ContinueSentinel = {};
+            function Generator() {}
+            function GeneratorFunction() {}
+            function GeneratorFunctionPrototype() {}
+            var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype;
+            GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+            GeneratorFunctionPrototype.constructor = GeneratorFunction;
+            GeneratorFunction.displayName = "GeneratorFunction";
+            function defineIteratorMethods(prototype) {
+              ["next", "throw", "return"].forEach(function(method) {
+                prototype[method] = function(arg) {
+                  return this._invoke(method, arg);
+                };
+              });
+            }
+            runtime.isGeneratorFunction = function(genFun) {
+              var ctor = typeof genFun === "function" && genFun.constructor;
+              return ctor ? ctor === GeneratorFunction || (ctor.displayName || ctor.name) === "GeneratorFunction" : false;
+            };
+            runtime.mark = function(genFun) {
+              genFun.__proto__ = GeneratorFunctionPrototype;
+              genFun.prototype = _Object$create(Gp);
+              return genFun;
+            };
+            runtime.awrap = function(arg) {
+              return new AwaitArgument(arg);
+            };
+            function AwaitArgument(arg) {
+              this.arg = arg;
+            }
+            function AsyncIterator(generator) {
+              function invoke(method, arg) {
+                var result = generator[method](arg);
+                var value = result.value;
+                return value instanceof AwaitArgument ? _Promise.resolve(value.arg).then(invokeNext, invokeThrow) : _Promise.resolve(value).then(function(unwrapped) {
+                  result.value = unwrapped;
+                  return result;
+                });
+              }
+              if (typeof process === "object" && process.domain) {
+                invoke = process.domain.bind(invoke);
+              }
+              var invokeNext = invoke.bind(generator, "next");
+              var invokeThrow = invoke.bind(generator, "throw");
+              var invokeReturn = invoke.bind(generator, "return");
+              var previousPromise;
+              function enqueue(method, arg) {
+                var enqueueResult = previousPromise ? previousPromise.then(function() {
+                  return invoke(method, arg);
+                }) : new _Promise(function(resolve) {
+                  resolve(invoke(method, arg));
+                });
+                previousPromise = enqueueResult["catch"](function(ignored) {});
+                return enqueueResult;
+              }
+              this._invoke = enqueue;
+            }
+            defineIteratorMethods(AsyncIterator.prototype);
+            runtime.async = function(innerFn, outerFn, self, tryLocsList) {
+              var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList));
+              return runtime.isGeneratorFunction(outerFn) ? iter : iter.next().then(function(result) {
+                return result.done ? result.value : iter.next();
+              });
+            };
+            function makeInvokeMethod(innerFn, self, context) {
+              var state = GenStateSuspendedStart;
+              return function invoke(method, arg) {
+                if (state === GenStateExecuting) {
+                  throw new Error("Generator is already running");
+                }
+                if (state === GenStateCompleted) {
+                  if (method === "throw") {
+                    throw arg;
+                  }
+                  return doneResult();
+                }
+                while (true) {
+                  var delegate = context.delegate;
+                  if (delegate) {
+                    if (method === "return" || method === "throw" && delegate.iterator[method] === undefined) {
+                      context.delegate = null;
+                      var returnMethod = delegate.iterator["return"];
+                      if (returnMethod) {
+                        var record = tryCatch(returnMethod, delegate.iterator, arg);
+                        if (record.type === "throw") {
+                          method = "throw";
+                          arg = record.arg;
+                          continue;
+                        }
+                      }
+                      if (method === "return") {
+                        continue;
+                      }
+                    }
+                    var record = tryCatch(delegate.iterator[method], delegate.iterator, arg);
+                    if (record.type === "throw") {
+                      context.delegate = null;
+                      method = "throw";
+                      arg = record.arg;
+                      continue;
+                    }
+                    method = "next";
+                    arg = undefined;
+                    var info = record.arg;
+                    if (info.done) {
+                      context[delegate.resultName] = info.value;
+                      context.next = delegate.nextLoc;
+                    } else {
+                      state = GenStateSuspendedYield;
+                      return info;
+                    }
+                    context.delegate = null;
+                  }
+                  if (method === "next") {
+                    if (state === GenStateSuspendedYield) {
+                      context.sent = arg;
+                    } else {
+                      context.sent = undefined;
+                    }
+                  } else if (method === "throw") {
+                    if (state === GenStateSuspendedStart) {
+                      state = GenStateCompleted;
+                      throw arg;
+                    }
+                    if (context.dispatchException(arg)) {
+                      method = "next";
+                      arg = undefined;
+                    }
+                  } else if (method === "return") {
+                    context.abrupt("return", arg);
+                  }
+                  state = GenStateExecuting;
+                  var record = tryCatch(innerFn, self, context);
+                  if (record.type === "normal") {
+                    state = context.done ? GenStateCompleted : GenStateSuspendedYield;
+                    var info = {
+                      value: record.arg,
+                      done: context.done
+                    };
+                    if (record.arg === ContinueSentinel) {
+                      if (context.delegate && method === "next") {
+                        arg = undefined;
+                      }
+                    } else {
+                      return info;
+                    }
+                  } else if (record.type === "throw") {
+                    state = GenStateCompleted;
+                    method = "throw";
+                    arg = record.arg;
+                  }
+                }
+              };
+            }
+            defineIteratorMethods(Gp);
+            Gp[iteratorSymbol] = function() {
+              return this;
+            };
+            Gp.toString = function() {
+              return "[object Generator]";
+            };
+            function pushTryEntry(locs) {
+              var entry = {tryLoc: locs[0]};
+              if (1 in locs) {
+                entry.catchLoc = locs[1];
+              }
+              if (2 in locs) {
+                entry.finallyLoc = locs[2];
+                entry.afterLoc = locs[3];
+              }
+              this.tryEntries.push(entry);
+            }
+            function resetTryEntry(entry) {
+              var record = entry.completion || {};
+              record.type = "normal";
+              delete record.arg;
+              entry.completion = record;
+            }
+            function Context(tryLocsList) {
+              this.tryEntries = [{tryLoc: "root"}];
+              tryLocsList.forEach(pushTryEntry, this);
+              this.reset(true);
+            }
+            runtime.keys = function(object) {
+              var keys = [];
+              for (var key in object) {
+                keys.push(key);
+              }
+              keys.reverse();
+              return function next() {
+                while (keys.length) {
+                  var key = keys.pop();
+                  if (key in object) {
+                    next.value = key;
+                    next.done = false;
+                    return next;
+                  }
+                }
+                next.done = true;
+                return next;
+              };
+            };
+            function values(iterable) {
+              if (iterable) {
+                var iteratorMethod = iterable[iteratorSymbol];
+                if (iteratorMethod) {
+                  return iteratorMethod.call(iterable);
+                }
+                if (typeof iterable.next === "function") {
+                  return iterable;
+                }
+                if (!isNaN(iterable.length)) {
+                  var i = -1,
+                      next = function next() {
+                        while (++i < iterable.length) {
+                          if (hasOwn.call(iterable, i)) {
+                            next.value = iterable[i];
+                            next.done = false;
+                            return next;
+                          }
+                        }
+                        next.value = undefined;
+                        next.done = true;
+                        return next;
+                      };
+                  return next.next = next;
+                }
+              }
+              return {next: doneResult};
+            }
+            runtime.values = values;
+            function doneResult() {
+              return {
+                value: undefined,
+                done: true
+              };
+            }
+            Context.prototype = {
+              constructor: Context,
+              reset: function reset(skipTempReset) {
+                this.prev = 0;
+                this.next = 0;
+                this.sent = undefined;
+                this.done = false;
+                this.delegate = null;
+                this.tryEntries.forEach(resetTryEntry);
+                if (!skipTempReset) {
+                  for (var name in this) {
+                    if (name.charAt(0) === "t" && hasOwn.call(this, name) && !isNaN(+name.slice(1))) {
+                      this[name] = undefined;
+                    }
+                  }
+                }
+              },
+              stop: function stop() {
+                this.done = true;
+                var rootEntry = this.tryEntries[0];
+                var rootRecord = rootEntry.completion;
+                if (rootRecord.type === "throw") {
+                  throw rootRecord.arg;
+                }
+                return this.rval;
+              },
+              dispatchException: function dispatchException(exception) {
+                if (this.done) {
+                  throw exception;
+                }
+                var context = this;
+                function handle(loc, caught) {
+                  record.type = "throw";
+                  record.arg = exception;
+                  context.next = loc;
+                  return !!caught;
+                }
+                for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+                  var entry = this.tryEntries[i];
+                  var record = entry.completion;
+                  if (entry.tryLoc === "root") {
+                    return handle("end");
+                  }
+                  if (entry.tryLoc <= this.prev) {
+                    var hasCatch = hasOwn.call(entry, "catchLoc");
+                    var hasFinally = hasOwn.call(entry, "finallyLoc");
+                    if (hasCatch && hasFinally) {
+                      if (this.prev < entry.catchLoc) {
+                        return handle(entry.catchLoc, true);
+                      } else if (this.prev < entry.finallyLoc) {
+                        return handle(entry.finallyLoc);
+                      }
+                    } else if (hasCatch) {
+                      if (this.prev < entry.catchLoc) {
+                        return handle(entry.catchLoc, true);
+                      }
+                    } else if (hasFinally) {
+                      if (this.prev < entry.finallyLoc) {
+                        return handle(entry.finallyLoc);
+                      }
+                    } else {
+                      throw new Error("try statement without catch or finally");
+                    }
+                  }
+                }
+              },
+              abrupt: function abrupt(type, arg) {
+                for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+                  var entry = this.tryEntries[i];
+                  if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) {
+                    var finallyEntry = entry;
+                    break;
+                  }
+                }
+                if (finallyEntry && (type === "break" || type === "continue") && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc) {
+                  finallyEntry = null;
+                }
+                var record = finallyEntry ? finallyEntry.completion : {};
+                record.type = type;
+                record.arg = arg;
+                if (finallyEntry) {
+                  this.next = finallyEntry.finallyLoc;
+                } else {
+                  this.complete(record);
+                }
+                return ContinueSentinel;
+              },
+              complete: function complete(record, afterLoc) {
+                if (record.type === "throw") {
+                  throw record.arg;
+                }
+                if (record.type === "break" || record.type === "continue") {
+                  this.next = record.arg;
+                } else if (record.type === "return") {
+                  this.rval = record.arg;
+                  this.next = "end";
+                } else if (record.type === "normal" && afterLoc) {
+                  this.next = afterLoc;
+                }
+              },
+              finish: function finish(finallyLoc) {
+                for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+                  var entry = this.tryEntries[i];
+                  if (entry.finallyLoc === finallyLoc) {
+                    this.complete(entry.completion, entry.afterLoc);
+                    resetTryEntry(entry);
+                    return ContinueSentinel;
+                  }
+                }
+              },
+              "catch": function _catch(tryLoc) {
+                for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+                  var entry = this.tryEntries[i];
+                  if (entry.tryLoc === tryLoc) {
+                    var record = entry.completion;
+                    if (record.type === "throw") {
+                      var thrown = record.arg;
+                      resetTryEntry(entry);
+                    }
+                    return thrown;
+                  }
+                }
+                throw new Error("illegal catch attempt");
+              },
+              delegateYield: function delegateYield(iterable, resultName, nextLoc) {
+                this.delegate = {
+                  iterator: values(iterable),
+                  resultName: resultName,
+                  nextLoc: nextLoc
+                };
+                return ContinueSentinel;
+              }
+            };
+          })(typeof global === "object" ? global : typeof window === "object" ? window : typeof self === "object" ? self : undefined);
+        }.call(exports, (function() {
+          return this;
+        }()), __webpack_require__(56)));
+      }, function(module, exports) {
+        var process = module.exports = {};
+        var queue = [];
+        var draining = false;
+        var currentQueue;
+        var queueIndex = -1;
+        function cleanUpNextTick() {
+          draining = false;
+          if (currentQueue.length) {
+            queue = currentQueue.concat(queue);
+          } else {
+            queueIndex = -1;
+          }
+          if (queue.length) {
+            drainQueue();
+          }
+        }
+        function drainQueue() {
+          if (draining) {
+            return;
+          }
+          var timeout = setTimeout(cleanUpNextTick);
+          draining = true;
+          var len = queue.length;
+          while (len) {
+            currentQueue = queue;
+            queue = [];
+            while (++queueIndex < len) {
+              if (currentQueue) {
+                currentQueue[queueIndex].run();
+              }
+            }
+            queueIndex = -1;
+            len = queue.length;
+          }
+          currentQueue = null;
+          draining = false;
+          clearTimeout(timeout);
+        }
+        process.nextTick = function(fun) {
+          var args = new Array(arguments.length - 1);
+          if (arguments.length > 1) {
+            for (var i = 1; i < arguments.length; i++) {
+              args[i - 1] = arguments[i];
+            }
+          }
+          queue.push(new Item(fun, args));
+          if (queue.length === 1 && !draining) {
+            setTimeout(drainQueue, 0);
+          }
+        };
+        function Item(fun, array) {
+          this.fun = fun;
+          this.array = array;
+        }
+        Item.prototype.run = function() {
+          this.fun.apply(null, this.array);
+        };
+        process.title = 'browser';
+        process.browser = true;
+        process.env = {};
+        process.argv = [];
+        process.version = '';
+        process.versions = {};
+        function noop() {}
+        process.on = noop;
+        process.addListener = noop;
+        process.once = noop;
+        process.off = noop;
+        process.removeListener = noop;
+        process.removeAllListeners = noop;
+        process.emit = noop;
+        process.binding = function(name) {
+          throw new Error('process.binding is not supported');
+        };
+        process.cwd = function() {
+          return '/';
+        };
+        process.chdir = function(dir) {
+          throw new Error('process.chdir is not supported');
+        };
+        process.umask = function() {
+          return 0;
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(58),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(59);
+        module.exports = __webpack_require__(12).Symbol;
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var $ = __webpack_require__(15),
+            global = __webpack_require__(11),
+            has = __webpack_require__(19),
+            SUPPORT_DESC = __webpack_require__(17),
+            $def = __webpack_require__(10),
+            $redef = __webpack_require__(13),
+            $fails = __webpack_require__(18),
+            shared = __webpack_require__(21),
+            setTag = __webpack_require__(25),
+            uid = __webpack_require__(22),
+            wks = __webpack_require__(20),
+            keyOf = __webpack_require__(60),
+            $names = __webpack_require__(61),
+            enumKeys = __webpack_require__(62),
+            isObject = __webpack_require__(32),
+            anObject = __webpack_require__(31),
+            toIObject = __webpack_require__(46),
+            createDesc = __webpack_require__(16),
+            getDesc = $.getDesc,
+            setDesc = $.setDesc,
+            _create = $.create,
+            getNames = $names.get,
+            $Symbol = global.Symbol,
+            setter = false,
+            HIDDEN = wks('_hidden'),
+            isEnum = $.isEnum,
+            SymbolRegistry = shared('symbol-registry'),
+            AllSymbols = shared('symbols'),
+            useNative = typeof $Symbol == 'function',
+            ObjectProto = Object.prototype;
+        var setSymbolDesc = SUPPORT_DESC && $fails(function() {
+          return _create(setDesc({}, 'a', {get: function() {
+              return setDesc(this, 'a', {value: 7}).a;
+            }})).a != 7;
+        }) ? function(it, key, D) {
+          var protoDesc = getDesc(ObjectProto, key);
+          if (protoDesc)
+            delete ObjectProto[key];
+          setDesc(it, key, D);
+          if (protoDesc && it !== ObjectProto)
+            setDesc(ObjectProto, key, protoDesc);
+        } : setDesc;
+        var wrap = function(tag) {
+          var sym = AllSymbols[tag] = _create($Symbol.prototype);
+          sym._k = tag;
+          SUPPORT_DESC && setter && setSymbolDesc(ObjectProto, tag, {
+            configurable: true,
+            set: function(value) {
+              if (has(this, HIDDEN) && has(this[HIDDEN], tag))
+                this[HIDDEN][tag] = false;
+              setSymbolDesc(this, tag, createDesc(1, value));
+            }
+          });
+          return sym;
+        };
+        var $defineProperty = function defineProperty(it, key, D) {
+          if (D && has(AllSymbols, key)) {
+            if (!D.enumerable) {
+              if (!has(it, HIDDEN))
+                setDesc(it, HIDDEN, createDesc(1, {}));
+              it[HIDDEN][key] = true;
+            } else {
+              if (has(it, HIDDEN) && it[HIDDEN][key])
+                it[HIDDEN][key] = false;
+              D = _create(D, {enumerable: createDesc(0, false)});
+            }
+            return setSymbolDesc(it, key, D);
+          }
+          return setDesc(it, key, D);
+        };
+        var $defineProperties = function defineProperties(it, P) {
+          anObject(it);
+          var keys = enumKeys(P = toIObject(P)),
+              i = 0,
+              l = keys.length,
+              key;
+          while (l > i)
+            $defineProperty(it, key = keys[i++], P[key]);
+          return it;
+        };
+        var $create = function create(it, P) {
+          return P === undefined ? _create(it) : $defineProperties(_create(it), P);
+        };
+        var $propertyIsEnumerable = function propertyIsEnumerable(key) {
+          var E = isEnum.call(this, key);
+          return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
+        };
+        var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
+          var D = getDesc(it = toIObject(it), key);
+          if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key]))
+            D.enumerable = true;
+          return D;
+        };
+        var $getOwnPropertyNames = function getOwnPropertyNames(it) {
+          var names = getNames(toIObject(it)),
+              result = [],
+              i = 0,
+              key;
+          while (names.length > i)
+            if (!has(AllSymbols, key = names[i++]) && key != HIDDEN)
+              result.push(key);
+          return result;
+        };
+        var $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
+          var names = getNames(toIObject(it)),
+              result = [],
+              i = 0,
+              key;
+          while (names.length > i)
+            if (has(AllSymbols, key = names[i++]))
+              result.push(AllSymbols[key]);
+          return result;
+        };
+        if (!useNative) {
+          $Symbol = function Symbol() {
+            if (this instanceof $Symbol)
+              throw TypeError('Symbol is not a constructor');
+            return wrap(uid(arguments[0]));
+          };
+          $redef($Symbol.prototype, 'toString', function toString() {
+            return this._k;
+          });
+          $.create = $create;
+          $.isEnum = $propertyIsEnumerable;
+          $.getDesc = $getOwnPropertyDescriptor;
+          $.setDesc = $defineProperty;
+          $.setDescs = $defineProperties;
+          $.getNames = $names.get = $getOwnPropertyNames;
+          $.getSymbols = $getOwnPropertySymbols;
+          if (SUPPORT_DESC && !__webpack_require__(9)) {
+            $redef(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
+          }
+        }
+        if (!useNative || $fails(function() {
+          return JSON.stringify([$Symbol()]) != '[null]';
+        }))
+          $redef($Symbol.prototype, 'toJSON', function toJSON() {
+            if (useNative && isObject(this))
+              return this;
+          });
+        var symbolStatics = {
+          'for': function(key) {
+            return has(SymbolRegistry, key += '') ? SymbolRegistry[key] : SymbolRegistry[key] = $Symbol(key);
+          },
+          keyFor: function keyFor(key) {
+            return keyOf(SymbolRegistry, key);
+          },
+          useSetter: function() {
+            setter = true;
+          },
+          useSimple: function() {
+            setter = false;
+          }
+        };
+        $.each.call(('hasInstance,isConcatSpreadable,iterator,match,replace,search,' + 'species,split,toPrimitive,toStringTag,unscopables').split(','), function(it) {
+          var sym = wks(it);
+          symbolStatics[it] = useNative ? sym : wrap(sym);
+        });
+        setter = true;
+        $def($def.G + $def.W, {Symbol: $Symbol});
+        $def($def.S, 'Symbol', symbolStatics);
+        $def($def.S + $def.F * !useNative, 'Object', {
+          create: $create,
+          defineProperty: $defineProperty,
+          defineProperties: $defineProperties,
+          getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+          getOwnPropertyNames: $getOwnPropertyNames,
+          getOwnPropertySymbols: $getOwnPropertySymbols
+        });
+        setTag($Symbol, 'Symbol');
+        setTag(Math, 'Math', true);
+        setTag(global.JSON, 'JSON', true);
+      }, function(module, exports, __webpack_require__) {
+        var $ = __webpack_require__(15),
+            toIObject = __webpack_require__(46);
+        module.exports = function(object, el) {
+          var O = toIObject(object),
+              keys = $.getKeys(O),
+              length = keys.length,
+              index = 0,
+              key;
+          while (length > index)
+            if (O[key = keys[index++]] === el)
+              return key;
+        };
+      }, function(module, exports, __webpack_require__) {
+        var toString = {}.toString,
+            toIObject = __webpack_require__(46),
+            getNames = __webpack_require__(15).getNames;
+        var windowNames = typeof window == 'object' && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [];
+        var getWindowNames = function(it) {
+          try {
+            return getNames(it);
+          } catch (e) {
+            return windowNames.slice();
+          }
+        };
+        module.exports.get = function getOwnPropertyNames(it) {
+          if (windowNames && toString.call(it) == '[object Window]')
+            return getWindowNames(it);
+          return getNames(toIObject(it));
+        };
+      }, function(module, exports, __webpack_require__) {
+        var $ = __webpack_require__(15);
+        module.exports = function(it) {
+          var keys = $.getKeys(it),
+              getSymbols = $.getSymbols;
+          if (getSymbols) {
+            var symbols = getSymbols(it),
+                isEnum = $.isEnum,
+                i = 0,
+                key;
+            while (symbols.length > i)
+              if (isEnum.call(it, key = symbols[i++]))
+                keys.push(key);
+          }
+          return keys;
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(64),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        var $ = __webpack_require__(15);
+        module.exports = function create(P, D) {
+          return $.create(P, D);
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(66),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(67);
+        __webpack_require__(4);
+        __webpack_require__(42);
+        __webpack_require__(68);
+        module.exports = __webpack_require__(12).Promise;
+      }, function(module, exports) {}, function(module, exports, __webpack_require__) {
+        'use strict';
+        var $ = __webpack_require__(15),
+            LIBRARY = __webpack_require__(9),
+            global = __webpack_require__(11),
+            ctx = __webpack_require__(27),
+            classof = __webpack_require__(36),
+            $def = __webpack_require__(10),
+            isObject = __webpack_require__(32),
+            anObject = __webpack_require__(31),
+            aFunction = __webpack_require__(28),
+            strictNew = __webpack_require__(69),
+            forOf = __webpack_require__(70),
+            setProto = __webpack_require__(71).set,
+            same = __webpack_require__(72),
+            species = __webpack_require__(73),
+            SPECIES = __webpack_require__(20)('species'),
+            RECORD = __webpack_require__(22)('record'),
+            asap = __webpack_require__(74),
+            PROMISE = 'Promise',
+            process = global.process,
+            isNode = classof(process) == 'process',
+            P = global[PROMISE],
+            Wrapper;
+        var testResolve = function(sub) {
+          var test = new P(function() {});
+          if (sub)
+            test.constructor = Object;
+          return P.resolve(test) === test;
+        };
+        var useNative = function() {
+          var works = false;
+          function P2(x) {
+            var self = new P(x);
+            setProto(self, P2.prototype);
+            return self;
+          }
+          try {
+            works = P && P.resolve && testResolve();
+            setProto(P2, P);
+            P2.prototype = $.create(P.prototype, {constructor: {value: P2}});
+            if (!(P2.resolve(5).then(function() {}) instanceof P2)) {
+              works = false;
+            }
+            if (works && __webpack_require__(17)) {
+              var thenableThenGotten = false;
+              P.resolve($.setDesc({}, 'then', {get: function() {
+                  thenableThenGotten = true;
+                }}));
+              works = thenableThenGotten;
+            }
+          } catch (e) {
+            works = false;
+          }
+          return works;
+        }();
+        var isPromise = function(it) {
+          return isObject(it) && (useNative ? classof(it) == 'Promise' : RECORD in it);
+        };
+        var sameConstructor = function(a, b) {
+          if (LIBRARY && a === P && b === Wrapper)
+            return true;
+          return same(a, b);
+        };
+        var getConstructor = function(C) {
+          var S = anObject(C)[SPECIES];
+          return S != undefined ? S : C;
+        };
+        var isThenable = function(it) {
+          var then;
+          return isObject(it) && typeof(then = it.then) == 'function' ? then : false;
+        };
+        var notify = function(record, isReject) {
+          if (record.n)
+            return;
+          record.n = true;
+          var chain = record.c;
+          asap(function() {
+            var value = record.v,
+                ok = record.s == 1,
+                i = 0;
+            var run = function(react) {
+              var cb = ok ? react.ok : react.fail,
+                  ret,
+                  then;
+              try {
+                if (cb) {
+                  if (!ok)
+                    record.h = true;
+                  ret = cb === true ? value : cb(value);
+                  if (ret === react.P) {
+                    react.rej(TypeError('Promise-chain cycle'));
+                  } else if (then = isThenable(ret)) {
+                    then.call(ret, react.res, react.rej);
+                  } else
+                    react.res(ret);
+                } else
+                  react.rej(value);
+              } catch (err) {
+                react.rej(err);
+              }
+            };
+            while (chain.length > i)
+              run(chain[i++]);
+            chain.length = 0;
+            record.n = false;
+            if (isReject)
+              setTimeout(function() {
+                var promise = record.p,
+                    handler,
+                    console;
+                if (isUnhandled(promise)) {
+                  if (isNode) {
+                    process.emit('unhandledRejection', value, promise);
+                  } else if (handler = global.onunhandledrejection) {
+                    handler({
+                      promise: promise,
+                      reason: value
+                    });
+                  } else if ((console = global.console) && console.error) {
+                    console.error('Unhandled promise rejection', value);
+                  }
+                }
+                record.a = undefined;
+              }, 1);
+          });
+        };
+        var isUnhandled = function(promise) {
+          var record = promise[RECORD],
+              chain = record.a || record.c,
+              i = 0,
+              react;
+          if (record.h)
+            return false;
+          while (chain.length > i) {
+            react = chain[i++];
+            if (react.fail || !isUnhandled(react.P))
+              return false;
+          }
+          return true;
+        };
+        var $reject = function(value) {
+          var record = this;
+          if (record.d)
+            return;
+          record.d = true;
+          record = record.r || record;
+          record.v = value;
+          record.s = 2;
+          record.a = record.c.slice();
+          notify(record, true);
+        };
+        var $resolve = function(value) {
+          var record = this,
+              then;
+          if (record.d)
+            return;
+          record.d = true;
+          record = record.r || record;
+          try {
+            if (then = isThenable(value)) {
+              asap(function() {
+                var wrapper = {
+                  r: record,
+                  d: false
+                };
+                try {
+                  then.call(value, ctx($resolve, wrapper, 1), ctx($reject, wrapper, 1));
+                } catch (e) {
+                  $reject.call(wrapper, e);
+                }
+              });
+            } else {
+              record.v = value;
+              record.s = 1;
+              notify(record, false);
+            }
+          } catch (e) {
+            $reject.call({
+              r: record,
+              d: false
+            }, e);
+          }
+        };
+        if (!useNative) {
+          P = function Promise(executor) {
+            aFunction(executor);
+            var record = {
+              p: strictNew(this, P, PROMISE),
+              c: [],
+              a: undefined,
+              s: 0,
+              d: false,
+              v: undefined,
+              h: false,
+              n: false
+            };
+            this[RECORD] = record;
+            try {
+              executor(ctx($resolve, record, 1), ctx($reject, record, 1));
+            } catch (err) {
+              $reject.call(record, err);
+            }
+          };
+          __webpack_require__(79)(P.prototype, {
+            then: function then(onFulfilled, onRejected) {
+              var S = anObject(anObject(this).constructor)[SPECIES];
+              var react = {
+                ok: typeof onFulfilled == 'function' ? onFulfilled : true,
+                fail: typeof onRejected == 'function' ? onRejected : false
+              };
+              var promise = react.P = new (S != undefined ? S : P)(function(res, rej) {
+                react.res = res;
+                react.rej = rej;
+              });
+              aFunction(react.res);
+              aFunction(react.rej);
+              var record = this[RECORD];
+              record.c.push(react);
+              if (record.a)
+                record.a.push(react);
+              if (record.s)
+                notify(record, false);
+              return promise;
+            },
+            'catch': function(onRejected) {
+              return this.then(undefined, onRejected);
+            }
+          });
+        }
+        $def($def.G + $def.W + $def.F * !useNative, {Promise: P});
+        __webpack_require__(25)(P, PROMISE);
+        species(P);
+        species(Wrapper = __webpack_require__(12)[PROMISE]);
+        $def($def.S + $def.F * !useNative, PROMISE, {reject: function reject(r) {
+            return new this(function(res, rej) {
+              rej(r);
+            });
+          }});
+        $def($def.S + $def.F * (!useNative || testResolve(true)), PROMISE, {resolve: function resolve(x) {
+            return isPromise(x) && sameConstructor(x.constructor, this) ? x : new this(function(res) {
+              res(x);
+            });
+          }});
+        $def($def.S + $def.F * !(useNative && __webpack_require__(38)(function(iter) {
+          P.all(iter)['catch'](function() {});
+        })), PROMISE, {
+          all: function all(iterable) {
+            var C = getConstructor(this),
+                values = [];
+            return new C(function(res, rej) {
+              forOf(iterable, false, values.push, values);
+              var remaining = values.length,
+                  results = Array(remaining);
+              if (remaining)
+                $.each.call(values, function(promise, index) {
+                  C.resolve(promise).then(function(value) {
+                    results[index] = value;
+                    --remaining || res(results);
+                  }, rej);
+                });
+              else
+                res(results);
+            });
+          },
+          race: function race(iterable) {
+            var C = getConstructor(this);
+            return new C(function(res, rej) {
+              forOf(iterable, false, function(promise) {
+                C.resolve(promise).then(res, rej);
+              });
+            });
+          }
+        });
+      }, function(module, exports) {
+        module.exports = function(it, Constructor, name) {
+          if (!(it instanceof Constructor))
+            throw TypeError(name + ": use the 'new' operator!");
+          return it;
+        };
+      }, function(module, exports, __webpack_require__) {
+        var ctx = __webpack_require__(27),
+            call = __webpack_require__(30),
+            isArrayIter = __webpack_require__(33),
+            anObject = __webpack_require__(31),
+            toLength = __webpack_require__(34),
+            getIterFn = __webpack_require__(35);
+        module.exports = function(iterable, entries, fn, that) {
+          var iterFn = getIterFn(iterable),
+              f = ctx(fn, that, entries ? 2 : 1),
+              index = 0,
+              length,
+              step,
+              iterator;
+          if (typeof iterFn != 'function')
+            throw TypeError(iterable + ' is not iterable!');
+          if (isArrayIter(iterFn))
+            for (length = toLength(iterable.length); length > index; index++) {
+              entries ? f(anObject(step = iterable[index])[0], step[1]) : f(iterable[index]);
+            }
+          else
+            for (iterator = iterFn.call(iterable); !(step = iterator.next()).done; ) {
+              call(iterator, f, step.value, entries);
+            }
+        };
+      }, function(module, exports, __webpack_require__) {
+        var getDesc = __webpack_require__(15).getDesc,
+            isObject = __webpack_require__(32),
+            anObject = __webpack_require__(31);
+        var check = function(O, proto) {
+          anObject(O);
+          if (!isObject(proto) && proto !== null)
+            throw TypeError(proto + ": can't set as prototype!");
+        };
+        module.exports = {
+          set: Object.setPrototypeOf || ('__proto__' in {} ? function(test, buggy, set) {
+            try {
+              set = __webpack_require__(27)(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
+              set(test, []);
+              buggy = !(test instanceof Array);
+            } catch (e) {
+              buggy = true;
+            }
+            return function setPrototypeOf(O, proto) {
+              check(O, proto);
+              if (buggy)
+                O.__proto__ = proto;
+              else
+                set(O, proto);
+              return O;
+            };
+          }({}, false) : undefined),
+          check: check
+        };
+      }, function(module, exports) {
+        module.exports = Object.is || function is(x, y) {
+          return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
+        };
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var $ = __webpack_require__(15),
+            SPECIES = __webpack_require__(20)('species');
+        module.exports = function(C) {
+          if (__webpack_require__(17) && !(SPECIES in C))
+            $.setDesc(C, SPECIES, {
+              configurable: true,
+              get: function() {
+                return this;
+              }
+            });
+        };
+      }, function(module, exports, __webpack_require__) {
+        var global = __webpack_require__(11),
+            macrotask = __webpack_require__(75).set,
+            Observer = global.MutationObserver || global.WebKitMutationObserver,
+            process = global.process,
+            isNode = __webpack_require__(37)(process) == 'process',
+            head,
+            last,
+            notify;
+        var flush = function() {
+          var parent,
+              domain;
+          if (isNode && (parent = process.domain)) {
+            process.domain = null;
+            parent.exit();
+          }
+          while (head) {
+            domain = head.domain;
+            if (domain)
+              domain.enter();
+            head.fn.call();
+            if (domain)
+              domain.exit();
+            head = head.next;
+          }
+          last = undefined;
+          if (parent)
+            parent.enter();
+        };
+        if (isNode) {
+          notify = function() {
+            process.nextTick(flush);
+          };
+        } else if (Observer) {
+          var toggle = 1,
+              node = document.createTextNode('');
+          new Observer(flush).observe(node, {characterData: true});
+          notify = function() {
+            node.data = toggle = -toggle;
+          };
+        } else {
+          notify = function() {
+            macrotask.call(global, flush);
+          };
+        }
+        module.exports = function asap(fn) {
+          var task = {
+            fn: fn,
+            next: undefined,
+            domain: isNode && process.domain
+          };
+          if (last)
+            last.next = task;
+          if (!head) {
+            head = task;
+            notify();
+          }
+          last = task;
+        };
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var ctx = __webpack_require__(27),
+            invoke = __webpack_require__(76),
+            html = __webpack_require__(77),
+            cel = __webpack_require__(78),
+            global = __webpack_require__(11),
+            process = global.process,
+            setTask = global.setImmediate,
+            clearTask = global.clearImmediate,
+            MessageChannel = global.MessageChannel,
+            counter = 0,
+            queue = {},
+            ONREADYSTATECHANGE = 'onreadystatechange',
+            defer,
+            channel,
+            port;
+        var run = function() {
+          var id = +this;
+          if (queue.hasOwnProperty(id)) {
+            var fn = queue[id];
+            delete queue[id];
+            fn();
+          }
+        };
+        var listner = function(event) {
+          run.call(event.data);
+        };
+        if (!setTask || !clearTask) {
+          setTask = function setImmediate(fn) {
+            var args = [],
+                i = 1;
+            while (arguments.length > i)
+              args.push(arguments[i++]);
+            queue[++counter] = function() {
+              invoke(typeof fn == 'function' ? fn : Function(fn), args);
+            };
+            defer(counter);
+            return counter;
+          };
+          clearTask = function clearImmediate(id) {
+            delete queue[id];
+          };
+          if (__webpack_require__(37)(process) == 'process') {
+            defer = function(id) {
+              process.nextTick(ctx(run, id, 1));
+            };
+          } else if (MessageChannel) {
+            channel = new MessageChannel;
+            port = channel.port2;
+            channel.port1.onmessage = listner;
+            defer = ctx(port.postMessage, port, 1);
+          } else if (global.addEventListener && typeof postMessage == 'function' && !global.importScript) {
+            defer = function(id) {
+              global.postMessage(id + '', '*');
+            };
+            global.addEventListener('message', listner, false);
+          } else if (ONREADYSTATECHANGE in cel('script')) {
+            defer = function(id) {
+              html.appendChild(cel('script'))[ONREADYSTATECHANGE] = function() {
+                html.removeChild(this);
+                run.call(id);
+              };
+            };
+          } else {
+            defer = function(id) {
+              setTimeout(ctx(run, id, 1), 0);
+            };
+          }
+        }
+        module.exports = {
+          set: setTask,
+          clear: clearTask
+        };
+      }, function(module, exports) {
+        module.exports = function(fn, args, that) {
+          var un = that === undefined;
+          switch (args.length) {
+            case 0:
+              return un ? fn() : fn.call(that);
+            case 1:
+              return un ? fn(args[0]) : fn.call(that, args[0]);
+            case 2:
+              return un ? fn(args[0], args[1]) : fn.call(that, args[0], args[1]);
+            case 3:
+              return un ? fn(args[0], args[1], args[2]) : fn.call(that, args[0], args[1], args[2]);
+            case 4:
+              return un ? fn(args[0], args[1], args[2], args[3]) : fn.call(that, args[0], args[1], args[2], args[3]);
+          }
+          return fn.apply(that, args);
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = __webpack_require__(11).document && document.documentElement;
+      }, function(module, exports, __webpack_require__) {
+        var isObject = __webpack_require__(32),
+            document = __webpack_require__(11).document,
+            is = isObject(document) && isObject(document.createElement);
+        module.exports = function(it) {
+          return is ? document.createElement(it) : {};
+        };
+      }, function(module, exports, __webpack_require__) {
+        var $redef = __webpack_require__(13);
+        module.exports = function(target, src) {
+          for (var key in src)
+            $redef(target, key, src[key]);
+          return target;
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(81),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(82);
+        module.exports = __webpack_require__(12).Object.keys;
+      }, function(module, exports, __webpack_require__) {
+        var toObject = __webpack_require__(29);
+        __webpack_require__(83)('keys', function($keys) {
+          return function keys(it) {
+            return $keys(toObject(it));
+          };
+        });
+      }, function(module, exports, __webpack_require__) {
+        module.exports = function(KEY, exec) {
+          var $def = __webpack_require__(10),
+              fn = (__webpack_require__(12).Object || {})[KEY] || Object[KEY],
+              exp = {};
+          exp[KEY] = exec(fn);
+          $def($def.S + $def.F * __webpack_require__(18)(function() {
+            fn(1);
+          }), 'Object', exp);
+        };
+      }, function(module, exports, __webpack_require__) {
+        module.exports = {
+          "default": __webpack_require__(85),
+          __esModule: true
+        };
+      }, function(module, exports, __webpack_require__) {
+        __webpack_require__(67);
+        __webpack_require__(4);
+        __webpack_require__(42);
+        __webpack_require__(86);
+        __webpack_require__(89);
+        module.exports = __webpack_require__(12).Set;
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var strong = __webpack_require__(87);
+        __webpack_require__(88)('Set', function(get) {
+          return function Set() {
+            return get(this, arguments[0]);
+          };
+        }, {add: function add(value) {
+            return strong.def(this, value = value === 0 ? 0 : value, value);
+          }}, strong);
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var $ = __webpack_require__(15),
+            hide = __webpack_require__(14),
+            ctx = __webpack_require__(27),
+            species = __webpack_require__(73),
+            strictNew = __webpack_require__(69),
+            defined = __webpack_require__(7),
+            forOf = __webpack_require__(70),
+            step = __webpack_require__(45),
+            ID = __webpack_require__(22)('id'),
+            $has = __webpack_require__(19),
+            isObject = __webpack_require__(32),
+            isExtensible = Object.isExtensible || isObject,
+            SUPPORT_DESC = __webpack_require__(17),
+            SIZE = SUPPORT_DESC ? '_s' : 'size',
+            id = 0;
+        var fastKey = function(it, create) {
+          if (!isObject(it))
+            return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+          if (!$has(it, ID)) {
+            if (!isExtensible(it))
+              return 'F';
+            if (!create)
+              return 'E';
+            hide(it, ID, ++id);
+          }
+          return 'O' + it[ID];
+        };
+        var getEntry = function(that, key) {
+          var index = fastKey(key),
+              entry;
+          if (index !== 'F')
+            return that._i[index];
+          for (entry = that._f; entry; entry = entry.n) {
+            if (entry.k == key)
+              return entry;
+          }
+        };
+        module.exports = {
+          getConstructor: function(wrapper, NAME, IS_MAP, ADDER) {
+            var C = wrapper(function(that, iterable) {
+              strictNew(that, C, NAME);
+              that._i = $.create(null);
+              that._f = undefined;
+              that._l = undefined;
+              that[SIZE] = 0;
+              if (iterable != undefined)
+                forOf(iterable, IS_MAP, that[ADDER], that);
+            });
+            __webpack_require__(79)(C.prototype, {
+              clear: function clear() {
+                for (var that = this,
+                    data = that._i,
+                    entry = that._f; entry; entry = entry.n) {
+                  entry.r = true;
+                  if (entry.p)
+                    entry.p = entry.p.n = undefined;
+                  delete data[entry.i];
+                }
+                that._f = that._l = undefined;
+                that[SIZE] = 0;
+              },
+              'delete': function(key) {
+                var that = this,
+                    entry = getEntry(that, key);
+                if (entry) {
+                  var next = entry.n,
+                      prev = entry.p;
+                  delete that._i[entry.i];
+                  entry.r = true;
+                  if (prev)
+                    prev.n = next;
+                  if (next)
+                    next.p = prev;
+                  if (that._f == entry)
+                    that._f = next;
+                  if (that._l == entry)
+                    that._l = prev;
+                  that[SIZE]--;
+                }
+                return !!entry;
+              },
+              forEach: function forEach(callbackfn) {
+                var f = ctx(callbackfn, arguments[1], 3),
+                    entry;
+                while (entry = entry ? entry.n : this._f) {
+                  f(entry.v, entry.k, this);
+                  while (entry && entry.r)
+                    entry = entry.p;
+                }
+              },
+              has: function has(key) {
+                return !!getEntry(this, key);
+              }
+            });
+            if (SUPPORT_DESC)
+              $.setDesc(C.prototype, 'size', {get: function() {
+                  return defined(this[SIZE]);
+                }});
+            return C;
+          },
+          def: function(that, key, value) {
+            var entry = getEntry(that, key),
+                prev,
+                index;
+            if (entry) {
+              entry.v = value;
+            } else {
+              that._l = entry = {
+                i: index = fastKey(key, true),
+                k: key,
+                v: value,
+                p: prev = that._l,
+                n: undefined,
+                r: false
+              };
+              if (!that._f)
+                that._f = entry;
+              if (prev)
+                prev.n = entry;
+              that[SIZE]++;
+              if (index !== 'F')
+                that._i[index] = entry;
+            }
+            return that;
+          },
+          getEntry: getEntry,
+          setStrong: function(C, NAME, IS_MAP) {
+            __webpack_require__(8)(C, NAME, function(iterated, kind) {
+              this._t = iterated;
+              this._k = kind;
+              this._l = undefined;
+            }, function() {
+              var that = this,
+                  kind = that._k,
+                  entry = that._l;
+              while (entry && entry.r)
+                entry = entry.p;
+              if (!that._t || !(that._l = entry = entry ? entry.n : that._t._f)) {
+                that._t = undefined;
+                return step(1);
+              }
+              if (kind == 'keys')
+                return step(0, entry.k);
+              if (kind == 'values')
+                return step(0, entry.v);
+              return step(0, [entry.k, entry.v]);
+            }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
+            species(C);
+            species(__webpack_require__(12)[NAME]);
+          }
+        };
+      }, function(module, exports, __webpack_require__) {
+        'use strict';
+        var $ = __webpack_require__(15),
+            $def = __webpack_require__(10),
+            hide = __webpack_require__(14),
+            forOf = __webpack_require__(70),
+            strictNew = __webpack_require__(69);
+        module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
+          var Base = __webpack_require__(11)[NAME],
+              C = Base,
+              ADDER = IS_MAP ? 'set' : 'add',
+              proto = C && C.prototype,
+              O = {};
+          if (!__webpack_require__(17) || typeof C != 'function' || !(IS_WEAK || proto.forEach && !__webpack_require__(18)(function() {
+            new C().entries().next();
+          }))) {
+            C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
+            __webpack_require__(79)(C.prototype, methods);
+          } else {
+            C = wrapper(function(target, iterable) {
+              strictNew(target, C, NAME);
+              target._c = new Base;
+              if (iterable != undefined)
+                forOf(iterable, IS_MAP, target[ADDER], target);
+            });
+            $.each.call('add,clear,delete,forEach,get,has,set,keys,values,entries'.split(','), function(KEY) {
+              var chain = KEY == 'add' || KEY == 'set';
+              if (KEY in proto && !(IS_WEAK && KEY == 'clear'))
+                hide(C.prototype, KEY, function(a, b) {
+                  var result = this._c[KEY](a === 0 ? 0 : a, b);
+                  return chain ? this : result;
+                });
+            });
+            if ('size' in proto)
+              $.setDesc(C.prototype, 'size', {get: function() {
+                  return this._c.size;
+                }});
+          }
+          __webpack_require__(25)(C, NAME);
+          O[NAME] = C;
+          $def($def.G + $def.W + $def.F, O);
+          if (!IS_WEAK)
+            common.setStrong(C, NAME, IS_MAP);
+          return C;
+        };
+      }, function(module, exports, __webpack_require__) {
+        var $def = __webpack_require__(10);
+        $def($def.P, 'Set', {toJSON: __webpack_require__(90)('Set')});
+      }, function(module, exports, __webpack_require__) {
+        var forOf = __webpack_require__(70),
+            classof = __webpack_require__(36);
+        module.exports = function(NAME) {
+          return function toJSON() {
+            if (classof(this) != NAME)
+              throw TypeError(NAME + "#toJSON isn't generic");
+            var arr = [];
+            forOf(this, false, arr.push, arr);
+            return arr;
+          };
+        };
+      }]);
+    });
+    ;
+  })(require("49"));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("34", ["42", "43", "4a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("42");
+  require("43");
+  module.exports = require("4a")('iterator');
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("35", ["41", "42", "43", "4b", "4c", "3d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("41");
+  require("42");
+  require("43");
+  require("4b");
+  require("4c");
+  module.exports = require("3d").Set;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("36", ["42", "4d", "3d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("42");
+  require("4d");
+  module.exports = require("3d").Array.from;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("37", ["4e"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var $ = require("4e");
+  module.exports = function defineProperty(it, key, desc) {
+    return $.setDesc(it, key, desc);
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("24", ["37", "34", "33", "38", "2b"], true, function(require, exports, module) {
+$__System.registerDynamic("38", ["4e"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("37");
-  require("34");
-  require("33");
-  require("38");
-  module.exports = require("2b").Promise;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("1b", ["39"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = {
-    "default": require("39"),
-    __esModule: true
+  var $ = require("4e");
+  module.exports = function create(P, D) {
+    return $.create(P, D);
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("27", ["3a"], true, function(require, exports, module) {
+$__System.registerDynamic("39", ["4f", "3d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("3a");
+  require("4f");
+  module.exports = require("3d").Object.setPrototypeOf;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("28", ["37", "34", "33", "3b", "3c", "2b"], true, function(require, exports, module) {
+$__System.registerDynamic("3a", ["4e", "50"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("37");
-  require("34");
-  require("33");
-  require("3b");
-  require("3c");
-  module.exports = require("2b").Map;
+  var $ = require("4e");
+  require("50");
+  module.exports = function getOwnPropertyDescriptor(it, key) {
+    return $.getDesc(it, key);
+  };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("29", ["3d", "2b"], true, function(require, exports, module) {
+$__System.registerDynamic("3c", ["51", "52"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("3d");
-  module.exports = require("2b").Math.trunc;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("2a", ["3e", "3f"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var toObject = require("3e");
-  require("3f")('keys', function($keys) {
+  var toObject = require("51");
+  require("52")('keys', function($keys) {
     return function keys(it) {
       return $keys(toObject(it));
     };
@@ -2665,7 +7070,19 @@ $__System.registerDynamic("2a", ["3e", "3f"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("2b", [], true, function(require, exports, module) {
+$__System.registerDynamic("3b", ["43", "42", "53"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("43");
+  require("42");
+  module.exports = require("53");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("3d", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2677,161 +7094,118 @@ $__System.registerDynamic("2b", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("2c", ["40"], true, function(require, exports, module) {
+$__System.registerDynamic("3e", ["54"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var $ = require("40");
-  module.exports = function defineProperty(it, key, desc) {
-    return $.setDesc(it, key, desc);
-  };
+  "use strict";
+  var createThunk = require("54");
+  function Procedure() {
+    this.argTypes = [];
+    this.shimArgs = [];
+    this.arrayArgs = [];
+    this.arrayBlockIndices = [];
+    this.scalarArgs = [];
+    this.offsetArgs = [];
+    this.offsetArgIndex = [];
+    this.indexArgs = [];
+    this.shapeArgs = [];
+    this.funcName = "";
+    this.pre = null;
+    this.body = null;
+    this.post = null;
+    this.debug = false;
+  }
+  function compileCwise(user_args) {
+    var proc = new Procedure();
+    proc.pre = user_args.pre;
+    proc.body = user_args.body;
+    proc.post = user_args.post;
+    var proc_args = user_args.args.slice(0);
+    proc.argTypes = proc_args;
+    for (var i = 0; i < proc_args.length; ++i) {
+      var arg_type = proc_args[i];
+      if (arg_type === "array" || (typeof arg_type === "object" && arg_type.blockIndices)) {
+        proc.argTypes[i] = "array";
+        proc.arrayArgs.push(i);
+        proc.arrayBlockIndices.push(arg_type.blockIndices ? arg_type.blockIndices : 0);
+        proc.shimArgs.push("array" + i);
+        if (i < proc.pre.args.length && proc.pre.args[i].count > 0) {
+          throw new Error("cwise: pre() block may not reference array args");
+        }
+        if (i < proc.post.args.length && proc.post.args[i].count > 0) {
+          throw new Error("cwise: post() block may not reference array args");
+        }
+      } else if (arg_type === "scalar") {
+        proc.scalarArgs.push(i);
+        proc.shimArgs.push("scalar" + i);
+      } else if (arg_type === "index") {
+        proc.indexArgs.push(i);
+        if (i < proc.pre.args.length && proc.pre.args[i].count > 0) {
+          throw new Error("cwise: pre() block may not reference array index");
+        }
+        if (i < proc.body.args.length && proc.body.args[i].lvalue) {
+          throw new Error("cwise: body() block may not write to array index");
+        }
+        if (i < proc.post.args.length && proc.post.args[i].count > 0) {
+          throw new Error("cwise: post() block may not reference array index");
+        }
+      } else if (arg_type === "shape") {
+        proc.shapeArgs.push(i);
+        if (i < proc.pre.args.length && proc.pre.args[i].lvalue) {
+          throw new Error("cwise: pre() block may not write to array shape");
+        }
+        if (i < proc.body.args.length && proc.body.args[i].lvalue) {
+          throw new Error("cwise: body() block may not write to array shape");
+        }
+        if (i < proc.post.args.length && proc.post.args[i].lvalue) {
+          throw new Error("cwise: post() block may not write to array shape");
+        }
+      } else if (typeof arg_type === "object" && arg_type.offset) {
+        proc.argTypes[i] = "offset";
+        proc.offsetArgs.push({
+          array: arg_type.array,
+          offset: arg_type.offset
+        });
+        proc.offsetArgIndex.push(i);
+      } else {
+        throw new Error("cwise: Unknown argument type " + proc_args[i]);
+      }
+    }
+    if (proc.arrayArgs.length <= 0) {
+      throw new Error("cwise: No array arguments specified");
+    }
+    if (proc.pre.args.length > proc_args.length) {
+      throw new Error("cwise: Too many arguments in pre() block");
+    }
+    if (proc.body.args.length > proc_args.length) {
+      throw new Error("cwise: Too many arguments in body() block");
+    }
+    if (proc.post.args.length > proc_args.length) {
+      throw new Error("cwise: Too many arguments in post() block");
+    }
+    proc.debug = !!user_args.printCode || !!user_args.debug;
+    proc.funcName = user_args.funcName || "cwise";
+    proc.blockSize = user_args.blockSize || 64;
+    return createThunk(proc);
+  }
+  module.exports = compileCwise;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("2d", ["33", "34", "41"], true, function(require, exports, module) {
+$__System.registerDynamic("3f", ["55"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("33");
-  require("34");
-  module.exports = require("41");
+  module.exports = require("55");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("2e", ["40", "42"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $ = require("40");
-  require("42");
-  module.exports = function getOwnPropertyDescriptor(it, key) {
-    return $.getDesc(it, key);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("31", ["43"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = require("43");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("30", ["40"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $ = require("40");
-  module.exports = function create(P, D) {
-    return $.create(P, D);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("2f", ["44", "2b"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("44");
-  module.exports = require("2b").Object.setPrototypeOf;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("32", ["45"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = require("45");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("34", ["46", "47"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  'use strict';
-  var $at = require("46")(true);
-  require("47")(String, 'String', function(iterated) {
-    this._t = String(iterated);
-    this._i = 0;
-  }, function() {
-    var O = this._t,
-        index = this._i,
-        point;
-    if (index >= O.length)
-      return {
-        value: undefined,
-        done: true
-      };
-    point = $at(O, index);
-    this._i += point.length;
-    return {
-      value: point,
-      done: false
-    };
-  });
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("35", ["48", "49", "2b"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var anObject = require("48"),
-      get = require("49");
-  module.exports = require("2b").getIterator = function(it) {
-    var iterFn = get(it);
-    if (typeof iterFn != 'function')
-      throw TypeError(it + ' is not iterable!');
-    return anObject(iterFn.call(it));
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("33", ["4a", "4b"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("4a");
-  var Iterators = require("4b");
-  Iterators.NodeList = Iterators.HTMLCollection = Iterators.Array;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("36", ["34", "4c", "2b"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("34");
-  require("4c");
-  module.exports = require("2b").Array.from;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("37", [], true, function(require, exports, module) {
+$__System.registerDynamic("41", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2841,30 +7215,52 @@ $__System.registerDynamic("37", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("38", ["40", "4e", "4f", "50", "51", "52", "53", "48", "54", "55", "56", "57", "58", "59", "5a", "5b", "5c", "5d", "5e", "5f", "2b", "60", "4d"], true, function(require, exports, module) {
+$__System.registerDynamic("40", ["56"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("56");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("43", ["57", "58"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("57");
+  var Iterators = require("58");
+  Iterators.NodeList = Iterators.HTMLCollection = Iterators.Array;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("44", ["4e", "59", "5a", "5b", "5c", "5d", "5e", "5f", "60", "61", "62", "63", "64", "65", "4a", "66", "67", "68", "69", "6a", "3d", "6b", "49"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var $ = require("40"),
-        LIBRARY = require("4e"),
-        global = require("4f"),
-        ctx = require("50"),
-        classof = require("51"),
-        $def = require("52"),
-        isObject = require("53"),
-        anObject = require("48"),
-        aFunction = require("54"),
-        strictNew = require("55"),
-        forOf = require("56"),
-        setProto = require("57").set,
-        same = require("58"),
-        species = require("59"),
-        SPECIES = require("5a")('species'),
-        RECORD = require("5b")('record'),
-        asap = require("5c"),
+    var $ = require("4e"),
+        LIBRARY = require("59"),
+        global = require("5a"),
+        ctx = require("5b"),
+        classof = require("5c"),
+        $def = require("5d"),
+        isObject = require("5e"),
+        anObject = require("5f"),
+        aFunction = require("60"),
+        strictNew = require("61"),
+        forOf = require("62"),
+        setProto = require("63").set,
+        same = require("64"),
+        species = require("65"),
+        SPECIES = require("4a")('species'),
+        RECORD = require("66")('record'),
+        asap = require("67"),
         PROMISE = 'Promise',
         process = global.process,
         isNode = classof(process) == 'process',
@@ -2890,7 +7286,7 @@ $__System.registerDynamic("38", ["40", "4e", "4f", "50", "51", "52", "53", "48",
         if (!(P2.resolve(5).then(function() {}) instanceof P2)) {
           works = false;
         }
-        if (works && require("5d")) {
+        if (works && require("68")) {
           var thenableThenGotten = false;
           P.resolve($.setDesc({}, 'then', {get: function() {
               thenableThenGotten = true;
@@ -3042,7 +7438,7 @@ $__System.registerDynamic("38", ["40", "4e", "4f", "50", "51", "52", "53", "48",
           $reject.call(record, err);
         }
       };
-      require("5e")(P.prototype, {
+      require("69")(P.prototype, {
         then: function then(onFulfilled, onRejected) {
           var S = anObject(anObject(this).constructor)[SPECIES];
           var react = {
@@ -3067,9 +7463,9 @@ $__System.registerDynamic("38", ["40", "4e", "4f", "50", "51", "52", "53", "48",
       });
     }
     $def($def.G + $def.W + $def.F * !useNative, {Promise: P});
-    require("5f")(P, PROMISE);
+    require("6a")(P, PROMISE);
     species(P);
-    species(Wrapper = require("2b")[PROMISE]);
+    species(Wrapper = require("3d")[PROMISE]);
     $def($def.S + $def.F * !useNative, PROMISE, {reject: function reject(r) {
         return new this(function(res, rej) {
           rej(r);
@@ -3080,7 +7476,7 @@ $__System.registerDynamic("38", ["40", "4e", "4f", "50", "51", "52", "53", "48",
           res(x);
         });
       }});
-    $def($def.S + $def.F * !(useNative && require("60")(function(iter) {
+    $def($def.S + $def.F * !(useNative && require("6b")(function(iter) {
       P.all(iter)['catch'](function() {});
     })), PROMISE, {
       all: function all(iterable) {
@@ -3110,132 +7506,49 @@ $__System.registerDynamic("38", ["40", "4e", "4f", "50", "51", "52", "53", "48",
         });
       }
     });
-  })(require("4d"));
+  })(require("49"));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("39", ["34", "33", "5a"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("34");
-  require("33");
-  module.exports = require("5a")('iterator');
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("3a", ["61"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  "use strict";
-  var createThunk = require("61");
-  function Procedure() {
-    this.argTypes = [];
-    this.shimArgs = [];
-    this.arrayArgs = [];
-    this.arrayBlockIndices = [];
-    this.scalarArgs = [];
-    this.offsetArgs = [];
-    this.offsetArgIndex = [];
-    this.indexArgs = [];
-    this.shapeArgs = [];
-    this.funcName = "";
-    this.pre = null;
-    this.body = null;
-    this.post = null;
-    this.debug = false;
-  }
-  function compileCwise(user_args) {
-    var proc = new Procedure();
-    proc.pre = user_args.pre;
-    proc.body = user_args.body;
-    proc.post = user_args.post;
-    var proc_args = user_args.args.slice(0);
-    proc.argTypes = proc_args;
-    for (var i = 0; i < proc_args.length; ++i) {
-      var arg_type = proc_args[i];
-      if (arg_type === "array" || (typeof arg_type === "object" && arg_type.blockIndices)) {
-        proc.argTypes[i] = "array";
-        proc.arrayArgs.push(i);
-        proc.arrayBlockIndices.push(arg_type.blockIndices ? arg_type.blockIndices : 0);
-        proc.shimArgs.push("array" + i);
-        if (i < proc.pre.args.length && proc.pre.args[i].count > 0) {
-          throw new Error("cwise: pre() block may not reference array args");
-        }
-        if (i < proc.post.args.length && proc.post.args[i].count > 0) {
-          throw new Error("cwise: post() block may not reference array args");
-        }
-      } else if (arg_type === "scalar") {
-        proc.scalarArgs.push(i);
-        proc.shimArgs.push("scalar" + i);
-      } else if (arg_type === "index") {
-        proc.indexArgs.push(i);
-        if (i < proc.pre.args.length && proc.pre.args[i].count > 0) {
-          throw new Error("cwise: pre() block may not reference array index");
-        }
-        if (i < proc.body.args.length && proc.body.args[i].lvalue) {
-          throw new Error("cwise: body() block may not write to array index");
-        }
-        if (i < proc.post.args.length && proc.post.args[i].count > 0) {
-          throw new Error("cwise: post() block may not reference array index");
-        }
-      } else if (arg_type === "shape") {
-        proc.shapeArgs.push(i);
-        if (i < proc.pre.args.length && proc.pre.args[i].lvalue) {
-          throw new Error("cwise: pre() block may not write to array shape");
-        }
-        if (i < proc.body.args.length && proc.body.args[i].lvalue) {
-          throw new Error("cwise: body() block may not write to array shape");
-        }
-        if (i < proc.post.args.length && proc.post.args[i].lvalue) {
-          throw new Error("cwise: post() block may not write to array shape");
-        }
-      } else if (typeof arg_type === "object" && arg_type.offset) {
-        proc.argTypes[i] = "offset";
-        proc.offsetArgs.push({
-          array: arg_type.array,
-          offset: arg_type.offset
-        });
-        proc.offsetArgIndex.push(i);
-      } else {
-        throw new Error("cwise: Unknown argument type " + proc_args[i]);
-      }
-    }
-    if (proc.arrayArgs.length <= 0) {
-      throw new Error("cwise: No array arguments specified");
-    }
-    if (proc.pre.args.length > proc_args.length) {
-      throw new Error("cwise: Too many arguments in pre() block");
-    }
-    if (proc.body.args.length > proc_args.length) {
-      throw new Error("cwise: Too many arguments in body() block");
-    }
-    if (proc.post.args.length > proc_args.length) {
-      throw new Error("cwise: Too many arguments in post() block");
-    }
-    proc.debug = !!user_args.printCode || !!user_args.debug;
-    proc.funcName = user_args.funcName || "cwise";
-    proc.blockSize = user_args.blockSize || 64;
-    return createThunk(proc);
-  }
-  module.exports = compileCwise;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("3b", ["62", "63"], true, function(require, exports, module) {
+$__System.registerDynamic("42", ["6c", "6d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var strong = require("62");
-  require("63")('Map', function(get) {
+  var $at = require("6c")(true);
+  require("6d")(String, 'String', function(iterated) {
+    this._t = String(iterated);
+    this._i = 0;
+  }, function() {
+    var O = this._t,
+        index = this._i,
+        point;
+    if (index >= O.length)
+      return {
+        value: undefined,
+        done: true
+      };
+    point = $at(O, index);
+    this._i += point.length;
+    return {
+      value: point,
+      done: false
+    };
+  });
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("45", ["6e", "6f"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  'use strict';
+  var strong = require("6e");
+  require("6f")('Map', function(get) {
     return function Map() {
       return get(this, arguments[0]);
     };
@@ -3252,41 +7565,40 @@ $__System.registerDynamic("3b", ["62", "63"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("3c", ["52", "64"], true, function(require, exports, module) {
+$__System.registerDynamic("46", ["5d", "70"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var $def = require("52");
-  $def($def.P, 'Map', {toJSON: require("64")('Map')});
+  var $def = require("5d");
+  $def($def.P, 'Map', {toJSON: require("70")('Map')});
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("3f", ["52", "2b", "65"], true, function(require, exports, module) {
+$__System.registerDynamic("47", ["5f", "71", "3d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = function(KEY, exec) {
-    var $def = require("52"),
-        fn = (require("2b").Object || {})[KEY] || Object[KEY],
-        exp = {};
-    exp[KEY] = exec(fn);
-    $def($def.S + $def.F * require("65")(function() {
-      fn(1);
-    }), 'Object', exp);
+  var anObject = require("5f"),
+      get = require("71");
+  module.exports = require("3d").getIterator = function(it) {
+    var iterFn = get(it);
+    if (typeof iterFn != 'function')
+      throw TypeError(it + ' is not iterable!');
+    return anObject(iterFn.call(it));
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("3d", ["52"], true, function(require, exports, module) {
+$__System.registerDynamic("48", ["5d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var $def = require("52");
+  var $def = require("5d");
   $def($def.S, 'Math', {trunc: function trunc(it) {
       return (it > 0 ? Math.floor : Math.ceil)(it);
     }});
@@ -3294,302 +7606,73 @@ $__System.registerDynamic("3d", ["52"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("3e", ["66"], true, function(require, exports, module) {
+$__System.registerDynamic("49", ["72"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var defined = require("66");
-  module.exports = function(it) {
-    return Object(defined(it));
+  module.exports = require("72");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4a", ["73", "5a", "66"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var store = require("73")('wks'),
+      Symbol = require("5a").Symbol;
+  module.exports = function(name) {
+    return store[name] || (store[name] = Symbol && Symbol[name] || (Symbol || require("66"))('Symbol.' + name));
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("40", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $Object = Object;
-  module.exports = {
-    create: $Object.create,
-    getProto: $Object.getPrototypeOf,
-    isEnum: {}.propertyIsEnumerable,
-    getDesc: $Object.getOwnPropertyDescriptor,
-    setDesc: $Object.defineProperty,
-    setDescs: $Object.defineProperties,
-    getKeys: $Object.keys,
-    getNames: $Object.getOwnPropertyNames,
-    getSymbols: $Object.getOwnPropertySymbols,
-    each: [].forEach
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("41", ["51", "5a", "4b", "2b"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var classof = require("51"),
-      ITERATOR = require("5a")('iterator'),
-      Iterators = require("4b");
-  module.exports = require("2b").isIterable = function(it) {
-    var O = Object(it);
-    return ITERATOR in O || '@@iterator' in O || Iterators.hasOwnProperty(classof(O));
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("42", ["67", "3f"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var toIObject = require("67");
-  require("3f")('getOwnPropertyDescriptor', function($getOwnPropertyDescriptor) {
-    return function getOwnPropertyDescriptor(it, key) {
-      return $getOwnPropertyDescriptor(toIObject(it), key);
-    };
-  });
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("43", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  "use strict";
-  function iota(n) {
-    var result = new Array(n);
-    for (var i = 0; i < n; ++i) {
-      result[i] = i;
-    }
-    return result;
-  }
-  module.exports = iota;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("44", ["52", "57"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $def = require("52");
-  $def($def.S, 'Object', {setPrototypeOf: require("57").set});
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("45", ["68"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(Buffer) {
-    module.exports = function(obj) {
-      return !!(obj != null && obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj));
-    };
-  })(require("68").Buffer);
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("47", ["4e", "52", "69", "6a", "6b", "5a", "4b", "6c", "40", "5f"], true, function(require, exports, module) {
+$__System.registerDynamic("4b", ["6e", "6f"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var LIBRARY = require("4e"),
-      $def = require("52"),
-      $redef = require("69"),
-      hide = require("6a"),
-      has = require("6b"),
-      SYMBOL_ITERATOR = require("5a")('iterator'),
-      Iterators = require("4b"),
-      BUGGY = !([].keys && 'next' in [].keys()),
-      FF_ITERATOR = '@@iterator',
-      KEYS = 'keys',
-      VALUES = 'values';
-  var returnThis = function() {
-    return this;
-  };
-  module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE) {
-    require("6c")(Constructor, NAME, next);
-    var createMethod = function(kind) {
-      switch (kind) {
-        case KEYS:
-          return function keys() {
-            return new Constructor(this, kind);
-          };
-        case VALUES:
-          return function values() {
-            return new Constructor(this, kind);
-          };
-      }
-      return function entries() {
-        return new Constructor(this, kind);
-      };
+  var strong = require("6e");
+  require("6f")('Set', function(get) {
+    return function Set() {
+      return get(this, arguments[0]);
     };
-    var TAG = NAME + ' Iterator',
-        proto = Base.prototype,
-        _native = proto[SYMBOL_ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT],
-        _default = _native || createMethod(DEFAULT),
-        methods,
-        key;
-    if (_native) {
-      var IteratorPrototype = require("40").getProto(_default.call(new Base));
-      require("5f")(IteratorPrototype, TAG, true);
-      if (!LIBRARY && has(proto, FF_ITERATOR))
-        hide(IteratorPrototype, SYMBOL_ITERATOR, returnThis);
-    }
-    if (!LIBRARY || FORCE)
-      hide(proto, SYMBOL_ITERATOR, _default);
-    Iterators[NAME] = _default;
-    Iterators[TAG] = returnThis;
-    if (DEFAULT) {
-      methods = {
-        keys: IS_SET ? _default : createMethod(KEYS),
-        values: DEFAULT == VALUES ? _default : createMethod(VALUES),
-        entries: DEFAULT != VALUES ? _default : createMethod('entries')
-      };
-      if (FORCE)
-        for (key in methods) {
-          if (!(key in proto))
-            $redef(proto, key, methods[key]);
-        }
-      else
-        $def($def.P + $def.F * BUGGY, NAME, methods);
-    }
-  };
+  }, {add: function add(value) {
+      return strong.def(this, value = value === 0 ? 0 : value, value);
+    }}, strong);
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("46", ["6d", "66"], true, function(require, exports, module) {
+$__System.registerDynamic("4c", ["5d", "70"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var toInteger = require("6d"),
-      defined = require("66");
-  module.exports = function(TO_STRING) {
-    return function(that, pos) {
-      var s = String(defined(that)),
-          i = toInteger(pos),
-          l = s.length,
-          a,
-          b;
-      if (i < 0 || i >= l)
-        return TO_STRING ? '' : undefined;
-      a = s.charCodeAt(i);
-      return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff ? TO_STRING ? s.charAt(i) : a : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-    };
-  };
+  var $def = require("5d");
+  $def($def.P, 'Set', {toJSON: require("70")('Set')});
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("49", ["51", "5a", "4b", "2b"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var classof = require("51"),
-      ITERATOR = require("5a")('iterator'),
-      Iterators = require("4b");
-  module.exports = require("2b").getIteratorMethod = function(it) {
-    if (it != undefined)
-      return it[ITERATOR] || it['@@iterator'] || Iterators[classof(it)];
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("48", ["53"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var isObject = require("53");
-  module.exports = function(it) {
-    if (!isObject(it))
-      throw TypeError(it + ' is not an object!');
-    return it;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4a", ["6e", "6f", "4b", "67", "47"], true, function(require, exports, module) {
+$__System.registerDynamic("4d", ["5b", "5d", "51", "74", "75", "76", "71", "6b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var setUnscope = require("6e"),
-      step = require("6f"),
-      Iterators = require("4b"),
-      toIObject = require("67");
-  require("47")(Array, 'Array', function(iterated, kind) {
-    this._t = toIObject(iterated);
-    this._i = 0;
-    this._k = kind;
-  }, function() {
-    var O = this._t,
-        kind = this._k,
-        index = this._i++;
-    if (!O || index >= O.length) {
-      this._t = undefined;
-      return step(1);
-    }
-    if (kind == 'keys')
-      return step(0, index);
-    if (kind == 'values')
-      return step(0, O[index]);
-    return step(0, [index, O[index]]);
-  }, 'values');
-  Iterators.Arguments = Iterators.Array;
-  setUnscope('keys');
-  setUnscope('values');
-  setUnscope('entries');
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4b", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = {};
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4c", ["50", "52", "3e", "70", "71", "72", "49", "60"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  'use strict';
-  var ctx = require("50"),
-      $def = require("52"),
-      toObject = require("3e"),
-      call = require("70"),
-      isArrayIter = require("71"),
-      toLength = require("72"),
-      getIterFn = require("49");
-  $def($def.S + $def.F * !require("60")(function(iter) {
+  var ctx = require("5b"),
+      $def = require("5d"),
+      toObject = require("51"),
+      call = require("74"),
+      isArrayIter = require("75"),
+      toLength = require("76"),
+      getIterFn = require("71");
+  $def($def.S + $def.F * !require("6b")(function(iter) {
     Array.from(iter);
   }), 'Array', {from: function from(arrayLike) {
       var O = toObject(arrayLike),
@@ -3620,27 +7703,236 @@ $__System.registerDynamic("4c", ["50", "52", "3e", "70", "71", "72", "49", "60"]
   return module.exports;
 });
 
-$__System.registerDynamic("4d", ["73"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = require("73");
-  global.define = __define;
-  return module.exports;
-});
-
 $__System.registerDynamic("4e", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = true;
+  var $Object = Object;
+  module.exports = {
+    create: $Object.create,
+    getProto: $Object.getPrototypeOf,
+    isEnum: {}.propertyIsEnumerable,
+    getDesc: $Object.getOwnPropertyDescriptor,
+    setDesc: $Object.defineProperty,
+    setDescs: $Object.defineProperties,
+    getKeys: $Object.keys,
+    getNames: $Object.getOwnPropertyNames,
+    getSymbols: $Object.getOwnPropertySymbols,
+    each: [].forEach
+  };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("4f", [], true, function(require, exports, module) {
+$__System.registerDynamic("4f", ["5d", "63"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var $def = require("5d");
+  $def($def.S, 'Object', {setPrototypeOf: require("63").set});
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("50", ["77", "52"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var toIObject = require("77");
+  require("52")('getOwnPropertyDescriptor', function($getOwnPropertyDescriptor) {
+    return function getOwnPropertyDescriptor(it, key) {
+      return $getOwnPropertyDescriptor(toIObject(it), key);
+    };
+  });
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("52", ["5d", "3d", "78"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = function(KEY, exec) {
+    var $def = require("5d"),
+        fn = (require("3d").Object || {})[KEY] || Object[KEY],
+        exp = {};
+    exp[KEY] = exec(fn);
+    $def($def.S + $def.F * require("78")(function() {
+      fn(1);
+    }), 'Object', exp);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("53", ["5c", "4a", "58", "3d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var classof = require("5c"),
+      ITERATOR = require("4a")('iterator'),
+      Iterators = require("58");
+  module.exports = require("3d").isIterable = function(it) {
+    var O = Object(it);
+    return ITERATOR in O || '@@iterator' in O || Iterators.hasOwnProperty(classof(O));
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("51", ["79"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var defined = require("79");
+  module.exports = function(it) {
+    return Object(defined(it));
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("54", ["7a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  "use strict";
+  var compile = require("7a");
+  function createThunk(proc) {
+    var code = ["'use strict'", "var CACHED={}"];
+    var vars = [];
+    var thunkName = proc.funcName + "_cwise_thunk";
+    code.push(["return function ", thunkName, "(", proc.shimArgs.join(","), "){"].join(""));
+    var typesig = [];
+    var string_typesig = [];
+    var proc_args = [["array", proc.arrayArgs[0], ".shape.slice(", Math.max(0, proc.arrayBlockIndices[0]), proc.arrayBlockIndices[0] < 0 ? ("," + proc.arrayBlockIndices[0] + ")") : ")"].join("")];
+    var shapeLengthConditions = [],
+        shapeConditions = [];
+    for (var i = 0; i < proc.arrayArgs.length; ++i) {
+      var j = proc.arrayArgs[i];
+      vars.push(["t", j, "=array", j, ".dtype,", "r", j, "=array", j, ".order"].join(""));
+      typesig.push("t" + j);
+      typesig.push("r" + j);
+      string_typesig.push("t" + j);
+      string_typesig.push("r" + j + ".join()");
+      proc_args.push("array" + j + ".data");
+      proc_args.push("array" + j + ".stride");
+      proc_args.push("array" + j + ".offset|0");
+      if (i > 0) {
+        shapeLengthConditions.push("array" + proc.arrayArgs[0] + ".shape.length===array" + j + ".shape.length+" + (Math.abs(proc.arrayBlockIndices[0]) - Math.abs(proc.arrayBlockIndices[i])));
+        shapeConditions.push("array" + proc.arrayArgs[0] + ".shape[shapeIndex+" + Math.max(0, proc.arrayBlockIndices[0]) + "]===array" + j + ".shape[shapeIndex+" + Math.max(0, proc.arrayBlockIndices[i]) + "]");
+      }
+    }
+    if (proc.arrayArgs.length > 1) {
+      code.push("if (!(" + shapeLengthConditions.join(" && ") + ")) throw new Error('cwise: Arrays do not all have the same dimensionality!')");
+      code.push("for(var shapeIndex=array" + proc.arrayArgs[0] + ".shape.length-" + Math.abs(proc.arrayBlockIndices[0]) + "; shapeIndex-->0;) {");
+      code.push("if (!(" + shapeConditions.join(" && ") + ")) throw new Error('cwise: Arrays do not all have the same shape!')");
+      code.push("}");
+    }
+    for (var i = 0; i < proc.scalarArgs.length; ++i) {
+      proc_args.push("scalar" + proc.scalarArgs[i]);
+    }
+    vars.push(["type=[", string_typesig.join(","), "].join()"].join(""));
+    vars.push("proc=CACHED[type]");
+    code.push("var " + vars.join(","));
+    code.push(["if(!proc){", "CACHED[type]=proc=compile([", typesig.join(","), "])}", "return proc(", proc_args.join(","), ")}"].join(""));
+    if (proc.debug) {
+      console.log("-----Generated thunk:\n" + code.join("\n") + "\n----------");
+    }
+    var thunk = new Function("compile", code.join("\n"));
+    return thunk(compile.bind(undefined, proc));
+  }
+  module.exports = createThunk;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("55", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  "use strict";
+  function iota(n) {
+    var result = new Array(n);
+    for (var i = 0; i < n; ++i) {
+      result[i] = i;
+    }
+    return result;
+  }
+  module.exports = iota;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("56", ["7b"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(Buffer) {
+    module.exports = function(obj) {
+      return !!(obj != null && obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj));
+    };
+  })(require("7b").Buffer);
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("57", ["7c", "7d", "58", "77", "6d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  'use strict';
+  var setUnscope = require("7c"),
+      step = require("7d"),
+      Iterators = require("58"),
+      toIObject = require("77");
+  require("6d")(Array, 'Array', function(iterated, kind) {
+    this._t = toIObject(iterated);
+    this._i = 0;
+    this._k = kind;
+  }, function() {
+    var O = this._t,
+        kind = this._k,
+        index = this._i++;
+    if (!O || index >= O.length) {
+      this._t = undefined;
+      return step(1);
+    }
+    if (kind == 'keys')
+      return step(0, index);
+    if (kind == 'values')
+      return step(0, O[index]);
+    return step(0, [index, O[index]]);
+  }, 'values');
+  Iterators.Arguments = Iterators.Array;
+  setUnscope('keys');
+  setUnscope('values');
+  setUnscope('entries');
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("58", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = {};
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5a", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3653,12 +7945,12 @@ $__System.registerDynamic("4f", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("50", ["54"], true, function(require, exports, module) {
+$__System.registerDynamic("5b", ["60"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var aFunction = require("54");
+  var aFunction = require("60");
   module.exports = function(fn, that, length) {
     aFunction(fn);
     if (that === undefined)
@@ -3685,13 +7977,43 @@ $__System.registerDynamic("50", ["54"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("52", ["4f", "2b"], true, function(require, exports, module) {
+$__System.registerDynamic("59", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var global = require("4f"),
-      core = require("2b"),
+  module.exports = true;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5c", ["7e", "4a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var cof = require("7e"),
+      TAG = require("4a")('toStringTag'),
+      ARG = cof(function() {
+        return arguments;
+      }()) == 'Arguments';
+  module.exports = function(it) {
+    var O,
+        T,
+        B;
+    return it === undefined ? 'Undefined' : it === null ? 'Null' : typeof(T = (O = Object(it))[TAG]) == 'string' ? T : ARG ? cof(O) : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5d", ["5a", "3d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var global = require("5a"),
+      core = require("3d"),
       PROTOTYPE = 'prototype';
   var ctx = function(fn, that) {
     return function() {
@@ -3743,7 +8065,22 @@ $__System.registerDynamic("52", ["4f", "2b"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("53", [], true, function(require, exports, module) {
+$__System.registerDynamic("5f", ["5e"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var isObject = require("5e");
+  module.exports = function(it) {
+    if (!isObject(it))
+      throw TypeError(it + ' is not an object!');
+    return it;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5e", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3755,27 +8092,7 @@ $__System.registerDynamic("53", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("51", ["74", "5a"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var cof = require("74"),
-      TAG = require("5a")('toStringTag'),
-      ARG = cof(function() {
-        return arguments;
-      }()) == 'Arguments';
-  module.exports = function(it) {
-    var O,
-        T,
-        B;
-    return it === undefined ? 'Undefined' : it === null ? 'Null' : typeof(T = (O = Object(it))[TAG]) == 'string' ? T : ARG ? cof(O) : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("54", [], true, function(require, exports, module) {
+$__System.registerDynamic("60", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3789,7 +8106,7 @@ $__System.registerDynamic("54", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("55", [], true, function(require, exports, module) {
+$__System.registerDynamic("61", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3803,26 +8120,14 @@ $__System.registerDynamic("55", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("58", [], true, function(require, exports, module) {
+$__System.registerDynamic("63", ["4e", "5e", "5f", "5b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = Object.is || function is(x, y) {
-    return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("57", ["40", "53", "48", "50"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var getDesc = require("40").getDesc,
-      isObject = require("53"),
-      anObject = require("48");
+  var getDesc = require("4e").getDesc,
+      isObject = require("5e"),
+      anObject = require("5f");
   var check = function(O, proto) {
     anObject(O);
     if (!isObject(proto) && proto !== null)
@@ -3831,7 +8136,7 @@ $__System.registerDynamic("57", ["40", "53", "48", "50"], true, function(require
   module.exports = {
     set: Object.setPrototypeOf || ('__proto__' in {} ? function(buggy, set) {
       try {
-        set = require("50")(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
+        set = require("5b")(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
         set({}, []);
       } catch (e) {
         buggy = true;
@@ -3851,17 +8156,17 @@ $__System.registerDynamic("57", ["40", "53", "48", "50"], true, function(require
   return module.exports;
 });
 
-$__System.registerDynamic("56", ["50", "70", "71", "48", "72", "49"], true, function(require, exports, module) {
+$__System.registerDynamic("62", ["5b", "74", "75", "5f", "76", "71"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ctx = require("50"),
-      call = require("70"),
-      isArrayIter = require("71"),
-      anObject = require("48"),
-      toLength = require("72"),
-      getIterFn = require("49");
+  var ctx = require("5b"),
+      call = require("74"),
+      isArrayIter = require("75"),
+      anObject = require("5f"),
+      toLength = require("76"),
+      getIterFn = require("71");
   module.exports = function(iterable, entries, fn, that) {
     var iterFn = getIterFn(iterable),
         f = ctx(fn, that, entries ? 2 : 1),
@@ -3884,30 +8189,28 @@ $__System.registerDynamic("56", ["50", "70", "71", "48", "72", "49"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("5a", ["75", "4f", "5b"], true, function(require, exports, module) {
+$__System.registerDynamic("64", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var store = require("75")('wks'),
-      Symbol = require("4f").Symbol;
-  module.exports = function(name) {
-    return store[name] || (store[name] = Symbol && Symbol[name] || (Symbol || require("5b"))('Symbol.' + name));
+  module.exports = Object.is || function is(x, y) {
+    return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("59", ["40", "5a", "5d"], true, function(require, exports, module) {
+$__System.registerDynamic("65", ["4e", "4a", "68"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var $ = require("40"),
-      SPECIES = require("5a")('species');
+  var $ = require("4e"),
+      SPECIES = require("4a")('species');
   module.exports = function(C) {
-    if (require("5d") && !(SPECIES in C))
+    if (require("68") && !(SPECIES in C))
       $.setDesc(C, SPECIES, {
         configurable: true,
         get: function() {
@@ -3919,17 +8222,17 @@ $__System.registerDynamic("59", ["40", "5a", "5d"], true, function(require, expo
   return module.exports;
 });
 
-$__System.registerDynamic("5c", ["4f", "76", "74", "4d"], true, function(require, exports, module) {
+$__System.registerDynamic("67", ["5a", "7f", "7e", "49"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
-    var global = require("4f"),
-        macrotask = require("76").set,
+    var global = require("5a"),
+        macrotask = require("7f").set,
         Observer = global.MutationObserver || global.WebKitMutationObserver,
         process = global.process,
-        isNode = require("74")(process) == 'process',
+        isNode = require("7e")(process) == 'process',
         head,
         last,
         notify;
@@ -3983,12 +8286,12 @@ $__System.registerDynamic("5c", ["4f", "76", "74", "4d"], true, function(require
       }
       last = task;
     };
-  })(require("4d"));
+  })(require("49"));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("5b", [], true, function(require, exports, module) {
+$__System.registerDynamic("66", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4002,12 +8305,12 @@ $__System.registerDynamic("5b", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("5d", ["65"], true, function(require, exports, module) {
+$__System.registerDynamic("68", ["78"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = !require("65")(function() {
+  module.exports = !require("78")(function() {
     return Object.defineProperty({}, 'a', {get: function() {
         return 7;
       }}).a != 7;
@@ -4016,12 +8319,12 @@ $__System.registerDynamic("5d", ["65"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("5e", ["69"], true, function(require, exports, module) {
+$__System.registerDynamic("69", ["80"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var $redef = require("69");
+  var $redef = require("80");
   module.exports = function(target, src) {
     for (var key in src)
       $redef(target, key, src[key]);
@@ -4031,14 +8334,14 @@ $__System.registerDynamic("5e", ["69"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("5f", ["6b", "6a", "5a"], true, function(require, exports, module) {
+$__System.registerDynamic("6a", ["81", "82", "4a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var has = require("6b"),
-      hide = require("6a"),
-      TAG = require("5a")('toStringTag');
+  var has = require("81"),
+      hide = require("82"),
+      TAG = require("4a")('toStringTag');
   module.exports = function(it, tag, stat) {
     if (it && !has(it = stat ? it : it.prototype, TAG))
       hide(it, TAG, tag);
@@ -4047,12 +8350,12 @@ $__System.registerDynamic("5f", ["6b", "6a", "5a"], true, function(require, expo
   return module.exports;
 });
 
-$__System.registerDynamic("60", ["5a"], true, function(require, exports, module) {
+$__System.registerDynamic("6b", ["4a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SYMBOL_ITERATOR = require("5a")('iterator'),
+  var SYMBOL_ITERATOR = require("4a")('iterator'),
       SAFE_CLOSING = false;
   try {
     var riter = [7][SYMBOL_ITERATOR]();
@@ -4084,81 +8387,121 @@ $__System.registerDynamic("60", ["5a"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("61", ["77"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  "use strict";
-  var compile = require("77");
-  function createThunk(proc) {
-    var code = ["'use strict'", "var CACHED={}"];
-    var vars = [];
-    var thunkName = proc.funcName + "_cwise_thunk";
-    code.push(["return function ", thunkName, "(", proc.shimArgs.join(","), "){"].join(""));
-    var typesig = [];
-    var string_typesig = [];
-    var proc_args = [["array", proc.arrayArgs[0], ".shape.slice(", Math.max(0, proc.arrayBlockIndices[0]), proc.arrayBlockIndices[0] < 0 ? ("," + proc.arrayBlockIndices[0] + ")") : ")"].join("")];
-    var shapeLengthConditions = [],
-        shapeConditions = [];
-    for (var i = 0; i < proc.arrayArgs.length; ++i) {
-      var j = proc.arrayArgs[i];
-      vars.push(["t", j, "=array", j, ".dtype,", "r", j, "=array", j, ".order"].join(""));
-      typesig.push("t" + j);
-      typesig.push("r" + j);
-      string_typesig.push("t" + j);
-      string_typesig.push("r" + j + ".join()");
-      proc_args.push("array" + j + ".data");
-      proc_args.push("array" + j + ".stride");
-      proc_args.push("array" + j + ".offset|0");
-      if (i > 0) {
-        shapeLengthConditions.push("array" + proc.arrayArgs[0] + ".shape.length===array" + j + ".shape.length+" + (Math.abs(proc.arrayBlockIndices[0]) - Math.abs(proc.arrayBlockIndices[i])));
-        shapeConditions.push("array" + proc.arrayArgs[0] + ".shape[shapeIndex+" + Math.max(0, proc.arrayBlockIndices[0]) + "]===array" + j + ".shape[shapeIndex+" + Math.max(0, proc.arrayBlockIndices[i]) + "]");
-      }
-    }
-    if (proc.arrayArgs.length > 1) {
-      code.push("if (!(" + shapeLengthConditions.join(" && ") + ")) throw new Error('cwise: Arrays do not all have the same dimensionality!')");
-      code.push("for(var shapeIndex=array" + proc.arrayArgs[0] + ".shape.length-" + Math.abs(proc.arrayBlockIndices[0]) + "; shapeIndex-->0;) {");
-      code.push("if (!(" + shapeConditions.join(" && ") + ")) throw new Error('cwise: Arrays do not all have the same shape!')");
-      code.push("}");
-    }
-    for (var i = 0; i < proc.scalarArgs.length; ++i) {
-      proc_args.push("scalar" + proc.scalarArgs[i]);
-    }
-    vars.push(["type=[", string_typesig.join(","), "].join()"].join(""));
-    vars.push("proc=CACHED[type]");
-    code.push("var " + vars.join(","));
-    code.push(["if(!proc){", "CACHED[type]=proc=compile([", typesig.join(","), "])}", "return proc(", proc_args.join(","), ")}"].join(""));
-    if (proc.debug) {
-      console.log("-----Generated thunk:\n" + code.join("\n") + "\n----------");
-    }
-    var thunk = new Function("compile", code.join("\n"));
-    return thunk(compile.bind(undefined, proc));
-  }
-  module.exports = createThunk;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("62", ["40", "6a", "50", "59", "55", "66", "56", "6f", "5b", "6b", "53", "5d", "5e", "47", "2b"], true, function(require, exports, module) {
+$__System.registerDynamic("6d", ["59", "5d", "80", "82", "81", "4a", "58", "83", "4e", "6a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var $ = require("40"),
-      hide = require("6a"),
-      ctx = require("50"),
-      species = require("59"),
-      strictNew = require("55"),
-      defined = require("66"),
-      forOf = require("56"),
-      step = require("6f"),
-      ID = require("5b")('id'),
-      $has = require("6b"),
-      isObject = require("53"),
+  var LIBRARY = require("59"),
+      $def = require("5d"),
+      $redef = require("80"),
+      hide = require("82"),
+      has = require("81"),
+      SYMBOL_ITERATOR = require("4a")('iterator'),
+      Iterators = require("58"),
+      BUGGY = !([].keys && 'next' in [].keys()),
+      FF_ITERATOR = '@@iterator',
+      KEYS = 'keys',
+      VALUES = 'values';
+  var returnThis = function() {
+    return this;
+  };
+  module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE) {
+    require("83")(Constructor, NAME, next);
+    var createMethod = function(kind) {
+      switch (kind) {
+        case KEYS:
+          return function keys() {
+            return new Constructor(this, kind);
+          };
+        case VALUES:
+          return function values() {
+            return new Constructor(this, kind);
+          };
+      }
+      return function entries() {
+        return new Constructor(this, kind);
+      };
+    };
+    var TAG = NAME + ' Iterator',
+        proto = Base.prototype,
+        _native = proto[SYMBOL_ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT],
+        _default = _native || createMethod(DEFAULT),
+        methods,
+        key;
+    if (_native) {
+      var IteratorPrototype = require("4e").getProto(_default.call(new Base));
+      require("6a")(IteratorPrototype, TAG, true);
+      if (!LIBRARY && has(proto, FF_ITERATOR))
+        hide(IteratorPrototype, SYMBOL_ITERATOR, returnThis);
+    }
+    if (!LIBRARY || FORCE)
+      hide(proto, SYMBOL_ITERATOR, _default);
+    Iterators[NAME] = _default;
+    Iterators[TAG] = returnThis;
+    if (DEFAULT) {
+      methods = {
+        keys: IS_SET ? _default : createMethod(KEYS),
+        values: DEFAULT == VALUES ? _default : createMethod(VALUES),
+        entries: DEFAULT != VALUES ? _default : createMethod('entries')
+      };
+      if (FORCE)
+        for (key in methods) {
+          if (!(key in proto))
+            $redef(proto, key, methods[key]);
+        }
+      else
+        $def($def.P + $def.F * BUGGY, NAME, methods);
+    }
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("6c", ["84", "79"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var toInteger = require("84"),
+      defined = require("79");
+  module.exports = function(TO_STRING) {
+    return function(that, pos) {
+      var s = String(defined(that)),
+          i = toInteger(pos),
+          l = s.length,
+          a,
+          b;
+      if (i < 0 || i >= l)
+        return TO_STRING ? '' : undefined;
+      a = s.charCodeAt(i);
+      return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff ? TO_STRING ? s.charAt(i) : a : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+    };
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("6e", ["4e", "82", "5b", "65", "61", "79", "62", "7d", "66", "81", "5e", "68", "69", "6d", "3d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  'use strict';
+  var $ = require("4e"),
+      hide = require("82"),
+      ctx = require("5b"),
+      species = require("65"),
+      strictNew = require("61"),
+      defined = require("79"),
+      forOf = require("62"),
+      step = require("7d"),
+      ID = require("66")('id'),
+      $has = require("81"),
+      isObject = require("5e"),
       isExtensible = Object.isExtensible || isObject,
-      SUPPORT_DESC = require("5d"),
+      SUPPORT_DESC = require("68"),
       SIZE = SUPPORT_DESC ? '_s' : 'size',
       id = 0;
   var fastKey = function(it, create) {
@@ -4194,7 +8537,7 @@ $__System.registerDynamic("62", ["40", "6a", "50", "59", "55", "66", "56", "6f",
         if (iterable != undefined)
           forOf(iterable, IS_MAP, that[ADDER], that);
       });
-      require("5e")(C.prototype, {
+      require("69")(C.prototype, {
         clear: function clear() {
           for (var that = this,
               data = that._i,
@@ -4273,7 +8616,7 @@ $__System.registerDynamic("62", ["40", "6a", "50", "59", "55", "66", "56", "6f",
     },
     getEntry: getEntry,
     setStrong: function(C, NAME, IS_MAP) {
-      require("47")(C, NAME, function(iterated, kind) {
+      require("6d")(C, NAME, function(iterated, kind) {
         this._t = iterated;
         this._k = kind;
         this._l = undefined;
@@ -4294,35 +8637,35 @@ $__System.registerDynamic("62", ["40", "6a", "50", "59", "55", "66", "56", "6f",
         return step(0, [entry.k, entry.v]);
       }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
       species(C);
-      species(require("2b")[NAME]);
+      species(require("3d")[NAME]);
     }
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("63", ["40", "52", "6a", "56", "55", "4f", "5d", "65", "5e", "5f"], true, function(require, exports, module) {
+$__System.registerDynamic("6f", ["4e", "5d", "82", "62", "61", "5a", "68", "78", "69", "6a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var $ = require("40"),
-      $def = require("52"),
-      hide = require("6a"),
-      forOf = require("56"),
-      strictNew = require("55");
+  var $ = require("4e"),
+      $def = require("5d"),
+      hide = require("82"),
+      forOf = require("62"),
+      strictNew = require("61");
   module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
-    var Base = require("4f")[NAME],
+    var Base = require("5a")[NAME],
         C = Base,
         ADDER = IS_MAP ? 'set' : 'add',
         proto = C && C.prototype,
         O = {};
-    if (!require("5d") || typeof C != 'function' || !(IS_WEAK || proto.forEach && !require("65")(function() {
+    if (!require("68") || typeof C != 'function' || !(IS_WEAK || proto.forEach && !require("78")(function() {
       new C().entries().next();
     }))) {
       C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
-      require("5e")(C.prototype, methods);
+      require("69")(C.prototype, methods);
     } else {
       C = wrapper(function(target, iterable) {
         strictNew(target, C, NAME);
@@ -4343,7 +8686,7 @@ $__System.registerDynamic("63", ["40", "52", "6a", "56", "55", "4f", "5d", "65",
             return this._c.size;
           }});
     }
-    require("5f")(C, NAME);
+    require("6a")(C, NAME);
     O[NAME] = C;
     $def($def.G + $def.W + $def.F, O);
     if (!IS_WEAK)
@@ -4354,29 +8697,13 @@ $__System.registerDynamic("63", ["40", "52", "6a", "56", "55", "4f", "5d", "65",
   return module.exports;
 });
 
-$__System.registerDynamic("65", [], true, function(require, exports, module) {
+$__System.registerDynamic("70", ["62", "5c"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = function(exec) {
-    try {
-      return !!exec();
-    } catch (e) {
-      return true;
-    }
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("64", ["56", "51"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var forOf = require("56"),
-      classof = require("51");
+  var forOf = require("62"),
+      classof = require("5c");
   module.exports = function(NAME) {
     return function toJSON() {
       if (classof(this) != NAME)
@@ -4390,149 +8717,54 @@ $__System.registerDynamic("64", ["56", "51"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("66", [], true, function(require, exports, module) {
+$__System.registerDynamic("71", ["5c", "4a", "58", "3d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = function(it) {
-    if (it == undefined)
-      throw TypeError("Can't call method on  " + it);
-    return it;
+  var classof = require("5c"),
+      ITERATOR = require("4a")('iterator'),
+      Iterators = require("58");
+  module.exports = require("3d").getIteratorMethod = function(it) {
+    if (it != undefined)
+      return it[ITERATOR] || it['@@iterator'] || Iterators[classof(it)];
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("67", ["78", "66"], true, function(require, exports, module) {
+$__System.registerDynamic("72", ["85"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var IObject = require("78"),
-      defined = require("66");
-  module.exports = function(it) {
-    return IObject(defined(it));
+  module.exports = $__System._nodeRequire ? process : require("85");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("73", ["5a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var global = require("5a"),
+      SHARED = '__core-js_shared__',
+      store = global[SHARED] || (global[SHARED] = {});
+  module.exports = function(key) {
+    return store[key] || (store[key] = {});
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("68", ["79"], true, function(require, exports, module) {
+$__System.registerDynamic("75", ["58", "4a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("79");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6a", ["40", "7a", "5d"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $ = require("40"),
-      createDesc = require("7a");
-  module.exports = require("5d") ? function(object, key, value) {
-    return $.setDesc(object, key, createDesc(1, value));
-  } : function(object, key, value) {
-    object[key] = value;
-    return object;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("69", ["6a"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = require("6a");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6b", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var hasOwnProperty = {}.hasOwnProperty;
-  module.exports = function(it, key) {
-    return hasOwnProperty.call(it, key);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6c", ["40", "6a", "5a", "7a", "5f"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  'use strict';
-  var $ = require("40"),
-      IteratorPrototype = {};
-  require("6a")(IteratorPrototype, require("5a")('iterator'), function() {
-    return this;
-  });
-  module.exports = function(Constructor, NAME, next) {
-    Constructor.prototype = $.create(IteratorPrototype, {next: require("7a")(1, next)});
-    require("5f")(Constructor, NAME + ' Iterator');
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6d", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var ceil = Math.ceil,
-      floor = Math.floor;
-  module.exports = function(it) {
-    return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6f", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = function(done, value) {
-    return {
-      value: value,
-      done: !!done
-    };
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6e", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = function() {};
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("71", ["4b", "5a"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var Iterators = require("4b"),
-      ITERATOR = require("5a")('iterator');
+  var Iterators = require("58"),
+      ITERATOR = require("4a")('iterator');
   module.exports = function(it) {
     return (Iterators.Array || Array.prototype[ITERATOR]) === it;
   };
@@ -4540,12 +8772,26 @@ $__System.registerDynamic("71", ["4b", "5a"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("70", ["48"], true, function(require, exports, module) {
+$__System.registerDynamic("76", ["84"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var anObject = require("48");
+  var toInteger = require("84"),
+      min = Math.min;
+  module.exports = function(it) {
+    return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("74", ["5f"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var anObject = require("5f");
   module.exports = function(iterator, fn, value, entries) {
     try {
       return entries ? fn(anObject(value)[0], value[1]) : fn(value);
@@ -4560,150 +8806,38 @@ $__System.registerDynamic("70", ["48"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("73", ["7b"], true, function(require, exports, module) {
+$__System.registerDynamic("77", ["86", "79"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__System._nodeRequire ? process : require("7b");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("72", ["6d"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var toInteger = require("6d"),
-      min = Math.min;
+  var IObject = require("86"),
+      defined = require("79");
   module.exports = function(it) {
-    return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0;
+    return IObject(defined(it));
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("74", [], true, function(require, exports, module) {
+$__System.registerDynamic("7b", ["87"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var toString = {}.toString;
-  module.exports = function(it) {
-    return toString.call(it).slice(8, -1);
-  };
+  module.exports = require("87");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("75", ["4f"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var global = require("4f"),
-      SHARED = '__core-js_shared__',
-      store = global[SHARED] || (global[SHARED] = {});
-  module.exports = function(key) {
-    return store[key] || (store[key] = {});
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("76", ["50", "7c", "7d", "7e", "4f", "74", "4d"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(process) {
-    'use strict';
-    var ctx = require("50"),
-        invoke = require("7c"),
-        html = require("7d"),
-        cel = require("7e"),
-        global = require("4f"),
-        process = global.process,
-        setTask = global.setImmediate,
-        clearTask = global.clearImmediate,
-        MessageChannel = global.MessageChannel,
-        counter = 0,
-        queue = {},
-        ONREADYSTATECHANGE = 'onreadystatechange',
-        defer,
-        channel,
-        port;
-    var run = function() {
-      var id = +this;
-      if (queue.hasOwnProperty(id)) {
-        var fn = queue[id];
-        delete queue[id];
-        fn();
-      }
-    };
-    var listner = function(event) {
-      run.call(event.data);
-    };
-    if (!setTask || !clearTask) {
-      setTask = function setImmediate(fn) {
-        var args = [],
-            i = 1;
-        while (arguments.length > i)
-          args.push(arguments[i++]);
-        queue[++counter] = function() {
-          invoke(typeof fn == 'function' ? fn : Function(fn), args);
-        };
-        defer(counter);
-        return counter;
-      };
-      clearTask = function clearImmediate(id) {
-        delete queue[id];
-      };
-      if (require("74")(process) == 'process') {
-        defer = function(id) {
-          process.nextTick(ctx(run, id, 1));
-        };
-      } else if (MessageChannel) {
-        channel = new MessageChannel;
-        port = channel.port2;
-        channel.port1.onmessage = listner;
-        defer = ctx(port.postMessage, port, 1);
-      } else if (global.addEventListener && typeof postMessage == 'function' && !global.importScript) {
-        defer = function(id) {
-          global.postMessage(id + '', '*');
-        };
-        global.addEventListener('message', listner, false);
-      } else if (ONREADYSTATECHANGE in cel('script')) {
-        defer = function(id) {
-          html.appendChild(cel('script'))[ONREADYSTATECHANGE] = function() {
-            html.removeChild(this);
-            run.call(id);
-          };
-        };
-      } else {
-        defer = function(id) {
-          setTimeout(ctx(run, id, 1), 0);
-        };
-      }
-    }
-    module.exports = {
-      set: setTask,
-      clear: clearTask
-    };
-  })(require("4d"));
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("77", ["7f", "4d"], true, function(require, exports, module) {
+$__System.registerDynamic("7a", ["88", "49"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     "use strict";
-    var uniq = require("7f");
+    var uniq = require("88");
     function innerFill(order, proc, body) {
       var dimension = order.length,
           nargs = proc.arrayArgs.length,
@@ -5006,17 +9140,252 @@ $__System.registerDynamic("77", ["7f", "4d"], true, function(require, exports, m
       return f();
     }
     module.exports = generateCWiseOp;
-  })(require("4d"));
+  })(require("49"));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("78", ["74"], true, function(require, exports, module) {
+$__System.registerDynamic("79", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var cof = require("74");
+  module.exports = function(it) {
+    if (it == undefined)
+      throw TypeError("Can't call method on  " + it);
+    return it;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("78", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = function(exec) {
+    try {
+      return !!exec();
+    } catch (e) {
+      return true;
+    }
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("7c", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = function() {};
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("7f", ["5b", "89", "8a", "8b", "5a", "7e", "49"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    'use strict';
+    var ctx = require("5b"),
+        invoke = require("89"),
+        html = require("8a"),
+        cel = require("8b"),
+        global = require("5a"),
+        process = global.process,
+        setTask = global.setImmediate,
+        clearTask = global.clearImmediate,
+        MessageChannel = global.MessageChannel,
+        counter = 0,
+        queue = {},
+        ONREADYSTATECHANGE = 'onreadystatechange',
+        defer,
+        channel,
+        port;
+    var run = function() {
+      var id = +this;
+      if (queue.hasOwnProperty(id)) {
+        var fn = queue[id];
+        delete queue[id];
+        fn();
+      }
+    };
+    var listner = function(event) {
+      run.call(event.data);
+    };
+    if (!setTask || !clearTask) {
+      setTask = function setImmediate(fn) {
+        var args = [],
+            i = 1;
+        while (arguments.length > i)
+          args.push(arguments[i++]);
+        queue[++counter] = function() {
+          invoke(typeof fn == 'function' ? fn : Function(fn), args);
+        };
+        defer(counter);
+        return counter;
+      };
+      clearTask = function clearImmediate(id) {
+        delete queue[id];
+      };
+      if (require("7e")(process) == 'process') {
+        defer = function(id) {
+          process.nextTick(ctx(run, id, 1));
+        };
+      } else if (MessageChannel) {
+        channel = new MessageChannel;
+        port = channel.port2;
+        channel.port1.onmessage = listner;
+        defer = ctx(port.postMessage, port, 1);
+      } else if (global.addEventListener && typeof postMessage == 'function' && !global.importScript) {
+        defer = function(id) {
+          global.postMessage(id + '', '*');
+        };
+        global.addEventListener('message', listner, false);
+      } else if (ONREADYSTATECHANGE in cel('script')) {
+        defer = function(id) {
+          html.appendChild(cel('script'))[ONREADYSTATECHANGE] = function() {
+            html.removeChild(this);
+            run.call(id);
+          };
+        };
+      } else {
+        defer = function(id) {
+          setTimeout(ctx(run, id, 1), 0);
+        };
+      }
+    }
+    module.exports = {
+      set: setTask,
+      clear: clearTask
+    };
+  })(require("49"));
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("7e", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var toString = {}.toString;
+  module.exports = function(it) {
+    return toString.call(it).slice(8, -1);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("80", ["82"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("82");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("7d", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = function(done, value) {
+    return {
+      value: value,
+      done: !!done
+    };
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("82", ["4e", "8c", "68"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var $ = require("4e"),
+      createDesc = require("8c");
+  module.exports = require("68") ? function(object, key, value) {
+    return $.setDesc(object, key, createDesc(1, value));
+  } : function(object, key, value) {
+    object[key] = value;
+    return object;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("81", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var hasOwnProperty = {}.hasOwnProperty;
+  module.exports = function(it, key) {
+    return hasOwnProperty.call(it, key);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("84", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var ceil = Math.ceil,
+      floor = Math.floor;
+  module.exports = function(it) {
+    return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("83", ["4e", "82", "4a", "8c", "6a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  'use strict';
+  var $ = require("4e"),
+      IteratorPrototype = {};
+  require("82")(IteratorPrototype, require("4a")('iterator'), function() {
+    return this;
+  });
+  module.exports = function(Constructor, NAME, next) {
+    Constructor.prototype = $.create(IteratorPrototype, {next: require("8c")(1, next)});
+    require("6a")(Constructor, NAME + ' Iterator');
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("85", ["8d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("8d");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("86", ["7e"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var cof = require("7e");
   module.exports = 0 in Object('z') ? Object : function(it) {
     return cof(it) == 'String' ? it.split('') : Object(it);
   };
@@ -5024,44 +9393,52 @@ $__System.registerDynamic("78", ["74"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("79", ["80"], true, function(require, exports, module) {
+$__System.registerDynamic("88", ["8e"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__System._nodeRequire ? $__System._nodeRequire('buffer') : require("80");
+  module.exports = require("8e");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("7a", [], true, function(require, exports, module) {
+$__System.registerDynamic("87", ["8f"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = function(bitmap, value) {
-    return {
-      enumerable: !(bitmap & 1),
-      configurable: !(bitmap & 2),
-      writable: !(bitmap & 4),
-      value: value
-    };
+  module.exports = $__System._nodeRequire ? $__System._nodeRequire('buffer') : require("8f");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("8b", ["5e", "5a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var isObject = require("5e"),
+      document = require("5a").document,
+      is = isObject(document) && isObject(document.createElement);
+  module.exports = function(it) {
+    return is ? document.createElement(it) : {};
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("7b", ["81"], true, function(require, exports, module) {
+$__System.registerDynamic("8a", ["5a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("81");
+  module.exports = require("5a").document && document.documentElement;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("7c", [], true, function(require, exports, module) {
+$__System.registerDynamic("89", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5086,42 +9463,24 @@ $__System.registerDynamic("7c", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("7d", ["4f"], true, function(require, exports, module) {
+$__System.registerDynamic("8c", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("4f").document && document.documentElement;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("7e", ["53", "4f"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var isObject = require("53"),
-      document = require("4f").document,
-      is = isObject(document) && isObject(document.createElement);
-  module.exports = function(it) {
-    return is ? document.createElement(it) : {};
+  module.exports = function(bitmap, value) {
+    return {
+      enumerable: !(bitmap & 1),
+      configurable: !(bitmap & 2),
+      writable: !(bitmap & 4),
+      value: value
+    };
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("7f", ["82"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = require("82");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("81", [], true, function(require, exports, module) {
+$__System.registerDynamic("8d", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5129,29 +9488,59 @@ $__System.registerDynamic("81", [], true, function(require, exports, module) {
   var process = module.exports = {};
   var queue = [];
   var draining = false;
+  var currentQueue;
+  var queueIndex = -1;
+  function cleanUpNextTick() {
+    draining = false;
+    if (currentQueue.length) {
+      queue = currentQueue.concat(queue);
+    } else {
+      queueIndex = -1;
+    }
+    if (queue.length) {
+      drainQueue();
+    }
+  }
   function drainQueue() {
     if (draining) {
       return;
     }
+    var timeout = setTimeout(cleanUpNextTick);
     draining = true;
-    var currentQueue;
     var len = queue.length;
     while (len) {
       currentQueue = queue;
       queue = [];
-      var i = -1;
-      while (++i < len) {
-        currentQueue[i]();
+      while (++queueIndex < len) {
+        if (currentQueue) {
+          currentQueue[queueIndex].run();
+        }
       }
+      queueIndex = -1;
       len = queue.length;
     }
+    currentQueue = null;
     draining = false;
+    clearTimeout(timeout);
   }
   process.nextTick = function(fun) {
-    queue.push(fun);
-    if (!draining) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+      for (var i = 1; i < arguments.length; i++) {
+        args[i - 1] = arguments[i];
+      }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
       setTimeout(drainQueue, 0);
     }
+  };
+  function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+  }
+  Item.prototype.run = function() {
+    this.fun.apply(null, this.array);
   };
   process.title = 'browser';
   process.browser = true;
@@ -5183,17 +9572,17 @@ $__System.registerDynamic("81", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("80", ["83"], true, function(require, exports, module) {
+$__System.registerDynamic("8f", ["90"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("83");
+  module.exports = require("90");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("82", [], true, function(require, exports, module) {
+$__System.registerDynamic("8e", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5257,20 +9646,20 @@ $__System.registerDynamic("82", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("83", ["84", "85", "86"], true, function(require, exports, module) {
+$__System.registerDynamic("90", ["91", "92", "93"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var base64 = require("84");
-  var ieee754 = require("85");
-  var isArray = require("86");
+  var base64 = require("91");
+  var ieee754 = require("92");
+  var isArray = require("93");
   exports.Buffer = Buffer;
   exports.SlowBuffer = SlowBuffer;
   exports.INSPECT_MAX_BYTES = 50;
   Buffer.poolSize = 8192;
   var rootParent = {};
-  Buffer.TYPED_ARRAY_SUPPORT = (function() {
+  Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined ? global.TYPED_ARRAY_SUPPORT : (function() {
     function Bar() {}
     try {
       var arr = new Uint8Array(1);
@@ -5391,9 +9780,14 @@ $__System.registerDynamic("83", ["84", "85", "86"], true, function(require, expo
     }
     return that;
   }
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    Buffer.prototype.__proto__ = Uint8Array.prototype;
+    Buffer.__proto__ = Uint8Array;
+  }
   function allocate(that, length) {
     if (Buffer.TYPED_ARRAY_SUPPORT) {
       that = Buffer._augment(new Uint8Array(length));
+      that.__proto__ = Buffer.prototype;
     } else {
       that.length = length;
       that._isBuffer = true;
@@ -6552,37 +10946,136 @@ $__System.registerDynamic("83", ["84", "85", "86"], true, function(require, expo
   return module.exports;
 });
 
-$__System.registerDynamic("84", ["87"], true, function(require, exports, module) {
+$__System.registerDynamic("93", ["94"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("87");
+  module.exports = require("94");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("85", ["88"], true, function(require, exports, module) {
+$__System.registerDynamic("92", ["95"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("88");
+  module.exports = require("95");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("86", ["89"], true, function(require, exports, module) {
+$__System.registerDynamic("91", ["96"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("89");
+  module.exports = require("96");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("87", [], true, function(require, exports, module) {
+$__System.registerDynamic("95", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  exports.read = function(buffer, offset, isLE, mLen, nBytes) {
+    var e,
+        m;
+    var eLen = nBytes * 8 - mLen - 1;
+    var eMax = (1 << eLen) - 1;
+    var eBias = eMax >> 1;
+    var nBits = -7;
+    var i = isLE ? (nBytes - 1) : 0;
+    var d = isLE ? -1 : 1;
+    var s = buffer[offset + i];
+    i += d;
+    e = s & ((1 << (-nBits)) - 1);
+    s >>= (-nBits);
+    nBits += eLen;
+    for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+    m = e & ((1 << (-nBits)) - 1);
+    e >>= (-nBits);
+    nBits += mLen;
+    for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {}
+    if (e === 0) {
+      e = 1 - eBias;
+    } else if (e === eMax) {
+      return m ? NaN : ((s ? -1 : 1) * Infinity);
+    } else {
+      m = m + Math.pow(2, mLen);
+      e = e - eBias;
+    }
+    return (s ? -1 : 1) * m * Math.pow(2, e - mLen);
+  };
+  exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
+    var e,
+        m,
+        c;
+    var eLen = nBytes * 8 - mLen - 1;
+    var eMax = (1 << eLen) - 1;
+    var eBias = eMax >> 1;
+    var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0);
+    var i = isLE ? 0 : (nBytes - 1);
+    var d = isLE ? 1 : -1;
+    var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0;
+    value = Math.abs(value);
+    if (isNaN(value) || value === Infinity) {
+      m = isNaN(value) ? 1 : 0;
+      e = eMax;
+    } else {
+      e = Math.floor(Math.log(value) / Math.LN2);
+      if (value * (c = Math.pow(2, -e)) < 1) {
+        e--;
+        c *= 2;
+      }
+      if (e + eBias >= 1) {
+        value += rt / c;
+      } else {
+        value += rt * Math.pow(2, 1 - eBias);
+      }
+      if (value * c >= 2) {
+        e++;
+        c /= 2;
+      }
+      if (e + eBias >= eMax) {
+        m = 0;
+        e = eMax;
+      } else if (e + eBias >= 1) {
+        m = (value * c - 1) * Math.pow(2, mLen);
+        e = e + eBias;
+      } else {
+        m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen);
+        e = 0;
+      }
+    }
+    for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
+    e = (e << mLen) | m;
+    eLen += mLen;
+    for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
+    buffer[offset + i - d] |= s * 128;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("94", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var isArray = Array.isArray;
+  var str = Object.prototype.toString;
+  module.exports = isArray || function(val) {
+    return !!val && '[object Array]' == str.call(val);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("96", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6688,113 +11181,13 @@ $__System.registerDynamic("87", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("88", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  exports.read = function(buffer, offset, isLE, mLen, nBytes) {
-    var e,
-        m;
-    var eLen = nBytes * 8 - mLen - 1;
-    var eMax = (1 << eLen) - 1;
-    var eBias = eMax >> 1;
-    var nBits = -7;
-    var i = isLE ? (nBytes - 1) : 0;
-    var d = isLE ? -1 : 1;
-    var s = buffer[offset + i];
-    i += d;
-    e = s & ((1 << (-nBits)) - 1);
-    s >>= (-nBits);
-    nBits += eLen;
-    for (; nBits > 0; e = e * 256 + buffer[offset + i], i += d, nBits -= 8) {}
-    m = e & ((1 << (-nBits)) - 1);
-    e >>= (-nBits);
-    nBits += mLen;
-    for (; nBits > 0; m = m * 256 + buffer[offset + i], i += d, nBits -= 8) {}
-    if (e === 0) {
-      e = 1 - eBias;
-    } else if (e === eMax) {
-      return m ? NaN : ((s ? -1 : 1) * Infinity);
-    } else {
-      m = m + Math.pow(2, mLen);
-      e = e - eBias;
-    }
-    return (s ? -1 : 1) * m * Math.pow(2, e - mLen);
-  };
-  exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
-    var e,
-        m,
-        c;
-    var eLen = nBytes * 8 - mLen - 1;
-    var eMax = (1 << eLen) - 1;
-    var eBias = eMax >> 1;
-    var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0);
-    var i = isLE ? 0 : (nBytes - 1);
-    var d = isLE ? 1 : -1;
-    var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0;
-    value = Math.abs(value);
-    if (isNaN(value) || value === Infinity) {
-      m = isNaN(value) ? 1 : 0;
-      e = eMax;
-    } else {
-      e = Math.floor(Math.log(value) / Math.LN2);
-      if (value * (c = Math.pow(2, -e)) < 1) {
-        e--;
-        c *= 2;
-      }
-      if (e + eBias >= 1) {
-        value += rt / c;
-      } else {
-        value += rt * Math.pow(2, 1 - eBias);
-      }
-      if (value * c >= 2) {
-        e++;
-        c /= 2;
-      }
-      if (e + eBias >= eMax) {
-        m = 0;
-        e = eMax;
-      } else if (e + eBias >= 1) {
-        m = (value * c - 1) * Math.pow(2, mLen);
-        e = e + eBias;
-      } else {
-        m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen);
-        e = 0;
-      }
-    }
-    for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
-    e = (e << mLen) | m;
-    eLen += mLen;
-    for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
-    buffer[offset + i - d] |= s * 128;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("89", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var isArray = Array.isArray;
-  var str = Object.prototype.toString;
-  module.exports = isArray || function(val) {
-    return !!val && '[object Array]' == str.call(val);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9'], function (_export) {
+$__System.register('0', ['1', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'], function (_export) {
+  'use strict';
 
   // Injects all classes etc. into leaflet's global L object.
   // This is the "classic" non-ES6-module interface.
 
-  'use strict';
-
-  var L, LayerFactory, Legend, TimeAxis, VerticalAxis, Grid, Profile, Trajectory, palettes, c, _arr, _i, ns;
+  var L, LayerFactory, Legend, DiscreteLegend, TimeAxis, VerticalAxis, Grid, Profile, Trajectory, palettes, ParameterSync, ProfilePlot, c, _arr, _i, ns;
 
   return {
     setters: [function (_) {
@@ -6804,17 +11197,23 @@ $__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9'], function 
     }, function (_3) {
       Legend = _3['default'];
     }, function (_4) {
-      TimeAxis = _4['default'];
+      DiscreteLegend = _4['default'];
     }, function (_5) {
-      VerticalAxis = _5['default'];
+      TimeAxis = _5['default'];
     }, function (_6) {
-      Grid = _6['default'];
+      VerticalAxis = _6['default'];
     }, function (_7) {
-      Profile = _7['default'];
-    }, function (_8) {
-      Trajectory = _8['default'];
-    }, function (_9) {
-      palettes = _9;
+      Grid = _7['default'];
+    }, function (_a) {
+      Profile = _a['default'];
+    }, function (_b) {
+      Trajectory = _b['default'];
+    }, function (_c) {
+      palettes = _c;
+    }, function (_d) {
+      ParameterSync = _d['default'];
+    }, function (_e) {
+      ProfilePlot = _e['default'];
     }],
     execute: function () {
 
@@ -6823,7 +11222,7 @@ $__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9'], function 
       }
 
       c = L.coverage;
-      _arr = ['control', 'renderer', 'palette'];
+      _arr = ['control', 'renderer', 'popup', 'palette'];
 
       for (_i = 0; _i < _arr.length; _i++) {
         ns = _arr[_i];
@@ -6834,110 +11233,42 @@ $__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9'], function 
       }
 
       c.LayerFactory = LayerFactory;
+      c.ParameterSync = ParameterSync;
       c.control.Legend = Legend;
+      c.control.DiscreteLegend = DiscreteLegend;
       c.control.TimeAxis = TimeAxis;
       c.control.VerticalAxis = VerticalAxis;
       c.renderer.Grid = Grid;
       c.renderer.Profile = Profile;
       c.renderer.Trajectory = Trajectory;
+      c.popup.ProfilePlot = ProfilePlot;
       c.palette = palettes;
     }
   };
 });
 
-$__System.register('2', ['6', '7', '8', 'a', 'b'], function (_export) {
-  var Grid, Profile, Trajectory, _defineProperty, _Object$keys, _DEFAULT_RENDERERS, pre, DEFAULT_RENDERERS;
-
-  function LayerFactory() {
-    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-    if (options.renderer) {
-      return function (cov, opts) {
-        return new options.renderer(cov, opts);
-      };
-    }
-    if (options.renderers) {
-      return function (cov, opts) {
-        if (options.renderers[cov.type]) {
-          return new options.renderers[cov.type](cov, opts);
-        }
-        if (options.renderers[cov.domainType]) {
-          return new options.renderers[cov.domainType](cov, opts);
-        }
-        throw new Error('No renderer found for type=' + cov.type + ' or domainType=' + cov.domainType + ',\n                       available: ' + _Object$keys(options.renderers));
-      };
-    }
-    return function (cov, opts) {
-      if (!DEFAULT_RENDERERS[cov.domainType]) {
-        throw new Error('No renderer found for domainType=' + cov.domainType + ',\n          available: ' + _Object$keys(DEFAULT_RENDERERS));
-      }
-      return new DEFAULT_RENDERERS[cov.domainType](cov, opts);
-    };
-  }
+$__System.register('5', ['1', '10', '11', '12', '13', '14', '15', '16', 'f'], function (_export) {
+  var L, inject, i18n, _get, _inherits, _createClass, _classCallCheck, _slicedToArray, $, DEFAULT_TEMPLATE_ID, DEFAULT_TEMPLATE, DEFAULT_TEMPLATE_CSS, Legend;
 
   return {
-    setters: [function (_) {
-      Grid = _['default'];
-    }, function (_3) {
-      Profile = _3['default'];
-    }, function (_2) {
-      Trajectory = _2['default'];
-    }, function (_a) {
-      _defineProperty = _a['default'];
-    }, function (_b) {
-      _Object$keys = _b['default'];
-    }],
-    execute: function () {
-      'use strict';
-
-      _export('default', LayerFactory);
-
-      pre = 'http://coveragejson.org/def#';
-      DEFAULT_RENDERERS = (_DEFAULT_RENDERERS = {}, _defineProperty(_DEFAULT_RENDERERS, pre + 'Grid', Grid), _defineProperty(_DEFAULT_RENDERERS, pre + 'Profile', Profile), _defineProperty(_DEFAULT_RENDERERS, pre + 'Trajectory', Trajectory), _DEFAULT_RENDERERS);
-
-      _export('DEFAULT_RENDERERS', DEFAULT_RENDERERS);
-    }
-  };
-});
-
-$__System.register('3', ['1', '10', '11', '12', 'e', 'f', 'c', 'd'], function (_export) {
-  var L, _createClass, _classCallCheck, _slicedToArray, _get, _inherits, $, inject, DEFAULT_TEMPLATE_ID, DEFAULT_TEMPLATE, DEFAULT_TEMPLATE_CSS, DEFAULT_LANGUAGE, Legend;
-
-  function getLanguageTag(map, preferredLanguage) {
-    if (map.has(preferredLanguage)) {
-      return preferredLanguage;
-    } else {
-      // could be more clever here for cases like 'de' vs 'de-DE'
-      return map.keys().next().value;
-    }
-  }
-
-  function getLanguageString(map, preferredLanguage) {
-    if (map.has(preferredLanguage)) {
-      return map.get(preferredLanguage);
-    } else {
-      // random language
-      // this case should not happen as all labels should have common languages
-      return map.values().next().value;
-    }
-  }
-  return {
-    setters: [function (_4) {
-      L = _4['default'];
+    setters: [function (_6) {
+      L = _6['default'];
+    }, function (_7) {
+      inject = _7.inject;
+    }, function (_8) {
+      i18n = _8;
     }, function (_) {
-      _createClass = _['default'];
+      _get = _['default'];
     }, function (_2) {
-      _classCallCheck = _2['default'];
+      _inherits = _2['default'];
     }, function (_3) {
-      _slicedToArray = _3['default'];
-    }, function (_e) {
-      _get = _e['default'];
+      _createClass = _3['default'];
+    }, function (_4) {
+      _classCallCheck = _4['default'];
+    }, function (_5) {
+      _slicedToArray = _5['default'];
     }, function (_f) {
-      _inherits = _f['default'];
-    }, function (_c) {
-      $ = _c.$;
-    }, function (_d) {
-      inject = _d.inject;
+      $ = _f.$;
     }],
     execute: function () {
 
@@ -6945,9 +11276,8 @@ $__System.register('3', ['1', '10', '11', '12', 'e', 'f', 'c', 'd'], function (_
       'use strict';
 
       DEFAULT_TEMPLATE_ID = 'template-coverage-parameter-legend';
-      DEFAULT_TEMPLATE = '\n<template id="' + DEFAULT_TEMPLATE_ID + '">\n  <div class="info legend">\n    <div style="margin-bottom:3px">\n      <strong class="legend-title"></strong>\n    </div>\n    <div style="display: inline-block; height: 144px; float:left">\n      <span style="height: 136px; width: 18px; display: block; margin-top: 9px;" class="legend-palette"></span>\n    </div>\n    <div style="display: inline-block; float:left; height:153px">\n      <table style="height: 100%;">\n        <tr><td style="vertical-align:top"><span class="legend-max"></span> <span class="legend-uom"></span></td></tr>\n        <tr><td><span class="legend-current"></span></td></tr>\n        <tr><td style="vertical-align:bottom"><span class="legend-min"></span> <span class="legend-uom"></span></td></tr>\n      </table>\n    </div>\n  </div>\n</template>\n';
-      DEFAULT_TEMPLATE_CSS = '\n.legend {\n  text-align: left;\n  line-height: 18px;\n  color: #555;\n}\n.legend i {\n  width: 18px;\n  height: 18px;\n  float: left;\n  margin-right: 8px;\n  opacity: 0.7;\n}\n';
-      DEFAULT_LANGUAGE = 'en';
+      DEFAULT_TEMPLATE = '\n<template id="' + DEFAULT_TEMPLATE_ID + '">\n  <div class="info legend continuous-legend">\n    <div style="margin-bottom:3px">\n      <strong class="legend-title"></strong>\n    </div>\n    <div style="display: inline-block; height: 144px; float:left">\n      <span style="height: 136px; width: 18px; display: block; margin-top: 9px;" class="legend-palette"></span>\n    </div>\n    <div style="display: inline-block; float:left; height:153px">\n      <table style="height: 100%;">\n        <tr><td style="vertical-align:top"><span class="legend-max"></span> <span class="legend-uom"></span></td></tr>\n        <tr><td><span class="legend-current"></span></td></tr>\n        <tr><td style="vertical-align:bottom"><span class="legend-min"></span> <span class="legend-uom"></span></td></tr>\n      </table>\n    </div>\n  </div>\n</template>\n';
+      DEFAULT_TEMPLATE_CSS = '\n.legend {\n  color: #555;\n}\n';
 
       /**
        * Displays a palette legend for the parameter displayed by the given
@@ -6963,7 +11293,7 @@ $__System.register('3', ['1', '10', '11', '12', 'e', 'f', 'c', 'd'], function (_
           _get(Object.getPrototypeOf(Legend.prototype), 'constructor', this).call(this, options.position ? { position: options.position } : {});
           this.covLayer = covLayer;
           this.id = options.id || DEFAULT_TEMPLATE_ID;
-          this.language = options.language || DEFAULT_LANGUAGE;
+          this.language = options.language || i18n.DEFAULT_LANGUAGE;
 
           if (!options.id && document.getElementById(DEFAULT_TEMPLATE_ID) === null) {
             inject(DEFAULT_TEMPLATE, DEFAULT_TEMPLATE_CSS);
@@ -7004,23 +11334,35 @@ $__System.register('3', ['1', '10', '11', '12', 'e', 'f', 'c', 'd'], function (_
         }, {
           key: 'onRemove',
           value: function onRemove(map) {
+            var _this = this;
+
             this.covLayer.off('remove', this._remove);
-            this.covLayer.off('paletteChange', this.updateLegend);
-            this.covLayer.off('paletteExtentChange', this.updateLegend);
+            this.covLayer.off('paletteChange', function () {
+              return _this.updateLegend();
+            });
+            this.covLayer.off('paletteExtentChange', function () {
+              return _this.updateLegend();
+            });
           }
         }, {
           key: 'onAdd',
           value: function onAdd(map) {
+            var _this2 = this;
+
             this._map = map;
 
-            this.covLayer.on('paletteChange', this.updateLegend);
-            this.covLayer.on('paletteExtentChange', this.updateLegend);
+            this.covLayer.on('paletteChange', function () {
+              return _this2.updateLegend();
+            });
+            this.covLayer.on('paletteExtentChange', function () {
+              return _this2.updateLegend();
+            });
 
             var param = this.covLayer.parameter;
             // if requested language doesn't exist, use the returned one for all other labels
-            var language = getLanguageTag(param.observedProperty.label, this.language);
-            var title = getLanguageString(param.observedProperty.label, language);
-            var unit = param.unit ? param.unit.symbol ? param.unit.symbol : getLanguageString(param.unit.label, language) : '';
+            var language = i18n.getLanguageTag(param.observedProperty.label, this.language);
+            var title = i18n.getLanguageString(param.observedProperty.label, language);
+            var unit = param.unit ? param.unit.symbol ? param.unit.symbol : i18n.getLanguageString(param.unit.label, language) : '';
 
             var el = document.importNode($('#' + this.id)[0].content, true).children[0];
             this._el = el;
@@ -7040,8 +11382,293 @@ $__System.register('3', ['1', '10', '11', '12', 'e', 'f', 'c', 'd'], function (_
   };
 });
 
-$__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', 'e', 'f', 'b'], function (_export) {
-  var L, linearPalette, scale, _createClass, _classCallCheck, _slicedToArray, ndarray, utils, opsnull, _toConsumableArray, _Promise, _getIterator, _get, _inherits, _Object$keys, DOMAIN_TYPE, DEFAULT_PALETTE, Grid;
+$__System.register('4', ['9', '17', '18', 'b', 'a'], function (_export) {
+  var Grid, _defineProperty, _Object$keys, Trajectory, Profile, _DEFAULT_RENDERERS, pre, DEFAULT_RENDERERS;
+
+  function LayerFactory() {
+    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+    if (options.renderer) {
+      return function (cov, opts) {
+        return new options.renderer(cov, opts);
+      };
+    }
+    if (options.renderers) {
+      return function (cov, opts) {
+        if (options.renderers[cov.type]) {
+          return new options.renderers[cov.type](cov, opts);
+        }
+        if (options.renderers[cov.domainType]) {
+          return new options.renderers[cov.domainType](cov, opts);
+        }
+        throw new Error('No renderer found for type=' + cov.type + ' or domainType=' + cov.domainType + ',\n                       available: ' + _Object$keys(options.renderers));
+      };
+    }
+    return function (cov, opts) {
+      if (!DEFAULT_RENDERERS[cov.domainType]) {
+        throw new Error('No renderer found for domainType=' + cov.domainType + ',\n          available: ' + _Object$keys(DEFAULT_RENDERERS));
+      }
+      return new DEFAULT_RENDERERS[cov.domainType](cov, opts);
+    };
+  }
+
+  return {
+    setters: [function (_3) {
+      Grid = _3['default'];
+    }, function (_) {
+      _defineProperty = _['default'];
+    }, function (_2) {
+      _Object$keys = _2['default'];
+    }, function (_b) {
+      Trajectory = _b['default'];
+    }, function (_a) {
+      Profile = _a['default'];
+    }],
+    execute: function () {
+      'use strict';
+
+      _export('default', LayerFactory);
+
+      pre = 'http://coveragejson.org/def#';
+      DEFAULT_RENDERERS = (_DEFAULT_RENDERERS = {}, _defineProperty(_DEFAULT_RENDERERS, pre + 'Grid', Grid), _defineProperty(_DEFAULT_RENDERERS, pre + 'Profile', Profile), _defineProperty(_DEFAULT_RENDERERS, pre + 'Trajectory', Trajectory), _DEFAULT_RENDERERS);
+
+      _export('DEFAULT_RENDERERS', DEFAULT_RENDERERS);
+    }
+  };
+});
+
+$__System.register('6', ['1', '10', '11', '12', '13', '14', '15', 'f'], function (_export) {
+  var L, inject, i18n, _get, _inherits, _createClass, _classCallCheck, $, HTML, DEFAULT_TEMPLATE_ID, DEFAULT_TEMPLATE, DEFAULT_TEMPLATE_CSS, DiscreteLegend;
+
+  return {
+    setters: [function (_5) {
+      L = _5['default'];
+    }, function (_6) {
+      inject = _6.inject;
+    }, function (_7) {
+      i18n = _7;
+    }, function (_) {
+      _get = _['default'];
+    }, function (_2) {
+      _inherits = _2['default'];
+    }, function (_3) {
+      _createClass = _3['default'];
+    }, function (_4) {
+      _classCallCheck = _4['default'];
+    }, function (_f) {
+      $ = _f.$;
+      HTML = _f.HTML;
+    }],
+    execute: function () {
+
+      // TODO the default template should be moved outside this module so that it can be easily skipped
+      'use strict';
+
+      DEFAULT_TEMPLATE_ID = 'template-coverage-parameter-discrete-legend';
+      DEFAULT_TEMPLATE = '\n<template id="' + DEFAULT_TEMPLATE_ID + '">\n  <div class="info legend discrete-legend">\n    <strong class="legend-title"></strong><br>\n    <div class="legend-palette discrete-legend-palette"></div>\n  </div>\n</template>\n';
+      DEFAULT_TEMPLATE_CSS = '\n.legend {\n  color: #555;\n}\n.discrete-legend-palette {\n  padding: 2px 1px;\n  line-height: 18px;\n}\n.discrete-legend-palette i {\n  float: left;\n  height: 18px;\n  margin-right: 8px;\n  opacity: 0.7;\n  width: 18px;\n}\n';
+
+      /**
+       * Displays a discrete palette legend for the parameter displayed by the given
+       * Coverage layer. Supports category parameters only at the moment.
+       * 
+       * @example
+       * new DiscreteLegend(covLayer).addTo(map)
+       * 
+       * @example <caption>Fake layer</caption>
+       * var legend = new DiscreteLegend({parameter: {..}, palette: {...}}).addTo(map)
+       * 
+       * // either recreate the legend or update the fake layer in place:
+       * legend.covLayer = {..}
+       * legend.updateLegend()
+       */
+
+      DiscreteLegend = (function (_L$Control) {
+        _inherits(DiscreteLegend, _L$Control);
+
+        function DiscreteLegend(covLayer, options) {
+          var _this = this;
+
+          _classCallCheck(this, DiscreteLegend);
+
+          _get(Object.getPrototypeOf(DiscreteLegend.prototype), 'constructor', this).call(this, options.position ? { position: options.position } : {});
+          this.covLayer = covLayer;
+          this.id = options.id || DEFAULT_TEMPLATE_ID;
+          this.language = options.language || i18n.DEFAULT_LANGUAGE;
+
+          if (!options.id && document.getElementById(DEFAULT_TEMPLATE_ID) === null) {
+            inject(DEFAULT_TEMPLATE, DEFAULT_TEMPLATE_CSS);
+          }
+
+          if (covLayer.on) {
+            (function () {
+              // arrow function is broken here with traceur, this is a workaround
+              // see https://github.com/google/traceur-compiler/issues/1987
+              var self = _this;
+              _this._remove = function () {
+                self.removeFrom(self._map);
+              };
+              covLayer.on('remove', _this._remove);
+            })();
+          }
+        }
+
+        _createClass(DiscreteLegend, [{
+          key: 'updateLegend',
+          value: function updateLegend() {
+            var el = this._el;
+
+            var palette = this.covLayer.palette;
+            var param = this.covLayer.parameter;
+
+            var html = '';
+
+            for (var i = 0; i < palette.steps; i++) {
+              var cat = i18n.getLanguageString(param.categories[i].label, this.language);
+              html += '\n        <i style="background:rgb(' + palette.red[i] + ', ' + palette.green[i] + ', ' + palette.blue[i] + ')"></i>\n        ' + cat + '\n        <br>';
+            }
+
+            $('.legend-palette', el).fill(HTML(html));
+          }
+        }, {
+          key: 'onRemove',
+          value: function onRemove(map) {
+            var _this2 = this;
+
+            if (this.covLayer.off) {
+              this.covLayer.off('remove', this._remove);
+              this.covLayer.off('paletteChange', function () {
+                return _this2.updateLegend();
+              });
+            }
+          }
+        }, {
+          key: 'onAdd',
+          value: function onAdd(map) {
+            var _this3 = this;
+
+            this._map = map;
+
+            if (this.covLayer.on) {
+              this.covLayer.on('paletteChange', function () {
+                return _this3.updateLegend();
+              });
+            }
+
+            var param = this.covLayer.parameter;
+            // if requested language doesn't exist, use the returned one for all other labels
+            this.language = i18n.getLanguageTag(param.observedProperty.label, this.language);
+            var title = i18n.getLanguageString(param.observedProperty.label, this.language);
+
+            var el = document.importNode($('#' + this.id)[0].content, true).children[0];
+            this._el = el;
+            $('.legend-title', el).fill(title);
+            this.updateLegend();
+
+            return el;
+          }
+        }]);
+
+        return DiscreteLegend;
+      })(L.Control);
+
+      _export('default', DiscreteLegend);
+    }
+  };
+});
+
+$__System.register('7', ['1', '12', '13', '14', '15', 'f'], function (_export) {
+  var L, _get, _inherits, _createClass, _classCallCheck, $, TimeAxis;
+
+  return {
+    setters: [function (_5) {
+      L = _5['default'];
+    }, function (_) {
+      _get = _['default'];
+    }, function (_2) {
+      _inherits = _2['default'];
+    }, function (_3) {
+      _createClass = _3['default'];
+    }, function (_4) {
+      _classCallCheck = _4['default'];
+    }, function (_f) {
+      $ = _f.$;
+    }],
+    execute: function () {
+
+      /**
+       * Displays a time axis selector for a given coverage layer.
+       * Also listens to time axis changes which were not initiated from
+       * this control.
+       * 
+       *  TODO figure out for which use cases this can realistically be used
+       *  solve https://github.com/Reading-eScience-Centre/coverage-jsapi/issues/3 first
+       */
+      'use strict';
+
+      TimeAxis = (function (_L$Control) {
+        _inherits(TimeAxis, _L$Control);
+
+        function TimeAxis(covLayer, options) {
+          var _this = this;
+
+          _classCallCheck(this, TimeAxis);
+
+          _get(Object.getPrototypeOf(TimeAxis.prototype), 'constructor', this).call(this, options.position ? { position: options.position } : {});
+          this.covLayer = covLayer;
+          this.id = options.id || DEFAULT_TEMPLATE_ID;
+
+          if (!options.id && document.getElementById(DEFAULT_TEMPLATE_ID) === null) {
+            inject(DEFAULT_TEMPLATE, DEFAULT_TEMPLATE_CSS);
+          }
+
+          this._axisListener = function (e) {
+            if (e.axis === 'time') _this.updateAxis();
+          };
+
+          // arrow function is broken here with traceur, this is a workaround
+          // see https://github.com/google/traceur-compiler/issues/1987
+          var self = this;
+          this._remove = function () {
+            self.removeFrom(self._map);
+          };
+          covLayer.on('remove', this._remove);
+        }
+
+        _createClass(TimeAxis, [{
+          key: 'onRemove',
+          value: function onRemove(map) {
+            this.covLayer.off('remove', this._remove);
+            this.covLayer.off('axisChange', this._axisListener);
+          }
+        }, {
+          key: 'onAdd',
+          value: function onAdd(map) {
+            this._map = map;
+            covLayer.on('axisChange', this._axisListener);
+            var el = document.importNode($('#' + this.id)[0].content, true).children[0];
+            this._el = el;
+            this.updateAxis();
+
+            return el;
+          }
+        }, {
+          key: 'updateAxis',
+          value: function updateAxis() {
+            // TODO implement
+          }
+        }]);
+
+        return TimeAxis;
+      })(L.Control);
+
+      _export('default', TimeAxis);
+    }
+  };
+});
+
+$__System.register('9', ['1', '12', '13', '14', '15', '16', '18', '19', '1c', '1d', '1e', '1f', 'c', '1a', '1b'], function (_export) {
+  var L, _get, _inherits, _createClass, _classCallCheck, _slicedToArray, _Object$keys, ndarray, _toConsumableArray, _Promise, _getIterator, _Map, linearPalette, scale, arrays, opsnull, DOMAIN_TYPE, DEFAULT_CONTINUOUS_PALETTE, DEFAULT_CATEGORICAL_PALETTE, Grid;
 
   function wrapLongitude(lon, range) {
     return wrapNum(lon, range, true);
@@ -7058,40 +11685,50 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
   return {
     setters: [function (_7) {
       L = _7['default'];
-    }, function (_9) {
-      linearPalette = _9.linearPalette;
-      scale = _9.scale;
     }, function (_) {
-      _createClass = _['default'];
+      _get = _['default'];
     }, function (_2) {
-      _classCallCheck = _2['default'];
+      _inherits = _2['default'];
     }, function (_3) {
-      _slicedToArray = _3['default'];
+      _createClass = _3['default'];
+    }, function (_4) {
+      _classCallCheck = _4['default'];
+    }, function (_5) {
+      _slicedToArray = _5['default'];
+    }, function (_6) {
+      _Object$keys = _6['default'];
     }, function (_8) {
       ndarray = _8['default'];
-    }, function (_10) {
-      utils = _10;
-    }, function (_11) {
-      opsnull = _11;
-    }, function (_4) {
-      _toConsumableArray = _4['default'];
-    }, function (_5) {
-      _Promise = _5['default'];
-    }, function (_6) {
-      _getIterator = _6['default'];
+    }, function (_c) {
+      _toConsumableArray = _c['default'];
+    }, function (_d) {
+      _Promise = _d['default'];
     }, function (_e) {
-      _get = _e['default'];
+      _getIterator = _e['default'];
     }, function (_f) {
-      _inherits = _f['default'];
+      _Map = _f['default'];
+    }, function (_c2) {
+      linearPalette = _c2.linearPalette;
+      scale = _c2.scale;
+    }, function (_a) {
+      arrays = _a;
     }, function (_b) {
-      _Object$keys = _b['default'];
+      opsnull = _b;
     }],
     execute: function () {
       'use strict';
 
       DOMAIN_TYPE = 'http://coveragejson.org/def#Grid';
-      DEFAULT_PALETTE = linearPalette(['#deebf7', '#3182bd']);
+
+      DEFAULT_CONTINUOUS_PALETTE = function DEFAULT_CONTINUOUS_PALETTE() {
+        return linearPalette(['#deebf7', '#3182bd']);
+      };
+
       // blues
+
+      DEFAULT_CATEGORICAL_PALETTE = function DEFAULT_CATEGORICAL_PALETTE(n) {
+        return linearPalette(['#e41a1c', '#377eb8', '#4daf4a', '#984ea3'], n);
+      };
 
       /**
        * Renderer for Coverages with domain type Grid.
@@ -7147,13 +11784,30 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
             z: { coordPref: options.vertical }
           };
 
-          this._palette = options.palette || DEFAULT_PALETTE;
-          if (options.paletteExtent === undefined) {
-            this._paletteExtent = 'full';
-          } else if (Array.isArray(options.paletteExtent) || ['full', 'subset', 'fov'].indexOf(options.paletteExtent) !== -1) {
-            this._paletteExtent = options.paletteExtent;
+          if (options.palette) {
+            this._palette = options.palette;
+          } else if (this.param.categories) {
+            this._palette = DEFAULT_CATEGORICAL_PALETTE(this.param.categories.length);
           } else {
-            throw new Error('paletteExtent must either be a 2-element array, one of "full", "subset", or "fov", or be omitted');
+            this._palette = DEFAULT_CONTINUOUS_PALETTE();
+          }
+
+          if (this.param.categories && this.param.categories.length !== this._palette.steps) {
+            throw new Error('Categorical palettes must match the number of categories of the parameter');
+          }
+
+          if (this.param.categories) {
+            if (options.paletteExtent) {
+              throw new Error('paletteExtent cannot be given for categorical parameters');
+            }
+          } else {
+            if (options.paletteExtent === undefined) {
+              this._paletteExtent = 'full';
+            } else if (Array.isArray(options.paletteExtent) || ['full', 'subset', 'fov'].indexOf(options.paletteExtent) !== -1) {
+              this._paletteExtent = options.paletteExtent;
+            } else {
+              throw new Error('paletteExtent must either be a 2-element array, one of "full", "subset", or "fov", or be omitted');
+            }
           }
 
           switch (options.redraw) {
@@ -7185,7 +11839,9 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
               _this.domain = domain;
               _this.range = range;
               _this._subsetAxesByCoordinatePreference();
-              _this._updatePaletteExtent(_this._paletteExtent);
+              if (!_this.param.categories) {
+                _this._updatePaletteExtent(_this._paletteExtent);
+              }
               _this.fire('add');
               _get(Object.getPrototypeOf(Grid.prototype), 'onAdd', _this).call(_this, map);
               map.fire('dataload');
@@ -7313,7 +11969,7 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
               return 0;
             }
             var vals = this.domain[axis];
-            var idx = utils.indexOfNearest(vals, val);
+            var idx = arrays.indexOfNearest(vals, val);
             return idx;
           }
         }, {
@@ -7327,7 +11983,7 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
             }
 
             // wrapping as SciJS's ndarray allows us to do easy subsetting and efficient min/max search
-            var arr = utils.asSciJSndarray(this.range.values);
+            var arr = arrays.asSciJSndarray(this.range.values);
             var sub = this._axesSubset;
 
             if (extent === 'full') {
@@ -7352,6 +12008,8 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
         }, {
           key: 'drawTile',
           value: function drawTile(canvas, tilePoint, zoom) {
+            var _this2 = this;
+
             var map = this._map;
             var ctx = canvas.getContext('2d');
             var tileSize = this.options.tileSize;
@@ -7373,21 +12031,74 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
 
             var paletteExtent = this.paletteExtent;
 
-            // TODO don't scale value if categorical parameter
-
-            function setPixel(tileY, tileX, val) {
-              if (val === null) return;
-              // map value to color using a palette
-              var valScaled = scale(val, palette, paletteExtent);
-
-              rgba.set(tileY, tileX, 0, red[valScaled]);
-              rgba.set(tileY, tileX, 1, green[valScaled]);
-              rgba.set(tileY, tileX, 2, blue[valScaled]);
+            var doSetPixel = function doSetPixel(tileY, tileX, idx) {
+              rgba.set(tileY, tileX, 0, red[idx]);
+              rgba.set(tileY, tileX, 1, green[idx]);
+              rgba.set(tileY, tileX, 2, blue[idx]);
               rgba.set(tileY, tileX, 3, 255);
+            };
+
+            var setPixel = undefined;
+            if (this.param.categories) {
+              var _iteratorNormalCompletion3;
+
+              var _didIteratorError3;
+
+              var _iteratorError3;
+
+              var _iterator3, _step3;
+
+              (function () {
+                // categorical parameter
+                var valIdxMap = new _Map();
+                for (var idx = 0; idx < _this2.param.categories.length; idx++) {
+                  var cat = _this2.param.categories[idx];
+                  if (cat.value) {
+                    valIdxMap.set(cat.value, idx);
+                  } else {
+                    _iteratorNormalCompletion3 = true;
+                    _didIteratorError3 = false;
+                    _iteratorError3 = undefined;
+
+                    try {
+                      for (_iterator3 = _getIterator(cat.values); !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                        var val = _step3.value;
+
+                        valIdxMap.set(val, idx);
+                      }
+                    } catch (err) {
+                      _didIteratorError3 = true;
+                      _iteratorError3 = err;
+                    } finally {
+                      try {
+                        if (!_iteratorNormalCompletion3 && _iterator3['return']) {
+                          _iterator3['return']();
+                        }
+                      } finally {
+                        if (_didIteratorError3) {
+                          throw _iteratorError3;
+                        }
+                      }
+                    }
+                  }
+                }
+                setPixel = function (tileY, tileX, val) {
+                  if (val === null || !valIdxMap.has(val)) return;
+                  var idx = valIdxMap.get(val);
+                  doSetPixel(tileY, tileX, idx);
+                };
+              })();
+            } else {
+              // continuous parameter
+              setPixel = function (tileY, tileX, val) {
+                if (val === null) return;
+                var idx = scale(val, palette, paletteExtent);
+                doSetPixel(tileY, tileX, idx);
+              };
             }
 
             var sub = this._axesSubset;
-            var vals = utils.asSciJSndarray(this.range.values).pick(sub.t.idx, sub.z.idx, null, null);
+            var vals = arrays.asSciJSndarray(this.range.values).pick(sub.t.idx, sub.z.idx, null, null);
 
             if (this._isRectilinearGeodeticDomainGrid()) {
               if (this._isProjectedCoverageCRS()) {
@@ -7500,8 +12211,8 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
                 // now we find the closest grid cell using simple binary search
                 // for finding the closest latitude/longitude we use a simple binary search
                 // (as there is no discontinuity)
-                var iLat = utils.indexOfNearest(y, lat);
-                var iLon = utils.indexOfNearest(x, lon);
+                var iLat = arrays.indexOfNearest(y, lat);
+                var iLon = arrays.indexOfNearest(x, lon);
 
                 setPixel(tileY, tileX, vals.get(iLat, iLon));
               }
@@ -7532,7 +12243,7 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
               var lat = map.unproject(L.point(startX, startY + tileY)).lat;
               latCache[tileY] = lat;
               // find the index of the closest latitude in the grid using simple binary search
-              iLatCache[tileY] = utils.indexOfNearest(y, lat);
+              iLatCache[tileY] = arrays.indexOfNearest(y, lat);
             }
 
             for (var tileX = 0; tileX < tileSize; tileX++) {
@@ -7544,7 +12255,7 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
 
               // find the index of the closest longitude in the grid using simple binary search
               // (as there is no discontinuity)
-              var iLon = utils.indexOfNearest(x, lon);
+              var iLon = arrays.indexOfNearest(x, lon);
 
               for (var tileY = 0; tileY < tileSize; tileY++) {
                 // get geographic coordinates of tile pixel
@@ -7588,7 +12299,7 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
         }, {
           key: '_isRectilinearGeodeticDomainGrid',
           value: function _isRectilinearGeodeticDomainGrid() {
-            var _this2 = this;
+            var _this3 = this;
 
             if (!this.domain.crs) {
               // defaults to CRS84 if not given
@@ -7597,7 +12308,7 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
             // TODO add other common ones or somehow detect it automatically
             var recti = ['http://www.opengis.net/def/crs/OGC/1.3/CRS84'];
             return recti.some(function (r) {
-              return _this2.domain.crs === r;
+              return _this3.domain.crs === r;
             });
           }
 
@@ -7609,20 +12320,22 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
         }, {
           key: '_isProjectedCoverageCRS',
           value: function _isProjectedCoverageCRS() {
-            var _this3 = this;
+            var _this4 = this;
 
             if (!this.domain.crs) {
               return false;
             }
             var geographic = ['http://www.opengis.net/def/crs/OGC/1.3/CRS84'];
             return !geographic.some(function (uri) {
-              return _this3.domain.crs === uri;
+              return _this4.domain.crs === uri;
             });
           }
         }, {
           key: '_doAutoRedraw',
           value: function _doAutoRedraw() {
-            if (this._autoRedraw) {
+            // we check getContainer() to prevent errors when trying to redraw when the layer has not
+            // fully initialized yet
+            if (this._autoRedraw && this.getContainer()) {
               this.redraw();
             }
           }
@@ -7692,6 +12405,9 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
         }, {
           key: 'paletteExtent',
           set: function set(extent) {
+            if (this.param.categories) {
+              throw new Error('Cannot set palette extent for categorical parameters');
+            }
             this._updatePaletteExtent(extent);
             this._doAutoRedraw();
             this.fire('paletteExtentChange');
@@ -7709,123 +12425,33 @@ $__System.register('6', ['1', '9', '10', '11', '12', '13', '14', '15', '16', '17
   };
 });
 
-$__System.register('4', ['1', '10', '11', 'e', 'f', 'c'], function (_export) {
-  var L, _createClass, _classCallCheck, _get, _inherits, $, TimeAxis;
-
-  return {
-    setters: [function (_3) {
-      L = _3['default'];
-    }, function (_) {
-      _createClass = _['default'];
-    }, function (_2) {
-      _classCallCheck = _2['default'];
-    }, function (_e) {
-      _get = _e['default'];
-    }, function (_f) {
-      _inherits = _f['default'];
-    }, function (_c) {
-      $ = _c.$;
-    }],
-    execute: function () {
-
-      /**
-       * Displays a time axis selector for a given coverage layer.
-       * Also listens to time axis changes which were not initiated from
-       * this control.
-       * 
-       *  TODO figure out for which use cases this can realistically be used
-       *  solve https://github.com/Reading-eScience-Centre/coverage-jsapi/issues/3 first
-       */
-      'use strict';
-
-      TimeAxis = (function (_L$Control) {
-        _inherits(TimeAxis, _L$Control);
-
-        function TimeAxis(covLayer, options) {
-          var _this = this;
-
-          _classCallCheck(this, TimeAxis);
-
-          _get(Object.getPrototypeOf(TimeAxis.prototype), 'constructor', this).call(this, options.position ? { position: options.position } : {});
-          this.covLayer = covLayer;
-          this.id = options.id || DEFAULT_TEMPLATE_ID;
-
-          if (!options.id && document.getElementById(DEFAULT_TEMPLATE_ID) === null) {
-            inject(DEFAULT_TEMPLATE, DEFAULT_TEMPLATE_CSS);
-          }
-
-          this._axisListener = function (e) {
-            if (e.axis === 'time') _this.updateAxis();
-          };
-
-          // arrow function is broken here with traceur, this is a workaround
-          // see https://github.com/google/traceur-compiler/issues/1987
-          var self = this;
-          this._remove = function () {
-            self.removeFrom(self._map);
-          };
-          covLayer.on('remove', this._remove);
-        }
-
-        _createClass(TimeAxis, [{
-          key: 'onRemove',
-          value: function onRemove(map) {
-            this.covLayer.off('remove', this._remove);
-            this.covLayer.off('axisChange', this._axisListener);
-          }
-        }, {
-          key: 'onAdd',
-          value: function onAdd(map) {
-            this._map = map;
-            covLayer.on('axisChange', this._axisListener);
-            var el = document.importNode($('#' + this.id)[0].content, true).children[0];
-            this._el = el;
-            this.updateAxis();
-
-            return el;
-          }
-        }, {
-          key: 'updateAxis',
-          value: function updateAxis() {
-            // TODO implement
-          }
-        }]);
-
-        return TimeAxis;
-      })(L.Control);
-
-      _export('default', TimeAxis);
-    }
-  };
-});
-
-$__System.register('7', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e', 'f'], function (_export) {
-  var L, linearPalette, scale, _createClass, _classCallCheck, _slicedToArray, utils, opsnull, _toConsumableArray, _Promise, _get, _inherits, DOMAIN_TYPE, DEFAULT_COLOR, DEFAULT_PALETTE, Profile;
+$__System.register('a', ['1', '12', '13', '14', '15', '16', '1c', '1d', 'c', '1a', '1b'], function (_export) {
+  var L, _get, _inherits, _createClass, _classCallCheck, _slicedToArray, _toConsumableArray, _Promise, linearPalette, scale, arrays, opsnull, DOMAIN_TYPE, DEFAULT_COLOR, DEFAULT_PALETTE, Profile;
 
   return {
     setters: [function (_6) {
       L = _6['default'];
-    }, function (_7) {
-      linearPalette = _7.linearPalette;
-      scale = _7.scale;
     }, function (_) {
-      _createClass = _['default'];
+      _get = _['default'];
     }, function (_2) {
-      _classCallCheck = _2['default'];
+      _inherits = _2['default'];
     }, function (_3) {
-      _slicedToArray = _3['default'];
-    }, function (_8) {
-      utils = _8;
-    }, function (_9) {
-      opsnull = _9;
+      _createClass = _3['default'];
     }, function (_4) {
-      _toConsumableArray = _4['default'];
+      _classCallCheck = _4['default'];
     }, function (_5) {
-      _Promise = _5['default'];
-    }, function (_e) {
-      _get = _e['default'];
-    }, function (_f) {
-      _inherits = _f['default'];
+      _slicedToArray = _5['default'];
+    }, function (_c) {
+      _toConsumableArray = _c['default'];
+    }, function (_d) {
+      _Promise = _d['default'];
+    }, function (_c2) {
+      linearPalette = _c2.linearPalette;
+      scale = _c2.scale;
+    }, function (_a) {
+      arrays = _a;
+    }, function (_b) {
+      opsnull = _b;
     }],
     execute: function () {
       'use strict';
@@ -7858,6 +12484,10 @@ $__System.register('7', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e'
           this.param = options.keys ? cov.parameters.get(options.keys[0]) : null;
           this._targetZ = 'targetZ' in options ? options.targetZ : null;
           this.defaultColor = options.color ? options.color : DEFAULT_COLOR;
+
+          if (this.param && this.param.categories) {
+            throw new Error('category parameters are currently not support for Profile');
+          }
 
           this._palette = options.palette || DEFAULT_PALETTE;
           if (Array.isArray(options.paletteExtent)) {
@@ -7944,7 +12574,7 @@ $__System.register('7', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e'
             }
 
             // wrapping as SciJS's ndarray allows us to do easy subsetting and efficient min/max search
-            var arr = utils.asSciJSndarray(this.range.values);
+            var arr = arrays.asSciJSndarray(this.range.values);
 
             // scan the whole range for min/max values
             this._paletteExtent = [arr.get.apply(arr, _toConsumableArray(opsnull.nullargmin(arr))), arr.get.apply(arr, _toConsumableArray(opsnull.nullargmax(arr)))];
@@ -7985,7 +12615,7 @@ $__System.register('7', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e'
             if (this.param && this.targetZ !== null) {
               // use a palette
               // find the value with z nearest to targetZ
-              var val = this.range.get(z[utils.indexOfNearest(z, this.targetZ)]);
+              var val = this.range.get(z[arrays.indexOfNearest(z, this.targetZ)]);
               if (val !== null) {
                 var valScaled = scale(val, this.palette, this.paletteExtent);
                 var _palette = this.palette;
@@ -8067,33 +12697,33 @@ $__System.register('7', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e'
   };
 });
 
-$__System.register('8', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e', 'f'], function (_export) {
-  var L, linearPalette, scale, _createClass, _classCallCheck, _slicedToArray, utils, opsnull, _toConsumableArray, _Promise, _get, _inherits, DOMAIN_TYPE, DEFAULT_PALETTE, Trajectory;
+$__System.register('b', ['1', '12', '13', '14', '15', '16', '1c', '1d', 'c', '1a', '1b'], function (_export) {
+  var L, _get, _inherits, _createClass, _classCallCheck, _slicedToArray, _toConsumableArray, _Promise, linearPalette, scale, arrays, opsnull, DOMAIN_TYPE, DEFAULT_PALETTE, Trajectory;
 
   return {
     setters: [function (_6) {
       L = _6['default'];
-    }, function (_7) {
-      linearPalette = _7.linearPalette;
-      scale = _7.scale;
     }, function (_) {
-      _createClass = _['default'];
+      _get = _['default'];
     }, function (_2) {
-      _classCallCheck = _2['default'];
+      _inherits = _2['default'];
     }, function (_3) {
-      _slicedToArray = _3['default'];
-    }, function (_8) {
-      utils = _8;
-    }, function (_9) {
-      opsnull = _9;
+      _createClass = _3['default'];
     }, function (_4) {
-      _toConsumableArray = _4['default'];
+      _classCallCheck = _4['default'];
     }, function (_5) {
-      _Promise = _5['default'];
-    }, function (_e) {
-      _get = _e['default'];
-    }, function (_f) {
-      _inherits = _f['default'];
+      _slicedToArray = _5['default'];
+    }, function (_c) {
+      _toConsumableArray = _c['default'];
+    }, function (_d) {
+      _Promise = _d['default'];
+    }, function (_c2) {
+      linearPalette = _c2.linearPalette;
+      scale = _c2.scale;
+    }, function (_a) {
+      arrays = _a;
+    }, function (_b) {
+      opsnull = _b;
     }],
     execute: function () {
       'use strict';
@@ -8136,6 +12766,10 @@ $__System.register('8', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e'
           }
           this.cov = cov;
           this.param = cov.parameters.get(options.keys[0]);
+
+          if (this.param.categories) {
+            throw new Error('category parameters are currently not support for Trajectory');
+          }
 
           this._palette = options.palette || DEFAULT_PALETTE;
           if (options.paletteExtent === undefined || options.paletteExtent === 'subset') {
@@ -8204,7 +12838,7 @@ $__System.register('8', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e'
             }
 
             // wrapping as SciJS's ndarray allows us to do easy subsetting and efficient min/max search
-            var arr = utils.asSciJSndarray(this.range.values);
+            var arr = arrays.asSciJSndarray(this.range.values);
 
             if (extent === 'full') {
               // scan the whole range for min/max values, don't subset
@@ -8320,8 +12954,8 @@ $__System.register('8', ['1', '9', '10', '11', '12', '14', '15', '16', '17', 'e'
   };
 });
 
-$__System.register('9', ['10', '11', '19', '1a', '1b'], function (_export) {
-  var _createClass, _classCallCheck, _Math$trunc, _Map, _Symbol$iterator, PaletteManager;
+$__System.register('c', ['14', '15', '20', '21', '1f'], function (_export) {
+  var _createClass, _classCallCheck, _Math$trunc, _Symbol$iterator, _Map, PaletteManager;
 
   function linearPalette(colors) {
     var steps = arguments.length <= 1 || arguments[1] === undefined ? 256 : arguments[1];
@@ -8437,10 +13071,10 @@ $__System.register('9', ['10', '11', '19', '1a', '1b'], function (_export) {
       _classCallCheck = _2['default'];
     }, function (_3) {
       _Math$trunc = _3['default'];
-    }, function (_a) {
-      _Map = _a['default'];
-    }, function (_b) {
-      _Symbol$iterator = _b['default'];
+    }, function (_4) {
+      _Symbol$iterator = _4['default'];
+    }, function (_f) {
+      _Map = _f['default'];
     }],
     execute: function () {
       /**
@@ -8562,7 +13196,715 @@ $__System.register('9', ['10', '11', '19', '1a', '1b'], function (_export) {
   };
 });
 
-$__System.register('d', [], function (_export) {
+$__System.register('d', ['1', '12', '13', '14', '15', '16', '18', '22', '23', '24', '25', '1e', '1f'], function (_export) {
+  var L, _get, _inherits, _createClass, _classCallCheck, _slicedToArray, _Object$keys, wu, _Set, _Array$from, _Object$defineProperty, _getIterator, _Map, ParameterSync, SyncLayer;
+
+  /**
+   * Default function that checks if two Parameter objects describe
+   * the same thing. No magic is applied here. Exact match or nothing.
+   */
+  function defaultMatch(p1, p2) {
+    if (!p1.observedProperty.id || !p2.observedProperty.id) {
+      return false;
+    }
+    if (p1.observedProperty.id !== p2.observedProperty.id) {
+      return false;
+    }
+    if (p1.unit && p2.unit) {
+      if (p1.unit.id && p2.unit.id && p1.unit.id !== p2.unit.id) {
+        return false;
+      }
+      if (p1.unit.symbol && p2.unit.symbol && p1.unit.symbol !== p2.unit.symbol) {
+        return false;
+      }
+    } else if (p1.unit || p2.unit) {
+      // only one of both has units
+      return false;
+    }
+    if (p1.categories && p2.categories) {
+      if (p1.categories.length !== p2.categories.length) {
+        return false;
+      }
+      var idMissing = function idMissing(cat) {
+        return !cat.id;
+      };
+      if (p1.categories.some(idMissing) || p2.categories.some(idMissing)) {
+        return false;
+      }
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        var _loop = function () {
+          var cat1 = _step.value;
+
+          if (!p2.categories.some(function (cat2) {
+            return cat1.id === cat2.id;
+          })) {
+            return {
+              v: false
+            };
+          }
+        };
+
+        for (var _iterator = _getIterator(p1.categories), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var _ret = _loop();
+
+          if (typeof _ret === 'object') return _ret.v;
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator['return']) {
+            _iterator['return']();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+    } else if (p1.categories || p2.categories) {
+      // only one of both has categories
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * Synchronizes visualization options of multiple renderer layers with matching Parameter
+   * and exposes a combined view of those options in form of a virtual layer object.
+   * 
+   * A common use case for this is to have equal palettes and only a single legend
+   * for multiple layers describing the same parameter.
+   * 
+   * Synchronizing visualization options means synchronizing certain common properties
+   * of the layer instances. For example, the palette extents of two layers can be
+   * synchronized by merging the extents of both. The logic for doing that has to
+   * be specified in terms of binary functions supplied in the constructor.
+   * 
+   * By default, a simple algorithm determines if two Parameter objects are equivalent
+   * by checking whether things like observedPropery have the same ID, units are the same,
+   * etc. This default algorithm can be replaced with a custom one. Such a custom
+   * algorithm could relate different vocabularies with each other or perform other checks.
+   * 
+   * @example <caption>Common palettes</caption>
+   * let paramSync = new ParameterSync({
+   *   syncProperties: {
+   *     palette: (p1, p2) => p1,
+   *     paletteExtent: (e1, e2) => e1 && e2 ? [Math.min(e1[0], e2[0]), Math.max(e1[1], e2[1])] : null
+   *   }
+   * }).on('parameterAdd', e => {
+   *   // The virtual sync layer proxies the synced palette, paletteExtent, and parameter.
+   *   // The sync layer will fire a 'remove' event once all real layers for that parameter were removed.
+   *   let layer = e.syncLayer
+   *   if (layer.palette) {
+   *     new Legend(layer, {
+   *       position: 'bottomright'
+   *     }).addTo(map)
+   *   }
+   * })
+   * let layer = layerFactory(cov).on('add', e => {
+   *   // Only add the layer to the ParameterSync instance once it has initialized.
+   *   // We can use the 'add' event for that.
+   *   paramSync.addLayer(e.target)
+   * })
+   */
+  return {
+    setters: [function (_10) {
+      L = _10['default'];
+    }, function (_) {
+      _get = _['default'];
+    }, function (_2) {
+      _inherits = _2['default'];
+    }, function (_3) {
+      _createClass = _3['default'];
+    }, function (_4) {
+      _classCallCheck = _4['default'];
+    }, function (_5) {
+      _slicedToArray = _5['default'];
+    }, function (_8) {
+      _Object$keys = _8['default'];
+    }, function (_11) {
+      wu = _11['default'];
+    }, function (_6) {
+      _Set = _6['default'];
+    }, function (_7) {
+      _Array$from = _7['default'];
+    }, function (_9) {
+      _Object$defineProperty = _9['default'];
+    }, function (_e) {
+      _getIterator = _e['default'];
+    }, function (_f) {
+      _Map = _f['default'];
+    }],
+    execute: function () {
+      'use strict';
+
+      ParameterSync = (function (_L$Class) {
+        _inherits(ParameterSync, _L$Class);
+
+        /**
+         * @param {Object} options
+         * @param {Object} options.syncProperties - 
+         *   An object that defines which properties shall be synchronized and how.
+         *   Each key is a property name where the value is a binary function that merges
+         *   the values of two such properties.
+         * @param {Function} [options.match] - 
+         *   Custom function that checks if two Parameter objects shall be equivalent.
+         *   The default function is simple and checks for identity of several properties.
+         */
+
+        function ParameterSync(options) {
+          _classCallCheck(this, ParameterSync);
+
+          _get(Object.getPrototypeOf(ParameterSync.prototype), 'constructor', this).call(this);
+          this._syncProps = options.syncProperties || {};
+          this._match = options.match || defaultMatch;
+          this._paramLayers = new _Map(); // Map (Parameter -> Set(Layer))
+          this._layerListeners = new _Map(); // Map (Layer -> Map(type -> listener))
+          this._propSyncing = new _Set(); // Set (property name)
+        }
+
+        /**
+         * Adds a layer that will be synchronized.
+         * 
+         * Synchronization stops automatically when the layer fires a 'remove' event.
+         * 
+         * @param {ILayer} layer - The layer to synchronize.
+         * @fires ParameterSync#parameterAdd - When a layer with a new parameter was added.
+         */
+
+        _createClass(ParameterSync, [{
+          key: 'addLayer',
+          value: function addLayer(layer) {
+            var _this = this;
+
+            if (!layer.parameter) {
+              console.log('layer has no parameter, skipping parameter sync');
+              return;
+            }
+            var params = _Array$from(this._paramLayers.keys());
+            var match = params.find(function (p) {
+              return _this._match(p, layer.parameter);
+            });
+
+            var param = undefined;
+            if (!match) {
+              param = layer.parameter;
+              this._paramLayers.set(param, new _Set([layer]));
+            } else {
+              param = match;
+              this._paramLayers.get(param).add(layer);
+              this._syncProperties(param);
+            }
+
+            this._registerLayerListeners(layer, param);
+
+            if (!match) {
+              /**
+               * Parameter Add event.
+               * 
+               * @event ParameterSync#parameterAdd
+               * @type {object}
+               * @property {SyncLayer} syncLayer - 
+               *   A virtual layer that proxies the synchronized properties for a single parameter.
+               *   If all layers of that parameter are removed, this layer fires a 'remove' event,
+               *   signalling that the parameter is not present anymore.
+               */
+              this.fire('parameterAdd', { syncLayer: new SyncLayer(param, this) });
+            }
+          }
+        }, {
+          key: '_removeLayer',
+          value: function _removeLayer(layer, param) {
+            var _iteratorNormalCompletion2 = true;
+            var _didIteratorError2 = false;
+            var _iteratorError2 = undefined;
+
+            try {
+              for (var _iterator2 = _getIterator(this._layerListeners.get(layer)), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                var _step2$value = _slicedToArray(_step2.value, 2);
+
+                var type = _step2$value[0];
+                var fn = _step2$value[1];
+
+                layer.off(type, fn);
+              }
+            } catch (err) {
+              _didIteratorError2 = true;
+              _iteratorError2 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion2 && _iterator2['return']) {
+                  _iterator2['return']();
+                }
+              } finally {
+                if (_didIteratorError2) {
+                  throw _iteratorError2;
+                }
+              }
+            }
+
+            this._layerListeners['delete'](layer);
+            this._paramLayers.get(param)['delete'](layer);
+            if (this._paramLayers.get(param).size === 0) {
+              this._paramLayers['delete'](param);
+              // underscore since the 'remove' event of the syncLayer should be used
+              // from the outside
+              this.fire('_parameterRemove', { param: param });
+            }
+          }
+        }, {
+          key: '_registerLayerListeners',
+          value: function _registerLayerListeners(layer, param) {
+            var _this2 = this;
+
+            var listeners = new _Map([['remove', function () {
+              return _this2._removeLayer(layer, param);
+            }]]);
+            var _iteratorNormalCompletion3 = true;
+            var _didIteratorError3 = false;
+            var _iteratorError3 = undefined;
+
+            try {
+              var _loop2 = function () {
+                var prop = _step3.value;
+
+                var type = prop + 'Change'; // our convention is camel case
+                // TODO does it make sense to unify again, or should it just propagate unchanged?
+                listeners.set(type, function () {
+                  return _this2._syncProperty(param, prop);
+                });
+              };
+
+              for (var _iterator3 = _getIterator(_Object$keys(this._syncProps)), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                _loop2();
+              }
+            } catch (err) {
+              _didIteratorError3 = true;
+              _iteratorError3 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion3 && _iterator3['return']) {
+                  _iterator3['return']();
+                }
+              } finally {
+                if (_didIteratorError3) {
+                  throw _iteratorError3;
+                }
+              }
+            }
+
+            var _iteratorNormalCompletion4 = true;
+            var _didIteratorError4 = false;
+            var _iteratorError4 = undefined;
+
+            try {
+              for (var _iterator4 = _getIterator(listeners), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+                var _step4$value = _slicedToArray(_step4.value, 2);
+
+                var type = _step4$value[0];
+                var fn = _step4$value[1];
+
+                layer.on(type, fn);
+              }
+            } catch (err) {
+              _didIteratorError4 = true;
+              _iteratorError4 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion4 && _iterator4['return']) {
+                  _iterator4['return']();
+                }
+              } finally {
+                if (_didIteratorError4) {
+                  throw _iteratorError4;
+                }
+              }
+            }
+
+            this._layerListeners.set(layer, listeners);
+          }
+        }, {
+          key: '_syncProperties',
+          value: function _syncProperties(param) {
+            var _iteratorNormalCompletion5 = true;
+            var _didIteratorError5 = false;
+            var _iteratorError5 = undefined;
+
+            try {
+              for (var _iterator5 = _getIterator(_Object$keys(this._syncProps)), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+                var prop = _step5.value;
+
+                this._syncProperty(param, prop);
+              }
+            } catch (err) {
+              _didIteratorError5 = true;
+              _iteratorError5 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion5 && _iterator5['return']) {
+                  _iterator5['return']();
+                }
+              } finally {
+                if (_didIteratorError5) {
+                  throw _iteratorError5;
+                }
+              }
+            }
+          }
+        }, {
+          key: '_syncProperty',
+          value: function _syncProperty(param, prop) {
+            if (this._propSyncing.has(prop)) {
+              return;
+            }
+            var propreduce = this._syncProps[prop];
+            var unified = wu(this._paramLayers.get(param)).map(function (l) {
+              return l[prop];
+            }).reduce(propreduce);
+            // While we unify properties, stop listening for changes to prevent a cycle.
+            this._propSyncing.add(prop);
+            var _iteratorNormalCompletion6 = true;
+            var _didIteratorError6 = false;
+            var _iteratorError6 = undefined;
+
+            try {
+              for (var _iterator6 = _getIterator(this._paramLayers.get(param)), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+                var layer_ = _step6.value;
+
+                layer_[prop] = unified;
+              }
+            } catch (err) {
+              _didIteratorError6 = true;
+              _iteratorError6 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion6 && _iterator6['return']) {
+                  _iterator6['return']();
+                }
+              } finally {
+                if (_didIteratorError6) {
+                  throw _iteratorError6;
+                }
+              }
+            }
+
+            this._propSyncing['delete'](prop);
+            this.fire('_syncPropChange', { param: param, prop: prop });
+          }
+        }]);
+
+        return ParameterSync;
+      })(L.Class);
+
+      ParameterSync.include(L.Mixin.Events);
+
+      SyncLayer = (function (_L$Class2) {
+        _inherits(SyncLayer, _L$Class2);
+
+        function SyncLayer(param, paramSync) {
+          var _this3 = this;
+
+          _classCallCheck(this, SyncLayer);
+
+          _get(Object.getPrototypeOf(SyncLayer.prototype), 'constructor', this).call(this);
+          this._param = param;
+          paramSync.on('_parameterRemove', function (e) {
+            if (e.param === param) {
+              _this3.fire('remove');
+            }
+          });
+          paramSync.on('_syncPropChange', function (e) {
+            if (e.param === param) {
+              _this3.fire(e.prop + 'Change');
+            }
+          });
+          var layers = function layers() {
+            return paramSync._paramLayers.get(param);
+          };
+          var _iteratorNormalCompletion7 = true;
+          var _didIteratorError7 = false;
+          var _iteratorError7 = undefined;
+
+          try {
+            var _loop3 = function () {
+              var prop = _step7.value;
+
+              _Object$defineProperty(_this3, prop, {
+                get: function get() {
+                  return layers().values().next().value[prop];
+                },
+                set: function set(v) {
+                  paramSync._propSyncing.add(prop);
+                  var _iteratorNormalCompletion8 = true;
+                  var _didIteratorError8 = false;
+                  var _iteratorError8 = undefined;
+
+                  try {
+                    for (var _iterator8 = _getIterator(layers()), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+                      var layer = _step8.value;
+
+                      layer[prop] = v;
+                    }
+                  } catch (err) {
+                    _didIteratorError8 = true;
+                    _iteratorError8 = err;
+                  } finally {
+                    try {
+                      if (!_iteratorNormalCompletion8 && _iterator8['return']) {
+                        _iterator8['return']();
+                      }
+                    } finally {
+                      if (_didIteratorError8) {
+                        throw _iteratorError8;
+                      }
+                    }
+                  }
+
+                  paramSync._propSyncing['delete'](prop);
+                  _this3.fire(prop + 'Change');
+                },
+                enumerable: true
+              });
+            };
+
+            for (var _iterator7 = _getIterator(_Object$keys(paramSync._syncProps)), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+              _loop3();
+            }
+          } catch (err) {
+            _didIteratorError7 = true;
+            _iteratorError7 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion7 && _iterator7['return']) {
+                _iterator7['return']();
+              }
+            } finally {
+              if (_didIteratorError7) {
+                throw _iteratorError7;
+              }
+            }
+          }
+        }
+
+        _createClass(SyncLayer, [{
+          key: 'parameter',
+          get: function get() {
+            return this._param;
+          }
+        }]);
+
+        return SyncLayer;
+      })(L.Class);
+
+      SyncLayer.include(L.Mixin.Events);
+
+      // work-around for Babel bug, otherwise ParameterSync cannot be referenced above for mixins
+
+      _export('default', ParameterSync);
+    }
+  };
+});
+
+$__System.register('e', ['1', '3', '11', '12', '13', '14', '15', '16', '17', '26', '1d', '1e'], function (_export) {
+  var L, c3, i18n, _get, _inherits, _createClass, _classCallCheck, _slicedToArray, _defineProperty, _Promise, _getIterator, DEFAULT_PLOT_OPTIONS, ProfilePlot;
+
+  return {
+    setters: [function (_7) {
+      L = _7['default'];
+    }, function (_8) {
+      c3 = _8['default'];
+    }, function (_10) {
+      i18n = _10;
+    }, function (_) {
+      _get = _['default'];
+    }, function (_2) {
+      _inherits = _2['default'];
+    }, function (_3) {
+      _createClass = _3['default'];
+    }, function (_4) {
+      _classCallCheck = _4['default'];
+    }, function (_6) {
+      _slicedToArray = _6['default'];
+    }, function (_5) {
+      _defineProperty = _5['default'];
+    }, function (_9) {}, function (_d) {
+      _Promise = _d['default'];
+    }, function (_e) {
+      _getIterator = _e['default'];
+    }],
+    execute: function () {
+
+      // not used currently
+      'use strict';
+
+      DEFAULT_PLOT_OPTIONS = {};
+
+      ProfilePlot = (function (_L$Popup) {
+        _inherits(ProfilePlot, _L$Popup);
+
+        function ProfilePlot(cov, options, plotOptions) {
+          _classCallCheck(this, ProfilePlot);
+
+          _get(Object.getPrototypeOf(ProfilePlot.prototype), 'constructor', this).call(this, { maxWidth: 350 });
+          this._cov = cov;
+          this.param = options.keys ? cov.parameters.get(options.keys[0]) : null;
+          this.language = options.language || i18n.DEFAULT_LANGUAGE;
+          this.plotOptions = plotOptions || DEFAULT_PLOT_OPTIONS;
+
+          if (this.param === null) {
+            throw new Error('multiple params not supported yet');
+          }
+        }
+
+        _createClass(ProfilePlot, [{
+          key: 'onAdd',
+          value: function onAdd(map) {
+            var _this = this;
+
+            map.fire('dataloading');
+            _Promise.all([this._cov.loadDomain(), this._cov.loadRanges()]).then(function (_ref) {
+              var _ref2 = _slicedToArray(_ref, 2);
+
+              var domain = _ref2[0];
+              var ranges = _ref2[1];
+
+              _this.domain = domain;
+              _this.ranges = ranges;
+              _this._addPlotToPopup();
+              _get(Object.getPrototypeOf(ProfilePlot.prototype), 'onAdd', _this).call(_this, map);
+              _this.fire('add');
+              map.fire('dataload');
+            })['catch'](function (e) {
+              console.error(e);
+              _this.fire('error', e);
+              map.fire('dataload');
+            });
+          }
+        }, {
+          key: '_addPlotToPopup',
+          value: function _addPlotToPopup() {
+            // TODO transform if necessary
+            var _domain = this.domain;
+            var x = _domain.x;
+            var y = _domain.y;
+
+            this.setLatLng(L.latLng(y, x));
+            var el = this._getPlotElement();
+            this.setContent(el);
+          }
+        }, {
+          key: '_getPlotElement',
+          value: function _getPlotElement() {
+            var param = this.param;
+
+            var xLabel = 'Vertical';
+            var unit = param.unit ? param.unit.symbol ? param.unit.symbol : i18n.getLanguageString(param.unit.label, this.language) : '';
+            var obsPropLabel = i18n.getLanguageString(param.observedProperty.label, this.language);
+            var x = ['x'];
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+              for (var _iterator = _getIterator(this.domain.z), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                var z = _step.value;
+
+                x.push(z);
+              }
+            } catch (err) {
+              _didIteratorError = true;
+              _iteratorError = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion && _iterator['return']) {
+                  _iterator['return']();
+                }
+              } finally {
+                if (_didIteratorError) {
+                  throw _iteratorError;
+                }
+              }
+            }
+
+            var y = [param.key];
+            for (var i = 0; i < this.domain.z.length; i++) {
+              y.push(this.ranges.get(param.key).values.get(i));
+            }
+
+            var el = document.createElement('div');
+            c3.generate({
+              bindto: el,
+              data: {
+                x: 'x',
+                columns: [x, y],
+                names: _defineProperty({}, param.key, obsPropLabel)
+              },
+              axis: {
+                rotated: true,
+                x: {
+                  label: {
+                    text: xLabel,
+                    position: 'outer-center'
+                  }
+                },
+                y: {
+                  label: {
+                    text: obsPropLabel + (unit ? ' (' + unit + ')' : ''),
+                    position: 'outer-middle'
+                  }
+                }
+              },
+              grid: {
+                x: {
+                  show: true
+                },
+                y: {
+                  show: true
+                }
+              },
+              // no need for a legend since there is only one source currently
+              legend: {
+                show: false
+              },
+              tooltip: {
+                format: {
+                  title: function title(d) {
+                    return 'Vertical: ' + d;
+                  },
+                  value: function value(_value, ratio, id) {
+                    return _value + unit;
+                  }
+                }
+              },
+              zoom: {
+                enabled: true,
+                rescale: true
+              },
+              size: {
+                height: 300,
+                width: 350
+              }
+            });
+
+            return el;
+          }
+        }]);
+
+        return ProfilePlot;
+      })(L.Popup);
+
+      _export('default', ProfilePlot);
+    }
+  };
+});
+
+$__System.register('10', [], function (_export) {
   /**
    * Inject HTML and CSS into the DOM.
    * 
@@ -8597,7 +13939,49 @@ $__System.register('d', [], function (_export) {
   };
 });
 
-$__System.register('14', ['10', '11', '13', '19'], function (_export) {
+$__System.register('11', [], function (_export) {
+  'use strict';
+
+  var DEFAULT_LANGUAGE;
+
+  _export('getLanguageTag', getLanguageTag);
+
+  _export('getLanguageString', getLanguageString);
+
+  function getLanguageTag(map) {
+    var preferredLanguage = arguments.length <= 1 || arguments[1] === undefined ? DEFAULT_LANGUAGE : arguments[1];
+
+    if (map.has(preferredLanguage)) {
+      return preferredLanguage;
+    } else {
+      // could be more clever here for cases like 'de' vs 'de-DE'
+      return map.keys().next().value;
+    }
+  }
+
+  function getLanguageString(map) {
+    var preferredLanguage = arguments.length <= 1 || arguments[1] === undefined ? DEFAULT_LANGUAGE : arguments[1];
+
+    if (map.has(preferredLanguage)) {
+      return map.get(preferredLanguage);
+    } else {
+      // random language
+      // this case should not happen as all labels should have common languages
+      return map.values().next().value;
+    }
+  }
+
+  return {
+    setters: [],
+    execute: function () {
+      DEFAULT_LANGUAGE = 'en';
+
+      _export('DEFAULT_LANGUAGE', DEFAULT_LANGUAGE);
+    }
+  };
+});
+
+$__System.register('1a', ['14', '15', '19', '20'], function (_export) {
   var _createClass, _classCallCheck, ndarray, _Math$trunc, Wrapper1D;
 
   /***
@@ -8759,7 +14143,7 @@ $__System.register('14', ['10', '11', '13', '19'], function (_export) {
   };
 });
 
-$__System.register('15', ['27'], function (_export) {
+$__System.register('1b', ['2e'], function (_export) {
 
   // handle null values in arrays
   // ndarray-ops only provides standard argmin and argmax
@@ -8795,8 +14179,8 @@ $__System.register('15', ['27'], function (_export) {
   /*eslint-enable */
 
   return {
-    setters: [function (_) {
-      compile = _['default'];
+    setters: [function (_e) {
+      compile = _e['default'];
     }],
     execute: function () {
       nullargmin = nullargminmax('min');
@@ -8810,7 +14194,10 @@ $__System.register('15', ['27'], function (_export) {
   };
 });
 
+$__System.register('26', [], false, function() {});
+(function(c){if (typeof document == 'undefined') return; var d=document,a='appendChild',i='styleSheet',s=d.createElement('style');s.type='text/css';d.getElementsByTagName('head')[0][a](s);s[i]?s[i].cssText=c:s[a](d.createTextNode(c));})
+(".c3 svg{font:10px sans-serif}.c3 line,.c3 path{fill:none;stroke:#000}.c3 text{-webkit-user-select:none;-moz-user-select:none;user-select:none}.c3-bars path,.c3-event-rect,.c3-legend-item-tile,.c3-xgrid-focus,.c3-ygrid{shape-rendering:crispEdges}.c3-chart-arc path{stroke:#fff}.c3-chart-arc text{fill:#fff;font-size:13px}.c3-grid line{stroke:#aaa}.c3-grid text{fill:#aaa}.c3-xgrid,.c3-ygrid{stroke-dasharray:3 3}.c3-text.c3-empty{fill:grey;font-size:2em}.c3-line{stroke-width:1px}.c3-circle._expanded_{stroke-width:1px;stroke:#fff}.c3-selected-circle{fill:#fff;stroke-width:2px}.c3-bar{stroke-width:0}.c3-bar._expanded_{fill-opacity:.75}.c3-target.c3-focused{opacity:1}.c3-target.c3-focused path.c3-line,.c3-target.c3-focused path.c3-step{stroke-width:2px}.c3-target.c3-defocused{opacity:.3!important}.c3-region{fill:#4682b4;fill-opacity:.1}.c3-brush .extent{fill-opacity:.1}.c3-legend-item{font-size:12px}.c3-legend-item-hidden{opacity:.15}.c3-legend-background{opacity:.75;fill:#fff;stroke:#d3d3d3;stroke-width:1}.c3-tooltip-container{z-index:10}.c3-tooltip{border-collapse:collapse;border-spacing:0;background-color:#fff;empty-cells:show;-webkit-box-shadow:7px 7px 12px -9px #777;-moz-box-shadow:7px 7px 12px -9px #777;box-shadow:7px 7px 12px -9px #777;opacity:.9}.c3-tooltip tr{border:1px solid #CCC}.c3-tooltip th{background-color:#aaa;font-size:14px;padding:2px 5px;text-align:left;color:#FFF}.c3-tooltip td{font-size:13px;padding:3px 6px;background-color:#fff;border-left:1px dotted #999}.c3-tooltip td>span{display:inline-block;width:10px;height:10px;margin-right:6px}.c3-tooltip td.value{text-align:right}.c3-area{stroke-width:0;opacity:.2}.c3-chart-arcs-title{dominant-baseline:middle;font-size:1.3em}.c3-chart-arcs .c3-chart-arcs-background{fill:#e0e0e0;stroke:none}.c3-chart-arcs .c3-chart-arcs-gauge-unit{fill:#000;font-size:16px}.c3-chart-arcs .c3-chart-arcs-gauge-max{fill:#777}.c3-chart-arcs .c3-chart-arcs-gauge-min{fill:#777}.c3-chart-arc .c3-gauge-value{fill:#000}");
 })
 (function(factory) {
-  factory(L, L, L, L, L, L);
+  factory(L, L, L, L, L, L, L, L, L, c3);
 });

@@ -1,4 +1,4 @@
-var lc_layer, remapped_layer, coverage;
+var lcLayer, remapped_layer, coverage;
 var dataset, variable, catData;
 var populated = false;
 
@@ -15,23 +15,25 @@ $(document).ready(function () {
 
     var map = L.map('map', {
         layers: [layer1],
-        center: [35, 0],
-        zoom: 2
+        center: [55, -3.5],
+        zoom: 6
     });
 
     var map2 = L.map('map2', {
         layers: [layer2],
-        center: [35, 0],
-        zoom: 2,
+        center: [55, -3.5],
+        zoom: 6,
         zoomControl: false
     });
 
     map.sync(map2);
     map2.sync(map);
 
-    dataset = 'http://termite.nerc-essc.ac.uk:8080/edal-json/api/datasets/landcover.asc/features/land_cover?details=domain,range,rangeMetadata';
+    dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
+    //    dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
     variable = 'land_cover';
-    var categories = 'modis-categories.json';
+    //    var categories = 'modis-categories.json';
+    var categories = 'melodies-categories.json';
 
     var lcData, catMapping;
     $.when(
@@ -44,23 +46,54 @@ $(document).ready(function () {
         })
     ).then(function () {
         CovJSON.read(lcData).then(function (cov) {
+            cov.parameters.get('land_cover').categories = getLegendCategories(catData);
+            cov.parameters.get('land_cover').observedProperty = {
+                label: new Map([["en", "Land Cover"]])
+            };
             coverage = cov;
-            var pal = getPaletteFromCategoryMapping(catMapping);
             var LayerFactory = L.coverage.LayerFactory()
-            lc_layer = LayerFactory(cov, {
+            var pal = getPaletteFromCategoryMapping(catMapping);
+            lcLayer = LayerFactory(cov, {
                 keys: [variable],
                 palette: pal
             });
-            lc_layer.addTo(map);
+            lcLayer.addTo(map);
+            console.log(catData);
+
+            var legend = new L.coverage.control.DiscreteLegend(lcLayer, {
+                position: 'bottomright'
+            }).addTo(map);
 
             remapped_layer = LayerFactory(cov, {
                 keys: [variable],
-                palette: pal
+                palette: pal,
+                parameter: {
+                    observedProperty: {
+                        label: new Map([["en", "Landcover"]])
+                    },
+                    categories: [{
+                        label: new Map([["en", "Grass"]])
+                    }, {
+                        label: new Map([["en", "Rocks"]])
+                    }]
+                }
             });
             remapped_layer.addTo(map2);
         });
     });
 });
+
+function getLegendCategories(catData, palette) {
+    var categories = [];
+    var i;
+    for (i = 0; i < catData.categories.length; i++) {
+        categories.push({
+            label: new Map([["en", catData.categories[i].name]]),
+            value: catData.categories[i].value
+        });
+    }
+    return categories;
+}
 
 function extractCategoryMapping(catData) {
     var i;
@@ -109,7 +142,7 @@ function show_remapper() {
     });
     if (!populated) {
         populated = true;
-        $.getJSON('melodies-categories.json', function (data) {
+        $.getJSON('modis-categories.json', function (data) {
             populateFroms(catData.categories);
             populateTos(data.categories);
         })
