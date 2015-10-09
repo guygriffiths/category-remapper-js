@@ -682,22 +682,6 @@ define("2", ["c"], function(main) {
 
 _removeDefine();
 })();
-$__System.registerDynamic("4", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  "use strict";
-  exports["default"] = function(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  };
-  exports.__esModule = true;
-  global.define = __define;
-  return module.exports;
-});
-
 $__System.registerDynamic("3", ["d"], true, function(require, exports, module) {
   ;
   var global = this,
@@ -729,14 +713,43 @@ $__System.registerDynamic("3", ["d"], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("5", ["7", "e"], true, function(require, exports, module) {
+$__System.registerDynamic("4", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  "use strict";
+  exports["default"] = function(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  };
+  exports.__esModule = true;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("6", ["e"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = {
+    "default": require("e"),
+    __esModule: true
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5", ["7", "f"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   "use strict";
   var _getIterator = require("7")["default"];
-  var _isIterable = require("e")["default"];
+  var _isIterable = require("f")["default"];
   exports["default"] = (function() {
     function sliceIterator(arr, i) {
       var _arr = [];
@@ -779,20 +792,7 @@ $__System.registerDynamic("5", ["7", "e"], true, function(require, exports, modu
   return module.exports;
 });
 
-$__System.registerDynamic("7", ["f"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = {
-    "default": require("f"),
-    __esModule: true
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("6", ["10"], true, function(require, exports, module) {
+$__System.registerDynamic("7", ["10"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -1512,84 +1512,84 @@ $__System.registerDynamic("d", ["16"], true, function(require, exports, module) 
   return module.exports;
 });
 
-$__System.registerDynamic("e", ["17"], true, function(require, exports, module) {
+$__System.registerDynamic("e", ["17", "18", "19", "1a", "1b"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("17");
+  require("18");
+  require("19");
+  require("1a");
+  module.exports = require("1b").Promise;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("f", ["1c"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = {
-    "default": require("17"),
+    "default": require("1c"),
     __esModule: true
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("f", ["18", "19", "1a"], true, function(require, exports, module) {
+$__System.registerDynamic("10", ["19", "18", "1d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("18");
   require("19");
-  module.exports = require("1a");
+  require("18");
+  module.exports = require("1d");
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("10", ["1b", "19", "18", "1c", "1d"], true, function(require, exports, module) {
+$__System.registerDynamic("11", ["17", "18", "19", "1e", "1f", "1b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("1b");
-  require("19");
+  require("17");
   require("18");
-  require("1c");
-  module.exports = require("1d").Promise;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("11", ["1b", "19", "18", "1e", "1f", "1d"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("1b");
   require("19");
-  require("18");
   require("1e");
   require("1f");
-  module.exports = require("1d").Map;
+  module.exports = require("1b").Map;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("12", ["20", "1d"], true, function(require, exports, module) {
+$__System.registerDynamic("12", ["20", "1b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   require("20");
-  module.exports = require("1d").Object.keys;
+  module.exports = require("1b").Object.keys;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("13", ["19", "21", "1d"], true, function(require, exports, module) {
+$__System.registerDynamic("13", ["18", "21", "1b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  require("19");
+  require("18");
   require("21");
-  module.exports = require("1d").Array.from;
+  module.exports = require("1b").Array.from;
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("15", ["22"], true, function(require, exports, module) {
+$__System.registerDynamic("14", ["22"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -1599,7 +1599,7 @@ $__System.registerDynamic("15", ["22"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("14", ["23"], true, function(require, exports, module) {
+$__System.registerDynamic("15", ["23"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -1609,12 +1609,24 @@ $__System.registerDynamic("14", ["23"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("16", ["24"], true, function(require, exports, module) {
+$__System.registerDynamic("19", ["24", "25"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var $ = require("24");
+  require("24");
+  var Iterators = require("25");
+  Iterators.NodeList = Iterators.HTMLCollection = Iterators.Array;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("16", ["26"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var $ = require("26");
   module.exports = function defineProperty(it, key, desc) {
     return $.setDesc(it, key, desc);
   };
@@ -1622,26 +1634,14 @@ $__System.registerDynamic("16", ["24"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("17", ["18", "19", "25"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("18");
-  require("19");
-  module.exports = require("25");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("19", ["26", "27"], true, function(require, exports, module) {
+$__System.registerDynamic("18", ["27", "28"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var $at = require("26")(true);
-  require("27")(String, 'String', function(iterated) {
+  var $at = require("27")(true);
+  require("28")(String, 'String', function(iterated) {
     this._t = String(iterated);
     this._i = 0;
   }, function() {
@@ -1664,36 +1664,7 @@ $__System.registerDynamic("19", ["26", "27"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("18", ["28", "29"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  require("28");
-  var Iterators = require("29");
-  Iterators.NodeList = Iterators.HTMLCollection = Iterators.Array;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("1a", ["2a", "2b", "1d"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var anObject = require("2a"),
-      get = require("2b");
-  module.exports = require("1d").getIterator = function(it) {
-    var iterFn = get(it);
-    if (typeof iterFn != 'function')
-      throw TypeError(it + ' is not iterable!');
-    return anObject(iterFn.call(it));
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("1b", [], true, function(require, exports, module) {
+$__System.registerDynamic("17", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -1703,45 +1674,33 @@ $__System.registerDynamic("1b", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("1d", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var core = module.exports = {};
-  if (typeof __e == 'number')
-    __e = core;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("1c", ["24", "2d", "2e", "2f", "30", "31", "32", "2a", "33", "34", "35", "36", "37", "38", "39", "3a", "3b", "3c", "3d", "3e", "1d", "3f", "2c"], true, function(require, exports, module) {
+$__System.registerDynamic("1a", ["26", "2a", "2b", "2c", "2d", "2e", "2f", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "3a", "3b", "3c", "1b", "3d", "29"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var $ = require("24"),
-        LIBRARY = require("2d"),
-        global = require("2e"),
-        ctx = require("2f"),
-        classof = require("30"),
-        $def = require("31"),
-        isObject = require("32"),
-        anObject = require("2a"),
-        aFunction = require("33"),
-        strictNew = require("34"),
-        forOf = require("35"),
-        setProto = require("36").set,
-        same = require("37"),
-        species = require("38"),
-        SPECIES = require("39")('species'),
-        RECORD = require("3a")('record'),
+    var $ = require("26"),
+        LIBRARY = require("2a"),
+        global = require("2b"),
+        ctx = require("2c"),
+        classof = require("2d"),
+        $def = require("2e"),
+        isObject = require("2f"),
+        anObject = require("30"),
+        aFunction = require("31"),
+        strictNew = require("32"),
+        forOf = require("33"),
+        setProto = require("34").set,
+        same = require("35"),
+        species = require("36"),
+        SPECIES = require("37")('species'),
+        RECORD = require("38")('record'),
         PROMISE = 'Promise',
         process = global.process,
         isNode = classof(process) == 'process',
-        asap = process && process.nextTick || require("3b").set,
+        asap = process && process.nextTick || require("39").set,
         P = global[PROMISE],
         Wrapper;
     var testResolve = function(sub) {
@@ -1764,7 +1723,7 @@ $__System.registerDynamic("1c", ["24", "2d", "2e", "2f", "30", "31", "32", "2a",
         if (!(P2.resolve(5).then(function() {}) instanceof P2)) {
           works = false;
         }
-        if (works && require("3c")) {
+        if (works && require("3a")) {
           var thenableThenGotten = false;
           P.resolve($.setDesc({}, 'then', {get: function() {
               thenableThenGotten = true;
@@ -1918,7 +1877,7 @@ $__System.registerDynamic("1c", ["24", "2d", "2e", "2f", "30", "31", "32", "2a",
           $reject.call(record, err);
         }
       };
-      require("3d")(P.prototype, {
+      require("3b")(P.prototype, {
         then: function then(onFulfilled, onRejected) {
           var S = anObject(anObject(this).constructor)[SPECIES];
           var react = {
@@ -1943,9 +1902,9 @@ $__System.registerDynamic("1c", ["24", "2d", "2e", "2f", "30", "31", "32", "2a",
       });
     }
     $def($def.G + $def.W + $def.F * !useNative, {Promise: P});
-    require("3e")(P, PROMISE);
+    require("3c")(P, PROMISE);
     species(P);
-    species(Wrapper = require("1d")[PROMISE]);
+    species(Wrapper = require("1b")[PROMISE]);
     $def($def.S + $def.F * !useNative, PROMISE, {reject: function reject(r) {
         return new this(function(res, rej) {
           rej(r);
@@ -1956,7 +1915,7 @@ $__System.registerDynamic("1c", ["24", "2d", "2e", "2f", "30", "31", "32", "2a",
           res(x);
         });
       }});
-    $def($def.S + $def.F * !(useNative && require("3f")(function(iter) {
+    $def($def.S + $def.F * !(useNative && require("3d")(function(iter) {
       P.all(iter)['catch'](function() {});
     })), PROMISE, {
       all: function all(iterable) {
@@ -1986,19 +1945,71 @@ $__System.registerDynamic("1c", ["24", "2d", "2e", "2f", "30", "31", "32", "2a",
         });
       }
     });
-  })(require("2c"));
+  })(require("29"));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("1e", ["40", "41"], true, function(require, exports, module) {
+$__System.registerDynamic("1b", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var core = module.exports = {};
+  if (typeof __e == 'number')
+    __e = core;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1c", ["19", "18", "3e"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  require("19");
+  require("18");
+  module.exports = require("3e");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1d", ["30", "3f", "1b"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var anObject = require("30"),
+      get = require("3f");
+  module.exports = require("1b").getIterator = function(it) {
+    var iterFn = get(it);
+    if (typeof iterFn != 'function')
+      throw TypeError(it + ' is not iterable!');
+    return anObject(iterFn.call(it));
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1f", ["2e", "40"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var $def = require("2e");
+  $def($def.P, 'Map', {toJSON: require("40")('Map')});
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("1e", ["41", "42"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var strong = require("40");
-  require("41")('Map', function(get) {
+  var strong = require("41");
+  require("42")('Map', function(get) {
     return function Map() {
       return get(this, arguments[0]);
     };
@@ -2011,17 +2022,6 @@ $__System.registerDynamic("1e", ["40", "41"], true, function(require, exports, m
       return strong.def(this, key === 0 ? 0 : key, value);
     }
   }, strong, true);
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("1f", ["31", "42"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $def = require("31");
-  $def($def.P, 'Map', {toJSON: require("42")('Map')});
   global.define = __define;
   return module.exports;
 });
@@ -2041,34 +2041,20 @@ $__System.registerDynamic("20", ["43", "44"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("22", ["45"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  (function(Buffer) {
-    module.exports = function(obj) {
-      return !!(obj != null && obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj));
-    };
-  })(require("45").Buffer);
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("21", ["2f", "31", "43", "46", "47", "48", "2b", "3f"], true, function(require, exports, module) {
+$__System.registerDynamic("21", ["2c", "2e", "43", "45", "46", "47", "3f", "3d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var ctx = require("2f"),
-      $def = require("31"),
+  var ctx = require("2c"),
+      $def = require("2e"),
       toObject = require("43"),
-      call = require("46"),
-      isArrayIter = require("47"),
-      toLength = require("48"),
-      getIterFn = require("2b");
-  $def($def.S + $def.F * !require("3f")(function(iter) {
+      call = require("45"),
+      isArrayIter = require("46"),
+      toLength = require("47"),
+      getIterFn = require("3f");
+  $def($def.S + $def.F * !require("3d")(function(iter) {
     Array.from(iter);
   }), 'Array', {from: function from(arrayLike) {
       var O = toObject(arrayLike),
@@ -2099,7 +2085,7 @@ $__System.registerDynamic("21", ["2f", "31", "43", "46", "47", "48", "2b", "3f"]
   return module.exports;
 });
 
-$__System.registerDynamic("23", [], true, function(require, exports, module) {
+$__System.registerDynamic("22", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2117,150 +2103,31 @@ $__System.registerDynamic("23", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("25", ["30", "39", "29", "1d"], true, function(require, exports, module) {
+$__System.registerDynamic("23", ["48"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var classof = require("30"),
-      ITERATOR = require("39")('iterator'),
-      Iterators = require("29");
-  module.exports = require("1d").isIterable = function(it) {
-    var O = Object(it);
-    return ITERATOR in O || '@@iterator' in O || Iterators.hasOwnProperty(classof(O));
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("24", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $Object = Object;
-  module.exports = {
-    create: $Object.create,
-    getProto: $Object.getPrototypeOf,
-    isEnum: {}.propertyIsEnumerable,
-    getDesc: $Object.getOwnPropertyDescriptor,
-    setDesc: $Object.defineProperty,
-    setDescs: $Object.defineProperties,
-    getKeys: $Object.keys,
-    getNames: $Object.getOwnPropertyNames,
-    getSymbols: $Object.getOwnPropertySymbols,
-    each: [].forEach
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("26", ["49", "4a"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var toInteger = require("49"),
-      defined = require("4a");
-  module.exports = function(TO_STRING) {
-    return function(that, pos) {
-      var s = String(defined(that)),
-          i = toInteger(pos),
-          l = s.length,
-          a,
-          b;
-      if (i < 0 || i >= l)
-        return TO_STRING ? '' : undefined;
-      a = s.charCodeAt(i);
-      return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff ? TO_STRING ? s.charAt(i) : a : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+  (function(Buffer) {
+    module.exports = function(obj) {
+      return !!(obj != null && obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj));
     };
-  };
+  })(require("48").Buffer);
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("27", ["2d", "31", "4b", "4c", "4d", "39", "29", "4e", "24", "3e", "4f"], true, function(require, exports, module) {
+$__System.registerDynamic("24", ["49", "4a", "25", "4b", "28"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var LIBRARY = require("2d"),
-      $def = require("31"),
-      $redef = require("4b"),
-      hide = require("4c"),
-      has = require("4d"),
-      SYMBOL_ITERATOR = require("39")('iterator'),
-      Iterators = require("29"),
-      FF_ITERATOR = '@@iterator',
-      KEYS = 'keys',
-      VALUES = 'values';
-  var returnThis = function() {
-    return this;
-  };
-  module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE) {
-    require("4e")(Constructor, NAME, next);
-    var createMethod = function(kind) {
-      switch (kind) {
-        case KEYS:
-          return function keys() {
-            return new Constructor(this, kind);
-          };
-        case VALUES:
-          return function values() {
-            return new Constructor(this, kind);
-          };
-      }
-      return function entries() {
-        return new Constructor(this, kind);
-      };
-    };
-    var TAG = NAME + ' Iterator',
-        proto = Base.prototype,
-        _native = proto[SYMBOL_ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT],
-        _default = _native || createMethod(DEFAULT),
-        methods,
-        key;
-    if (_native) {
-      var IteratorPrototype = require("24").getProto(_default.call(new Base));
-      require("3e")(IteratorPrototype, TAG, true);
-      if (!LIBRARY && has(proto, FF_ITERATOR))
-        hide(IteratorPrototype, SYMBOL_ITERATOR, returnThis);
-    }
-    if (!LIBRARY || FORCE)
-      hide(proto, SYMBOL_ITERATOR, _default);
-    Iterators[NAME] = _default;
-    Iterators[TAG] = returnThis;
-    if (DEFAULT) {
-      methods = {
-        keys: IS_SET ? _default : createMethod(KEYS),
-        values: DEFAULT == VALUES ? _default : createMethod(VALUES),
-        entries: DEFAULT != VALUES ? _default : createMethod('entries')
-      };
-      if (FORCE)
-        for (key in methods) {
-          if (!(key in proto))
-            $redef(proto, key, methods[key]);
-        }
-      else
-        $def($def.P + $def.F * require("4f"), NAME, methods);
-    }
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("28", ["50", "51", "29", "52", "27"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  'use strict';
-  var setUnscope = require("50"),
-      step = require("51"),
-      Iterators = require("29"),
-      toIObject = require("52");
-  require("27")(Array, 'Array', function(iterated, kind) {
+  var setUnscope = require("49"),
+      step = require("4a"),
+      Iterators = require("25"),
+      toIObject = require("4b");
+  require("28")(Array, 'Array', function(iterated, kind) {
     this._t = toIObject(iterated);
     this._i = 0;
     this._k = kind;
@@ -2286,7 +2153,7 @@ $__System.registerDynamic("28", ["50", "51", "29", "52", "27"], true, function(r
   return module.exports;
 });
 
-$__System.registerDynamic("29", [], true, function(require, exports, module) {
+$__System.registerDynamic("25", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2296,38 +2163,124 @@ $__System.registerDynamic("29", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("2a", ["32"], true, function(require, exports, module) {
+$__System.registerDynamic("26", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var isObject = require("32");
-  module.exports = function(it) {
-    if (!isObject(it))
-      throw TypeError(it + ' is not an object!');
-    return it;
+  var $Object = Object;
+  module.exports = {
+    create: $Object.create,
+    getProto: $Object.getPrototypeOf,
+    isEnum: {}.propertyIsEnumerable,
+    getDesc: $Object.getOwnPropertyDescriptor,
+    setDesc: $Object.defineProperty,
+    setDescs: $Object.defineProperties,
+    getKeys: $Object.keys,
+    getNames: $Object.getOwnPropertyNames,
+    getSymbols: $Object.getOwnPropertySymbols,
+    each: [].forEach
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("2b", ["30", "39", "29", "1d"], true, function(require, exports, module) {
+$__System.registerDynamic("27", ["4c", "4d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var classof = require("30"),
-      ITERATOR = require("39")('iterator'),
-      Iterators = require("29");
-  module.exports = require("1d").getIteratorMethod = function(it) {
-    if (it != undefined)
-      return it[ITERATOR] || it['@@iterator'] || Iterators[classof(it)];
+  var toInteger = require("4c"),
+      defined = require("4d");
+  module.exports = function(TO_STRING) {
+    return function(that, pos) {
+      var s = String(defined(that)),
+          i = toInteger(pos),
+          l = s.length,
+          a,
+          b;
+      if (i < 0 || i >= l)
+        return TO_STRING ? '' : undefined;
+      a = s.charCodeAt(i);
+      return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff ? TO_STRING ? s.charAt(i) : a : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+    };
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("2c", ["53"], true, function(require, exports, module) {
+$__System.registerDynamic("28", ["2a", "2e", "4e", "4f", "50", "37", "25", "51", "26", "3c", "52"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  'use strict';
+  var LIBRARY = require("2a"),
+      $def = require("2e"),
+      $redef = require("4e"),
+      hide = require("4f"),
+      has = require("50"),
+      SYMBOL_ITERATOR = require("37")('iterator'),
+      Iterators = require("25"),
+      FF_ITERATOR = '@@iterator',
+      KEYS = 'keys',
+      VALUES = 'values';
+  var returnThis = function() {
+    return this;
+  };
+  module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE) {
+    require("51")(Constructor, NAME, next);
+    var createMethod = function(kind) {
+      switch (kind) {
+        case KEYS:
+          return function keys() {
+            return new Constructor(this, kind);
+          };
+        case VALUES:
+          return function values() {
+            return new Constructor(this, kind);
+          };
+      }
+      return function entries() {
+        return new Constructor(this, kind);
+      };
+    };
+    var TAG = NAME + ' Iterator',
+        proto = Base.prototype,
+        _native = proto[SYMBOL_ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT],
+        _default = _native || createMethod(DEFAULT),
+        methods,
+        key;
+    if (_native) {
+      var IteratorPrototype = require("26").getProto(_default.call(new Base));
+      require("3c")(IteratorPrototype, TAG, true);
+      if (!LIBRARY && has(proto, FF_ITERATOR))
+        hide(IteratorPrototype, SYMBOL_ITERATOR, returnThis);
+    }
+    if (!LIBRARY || FORCE)
+      hide(proto, SYMBOL_ITERATOR, _default);
+    Iterators[NAME] = _default;
+    Iterators[TAG] = returnThis;
+    if (DEFAULT) {
+      methods = {
+        keys: IS_SET ? _default : createMethod(KEYS),
+        values: DEFAULT == VALUES ? _default : createMethod(VALUES),
+        entries: DEFAULT != VALUES ? _default : createMethod('entries')
+      };
+      if (FORCE)
+        for (key in methods) {
+          if (!(key in proto))
+            $redef(proto, key, methods[key]);
+        }
+      else
+        $def($def.P + $def.F * require("52"), NAME, methods);
+    }
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("29", ["53"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2337,7 +2290,17 @@ $__System.registerDynamic("2c", ["53"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("2e", [], true, function(require, exports, module) {
+$__System.registerDynamic("2a", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = true;
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("2b", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2350,22 +2313,12 @@ $__System.registerDynamic("2e", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("2d", [], true, function(require, exports, module) {
+$__System.registerDynamic("2c", ["31"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = true;
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("2f", ["33"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var aFunction = require("33");
+  var aFunction = require("31");
   module.exports = function(fn, that, length) {
     aFunction(fn);
     if (that === undefined)
@@ -2392,13 +2345,33 @@ $__System.registerDynamic("2f", ["33"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("31", ["2e", "1d"], true, function(require, exports, module) {
+$__System.registerDynamic("2d", ["54", "37"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var global = require("2e"),
-      core = require("1d"),
+  var cof = require("54"),
+      TAG = require("37")('toStringTag'),
+      ARG = cof(function() {
+        return arguments;
+      }()) == 'Arguments';
+  module.exports = function(it) {
+    var O,
+        T,
+        B;
+    return it === undefined ? 'Undefined' : it === null ? 'Null' : typeof(T = (O = Object(it))[TAG]) == 'string' ? T : ARG ? cof(O) : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("2e", ["2b", "1b"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var global = require("2b"),
+      core = require("1b"),
       PROTOTYPE = 'prototype';
   var ctx = function(fn, that) {
     return function() {
@@ -2450,27 +2423,7 @@ $__System.registerDynamic("31", ["2e", "1d"], true, function(require, exports, m
   return module.exports;
 });
 
-$__System.registerDynamic("30", ["54", "39"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var cof = require("54"),
-      TAG = require("39")('toStringTag'),
-      ARG = cof(function() {
-        return arguments;
-      }()) == 'Arguments';
-  module.exports = function(it) {
-    var O,
-        T,
-        B;
-    return it === undefined ? 'Undefined' : it === null ? 'Null' : typeof(T = (O = Object(it))[TAG]) == 'string' ? T : ARG ? cof(O) : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("32", [], true, function(require, exports, module) {
+$__System.registerDynamic("2f", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2482,7 +2435,22 @@ $__System.registerDynamic("32", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("33", [], true, function(require, exports, module) {
+$__System.registerDynamic("30", ["2f"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var isObject = require("2f");
+  module.exports = function(it) {
+    if (!isObject(it))
+      throw TypeError(it + ' is not an object!');
+    return it;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("31", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2496,7 +2464,7 @@ $__System.registerDynamic("33", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("34", [], true, function(require, exports, module) {
+$__System.registerDynamic("32", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2510,17 +2478,17 @@ $__System.registerDynamic("34", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("35", ["2f", "46", "47", "2a", "48", "2b"], true, function(require, exports, module) {
+$__System.registerDynamic("33", ["2c", "45", "46", "30", "47", "3f"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ctx = require("2f"),
-      call = require("46"),
-      isArrayIter = require("47"),
-      anObject = require("2a"),
-      toLength = require("48"),
-      getIterFn = require("2b");
+  var ctx = require("2c"),
+      call = require("45"),
+      isArrayIter = require("46"),
+      anObject = require("30"),
+      toLength = require("47"),
+      getIterFn = require("3f");
   module.exports = function(iterable, entries, fn, that) {
     var iterFn = getIterFn(iterable),
         f = ctx(fn, that, entries ? 2 : 1),
@@ -2543,14 +2511,14 @@ $__System.registerDynamic("35", ["2f", "46", "47", "2a", "48", "2b"], true, func
   return module.exports;
 });
 
-$__System.registerDynamic("36", ["24", "32", "2a", "2f"], true, function(require, exports, module) {
+$__System.registerDynamic("34", ["26", "2f", "30", "2c"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var getDesc = require("24").getDesc,
-      isObject = require("32"),
-      anObject = require("2a");
+  var getDesc = require("26").getDesc,
+      isObject = require("2f"),
+      anObject = require("30");
   var check = function(O, proto) {
     anObject(O);
     if (!isObject(proto) && proto !== null)
@@ -2559,7 +2527,7 @@ $__System.registerDynamic("36", ["24", "32", "2a", "2f"], true, function(require
   module.exports = {
     set: Object.setPrototypeOf || ('__proto__' in {} ? function(buggy, set) {
       try {
-        set = require("2f")(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
+        set = require("2c")(Function.call, getDesc(Object.prototype, '__proto__').set, 2);
         set({}, []);
       } catch (e) {
         buggy = true;
@@ -2579,7 +2547,7 @@ $__System.registerDynamic("36", ["24", "32", "2a", "2f"], true, function(require
   return module.exports;
 });
 
-$__System.registerDynamic("37", [], true, function(require, exports, module) {
+$__System.registerDynamic("35", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2591,16 +2559,16 @@ $__System.registerDynamic("37", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("38", ["24", "39", "3c"], true, function(require, exports, module) {
+$__System.registerDynamic("36", ["26", "37", "3a"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var $ = require("24"),
-      SPECIES = require("39")('species');
+  var $ = require("26"),
+      SPECIES = require("37")('species');
   module.exports = function(C) {
-    if (require("3c") && !(SPECIES in C))
+    if (require("3a") && !(SPECIES in C))
       $.setDesc(C, SPECIES, {
         configurable: true,
         get: function() {
@@ -2612,21 +2580,21 @@ $__System.registerDynamic("38", ["24", "39", "3c"], true, function(require, expo
   return module.exports;
 });
 
-$__System.registerDynamic("39", ["55", "2e", "3a"], true, function(require, exports, module) {
+$__System.registerDynamic("37", ["55", "2b", "38"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   var store = require("55")('wks'),
-      Symbol = require("2e").Symbol;
+      Symbol = require("2b").Symbol;
   module.exports = function(name) {
-    return store[name] || (store[name] = Symbol && Symbol[name] || (Symbol || require("3a"))('Symbol.' + name));
+    return store[name] || (store[name] = Symbol && Symbol[name] || (Symbol || require("38"))('Symbol.' + name));
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("3a", [], true, function(require, exports, module) {
+$__System.registerDynamic("38", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2640,18 +2608,18 @@ $__System.registerDynamic("3a", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("3b", ["2f", "56", "57", "58", "2e", "54", "2c"], true, function(require, exports, module) {
+$__System.registerDynamic("39", ["2c", "56", "57", "58", "2b", "54", "29"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   (function(process) {
     'use strict';
-    var ctx = require("2f"),
+    var ctx = require("2c"),
         invoke = require("56"),
         html = require("57"),
         cel = require("58"),
-        global = require("2e"),
+        global = require("2b"),
         process = global.process,
         setTask = global.setImmediate,
         clearTask = global.clearImmediate,
@@ -2719,12 +2687,12 @@ $__System.registerDynamic("3b", ["2f", "56", "57", "58", "2e", "54", "2c"], true
       set: setTask,
       clear: clearTask
     };
-  })(require("2c"));
+  })(require("29"));
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("3c", ["59"], true, function(require, exports, module) {
+$__System.registerDynamic("3a", ["59"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2738,12 +2706,12 @@ $__System.registerDynamic("3c", ["59"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("3d", ["4b"], true, function(require, exports, module) {
+$__System.registerDynamic("3b", ["4e"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var $redef = require("4b");
+  var $redef = require("4e");
   module.exports = function(target, src) {
     for (var key in src)
       $redef(target, key, src[key]);
@@ -2753,14 +2721,14 @@ $__System.registerDynamic("3d", ["4b"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("3e", ["4d", "4c", "39"], true, function(require, exports, module) {
+$__System.registerDynamic("3c", ["50", "4f", "37"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var has = require("4d"),
-      hide = require("4c"),
-      TAG = require("39")('toStringTag');
+  var has = require("50"),
+      hide = require("4f"),
+      TAG = require("37")('toStringTag');
   module.exports = function(it, tag, stat) {
     if (it && !has(it = stat ? it : it.prototype, TAG))
       hide(it, TAG, tag);
@@ -2769,12 +2737,12 @@ $__System.registerDynamic("3e", ["4d", "4c", "39"], true, function(require, expo
   return module.exports;
 });
 
-$__System.registerDynamic("3f", ["39"], true, function(require, exports, module) {
+$__System.registerDynamic("3d", ["37"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var SYMBOL_ITERATOR = require("39")('iterator'),
+  var SYMBOL_ITERATOR = require("37")('iterator'),
       SAFE_CLOSING = false;
   try {
     var riter = [7][SYMBOL_ITERATOR]();
@@ -2806,25 +2774,77 @@ $__System.registerDynamic("3f", ["39"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("40", ["24", "4c", "2f", "38", "34", "4a", "35", "51", "3a", "4d", "32", "3c", "3d", "27", "1d"], true, function(require, exports, module) {
+$__System.registerDynamic("3e", ["2d", "37", "25", "1b"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var classof = require("2d"),
+      ITERATOR = require("37")('iterator'),
+      Iterators = require("25");
+  module.exports = require("1b").isIterable = function(it) {
+    var O = Object(it);
+    return ITERATOR in O || '@@iterator' in O || Iterators.hasOwnProperty(classof(O));
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("3f", ["2d", "37", "25", "1b"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var classof = require("2d"),
+      ITERATOR = require("37")('iterator'),
+      Iterators = require("25");
+  module.exports = require("1b").getIteratorMethod = function(it) {
+    if (it != undefined)
+      return it[ITERATOR] || it['@@iterator'] || Iterators[classof(it)];
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("40", ["33", "2d"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var forOf = require("33"),
+      classof = require("2d");
+  module.exports = function(NAME) {
+    return function toJSON() {
+      if (classof(this) != NAME)
+        throw TypeError(NAME + "#toJSON isn't generic");
+      var arr = [];
+      forOf(this, false, arr.push, arr);
+      return arr;
+    };
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("41", ["26", "4f", "2c", "36", "32", "4d", "33", "4a", "38", "50", "2f", "3a", "3b", "28", "1b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var $ = require("24"),
-      hide = require("4c"),
-      ctx = require("2f"),
-      species = require("38"),
-      strictNew = require("34"),
-      defined = require("4a"),
-      forOf = require("35"),
-      step = require("51"),
-      ID = require("3a")('id'),
-      $has = require("4d"),
-      isObject = require("32"),
+  var $ = require("26"),
+      hide = require("4f"),
+      ctx = require("2c"),
+      species = require("36"),
+      strictNew = require("32"),
+      defined = require("4d"),
+      forOf = require("33"),
+      step = require("4a"),
+      ID = require("38")('id'),
+      $has = require("50"),
+      isObject = require("2f"),
       isExtensible = Object.isExtensible || isObject,
-      SUPPORT_DESC = require("3c"),
+      SUPPORT_DESC = require("3a"),
       SIZE = SUPPORT_DESC ? '_s' : 'size',
       id = 0;
   var fastKey = function(it, create) {
@@ -2860,7 +2880,7 @@ $__System.registerDynamic("40", ["24", "4c", "2f", "38", "34", "4a", "35", "51",
         if (iterable != undefined)
           forOf(iterable, IS_MAP, that[ADDER], that);
       });
-      require("3d")(C.prototype, {
+      require("3b")(C.prototype, {
         clear: function clear() {
           for (var that = this,
               data = that._i,
@@ -2939,7 +2959,7 @@ $__System.registerDynamic("40", ["24", "4c", "2f", "38", "34", "4a", "35", "51",
     },
     getEntry: getEntry,
     setStrong: function(C, NAME, IS_MAP) {
-      require("27")(C, NAME, function(iterated, kind) {
+      require("28")(C, NAME, function(iterated, kind) {
         this._t = iterated;
         this._k = kind;
         this._l = undefined;
@@ -2960,34 +2980,34 @@ $__System.registerDynamic("40", ["24", "4c", "2f", "38", "34", "4a", "35", "51",
         return step(0, [entry.k, entry.v]);
       }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
       species(C);
-      species(require("1d")[NAME]);
+      species(require("1b")[NAME]);
     }
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("41", ["24", "31", "4c", "4f", "35", "34", "2e", "3c", "3d", "3e"], true, function(require, exports, module) {
+$__System.registerDynamic("42", ["26", "2e", "4f", "52", "33", "32", "2b", "3a", "3b", "3c"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   'use strict';
-  var $ = require("24"),
-      $def = require("31"),
-      hide = require("4c"),
-      BUGGY = require("4f"),
-      forOf = require("35"),
-      strictNew = require("34");
+  var $ = require("26"),
+      $def = require("2e"),
+      hide = require("4f"),
+      BUGGY = require("52"),
+      forOf = require("33"),
+      strictNew = require("32");
   module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
-    var Base = require("2e")[NAME],
+    var Base = require("2b")[NAME],
         C = Base,
         ADDER = IS_MAP ? 'set' : 'add',
         proto = C && C.prototype,
         O = {};
-    if (!require("3c") || typeof C != 'function' || !(IS_WEAK || !BUGGY && proto.forEach && proto.entries)) {
+    if (!require("3a") || typeof C != 'function' || !(IS_WEAK || !BUGGY && proto.forEach && proto.entries)) {
       C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
-      require("3d")(C.prototype, methods);
+      require("3b")(C.prototype, methods);
     } else {
       C = wrapper(function(target, iterable) {
         strictNew(target, C, NAME);
@@ -3008,7 +3028,7 @@ $__System.registerDynamic("41", ["24", "31", "4c", "4f", "35", "34", "2e", "3c",
             return this._c.size;
           }});
     }
-    require("3e")(C, NAME);
+    require("3c")(C, NAME);
     O[NAME] = C;
     $def($def.G + $def.W + $def.F, O);
     if (!IS_WEAK)
@@ -3019,32 +3039,12 @@ $__System.registerDynamic("41", ["24", "31", "4c", "4f", "35", "34", "2e", "3c",
   return module.exports;
 });
 
-$__System.registerDynamic("42", ["35", "30"], true, function(require, exports, module) {
+$__System.registerDynamic("43", ["4d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var forOf = require("35"),
-      classof = require("30");
-  module.exports = function(NAME) {
-    return function toJSON() {
-      if (classof(this) != NAME)
-        throw TypeError(NAME + "#toJSON isn't generic");
-      var arr = [];
-      forOf(this, false, arr.push, arr);
-      return arr;
-    };
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("43", ["4a"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var defined = require("4a");
+  var defined = require("4d");
   module.exports = function(it) {
     return Object(defined(it));
   };
@@ -3052,14 +3052,14 @@ $__System.registerDynamic("43", ["4a"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("44", ["31", "1d", "59"], true, function(require, exports, module) {
+$__System.registerDynamic("44", ["2e", "1b", "59"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = function(KEY, exec) {
-    var $def = require("31"),
-        fn = (require("1d").Object || {})[KEY] || Object[KEY],
+    var $def = require("2e"),
+        fn = (require("1b").Object || {})[KEY] || Object[KEY],
         exp = {};
     exp[KEY] = exec(fn);
     $def($def.S + $def.F * require("59")(function() {
@@ -3070,22 +3070,12 @@ $__System.registerDynamic("44", ["31", "1d", "59"], true, function(require, expo
   return module.exports;
 });
 
-$__System.registerDynamic("45", ["5a"], true, function(require, exports, module) {
+$__System.registerDynamic("45", ["30"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("5a");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("46", ["2a"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var anObject = require("2a");
+  var anObject = require("30");
   module.exports = function(iterator, fn, value, entries) {
     try {
       return entries ? fn(anObject(value)[0], value[1]) : fn(value);
@@ -3100,29 +3090,29 @@ $__System.registerDynamic("46", ["2a"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("47", ["29", "39"], true, function(require, exports, module) {
+$__System.registerDynamic("47", ["4c"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var Iterators = require("29"),
-      ITERATOR = require("39")('iterator');
+  var toInteger = require("4c"),
+      min = Math.min;
   module.exports = function(it) {
-    return (Iterators.Array || Array.prototype[ITERATOR]) === it;
+    return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0;
   };
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("48", ["49"], true, function(require, exports, module) {
+$__System.registerDynamic("46", ["25", "37"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var toInteger = require("49"),
-      min = Math.min;
+  var Iterators = require("25"),
+      ITERATOR = require("37")('iterator');
   module.exports = function(it) {
-    return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0;
+    return (Iterators.Array || Array.prototype[ITERATOR]) === it;
   };
   global.define = __define;
   return module.exports;
@@ -3133,109 +3123,22 @@ $__System.registerDynamic("49", [], true, function(require, exports, module) {
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var ceil = Math.ceil,
-      floor = Math.floor;
-  module.exports = function(it) {
-    return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4c", ["24", "5b", "3c"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var $ = require("24"),
-      createDesc = require("5b");
-  module.exports = require("3c") ? function(object, key, value) {
-    return $.setDesc(object, key, createDesc(1, value));
-  } : function(object, key, value) {
-    object[key] = value;
-    return object;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4e", ["24", "4c", "39", "5b", "3e"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  'use strict';
-  var $ = require("24"),
-      IteratorPrototype = {};
-  require("4c")(IteratorPrototype, require("39")('iterator'), function() {
-    return this;
-  });
-  module.exports = function(Constructor, NAME, next) {
-    Constructor.prototype = $.create(IteratorPrototype, {next: require("5b")(1, next)});
-    require("3e")(Constructor, NAME + ' Iterator');
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4a", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = function(it) {
-    if (it == undefined)
-      throw TypeError("Can't call method on  " + it);
-    return it;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4d", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var hasOwnProperty = {}.hasOwnProperty;
-  module.exports = function(it, key) {
-    return hasOwnProperty.call(it, key);
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4b", ["4c"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = require("4c");
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("4f", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = 'keys' in [] && !('next' in [].keys());
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("50", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
   module.exports = function() {};
   global.define = __define;
   return module.exports;
 });
 
-$__System.registerDynamic("51", [], true, function(require, exports, module) {
+$__System.registerDynamic("48", ["5a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("5a");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4a", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3250,16 +3153,113 @@ $__System.registerDynamic("51", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("52", ["5c", "4a"], true, function(require, exports, module) {
+$__System.registerDynamic("4b", ["5b", "4d"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var IObject = require("5c"),
-      defined = require("4a");
+  var IObject = require("5b"),
+      defined = require("4d");
   module.exports = function(it) {
     return IObject(defined(it));
   };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4d", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = function(it) {
+    if (it == undefined)
+      throw TypeError("Can't call method on  " + it);
+    return it;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4e", ["4f"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = require("4f");
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4c", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var ceil = Math.ceil,
+      floor = Math.floor;
+  module.exports = function(it) {
+    return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("4f", ["26", "5c", "3a"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var $ = require("26"),
+      createDesc = require("5c");
+  module.exports = require("3a") ? function(object, key, value) {
+    return $.setDesc(object, key, createDesc(1, value));
+  } : function(object, key, value) {
+    object[key] = value;
+    return object;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("51", ["26", "4f", "37", "5c", "3c"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  'use strict';
+  var $ = require("26"),
+      IteratorPrototype = {};
+  require("4f")(IteratorPrototype, require("37")('iterator'), function() {
+    return this;
+  });
+  module.exports = function(Constructor, NAME, next) {
+    Constructor.prototype = $.create(IteratorPrototype, {next: require("5c")(1, next)});
+    require("3c")(Constructor, NAME + ' Iterator');
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("50", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var hasOwnProperty = {}.hasOwnProperty;
+  module.exports = function(it, key) {
+    return hasOwnProperty.call(it, key);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("52", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = 'keys' in [] && !('next' in [].keys());
   global.define = __define;
   return module.exports;
 });
@@ -3274,12 +3274,25 @@ $__System.registerDynamic("53", ["5d"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("55", ["2e"], true, function(require, exports, module) {
+$__System.registerDynamic("54", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var global = require("2e"),
+  var toString = {}.toString;
+  module.exports = function(it) {
+    return toString.call(it).slice(8, -1);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("55", ["2b"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var global = require("2b"),
       SHARED = '__core-js_shared__',
       store = global[SHARED] || (global[SHARED] = {});
   module.exports = function(key) {
@@ -3289,29 +3302,16 @@ $__System.registerDynamic("55", ["2e"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("58", ["32", "2e"], true, function(require, exports, module) {
+$__System.registerDynamic("58", ["2f", "2b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  var isObject = require("32"),
-      document = require("2e").document,
+  var isObject = require("2f"),
+      document = require("2b").document,
       is = isObject(document) && isObject(document.createElement);
   module.exports = function(it) {
     return is ? document.createElement(it) : {};
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("54", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var toString = {}.toString;
-  module.exports = function(it) {
-    return toString.call(it).slice(8, -1);
   };
   global.define = __define;
   return module.exports;
@@ -3342,12 +3342,12 @@ $__System.registerDynamic("56", [], true, function(require, exports, module) {
   return module.exports;
 });
 
-$__System.registerDynamic("57", ["2e"], true, function(require, exports, module) {
+$__System.registerDynamic("57", ["2b"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = require("2e").document && document.documentElement;
+  module.exports = require("2b").document && document.documentElement;
   global.define = __define;
   return module.exports;
 });
@@ -3378,7 +3378,20 @@ $__System.registerDynamic("5a", ["5e"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("5b", [], true, function(require, exports, module) {
+$__System.registerDynamic("5b", ["54"], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var cof = require("54");
+  module.exports = 0 in Object('z') ? Object : function(it) {
+    return cof(it) == 'String' ? it.split('') : Object(it);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("5c", [], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3390,19 +3403,6 @@ $__System.registerDynamic("5b", [], true, function(require, exports, module) {
       writable: !(bitmap & 4),
       value: value
     };
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("5c", ["54"], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var cof = require("54");
-  module.exports = 0 in Object('z') ? Object : function(it) {
-    return cof(it) == 'String' ? it.split('') : Object(it);
   };
   global.define = __define;
   return module.exports;
@@ -4795,7 +4795,7 @@ $__System.registerDynamic("61", ["64"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("62", ["65"], true, function(require, exports, module) {
+$__System.registerDynamic("63", ["65"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4805,7 +4805,7 @@ $__System.registerDynamic("62", ["65"], true, function(require, exports, module)
   return module.exports;
 });
 
-$__System.registerDynamic("63", ["66"], true, function(require, exports, module) {
+$__System.registerDynamic("62", ["66"], true, function(require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4926,6 +4926,20 @@ $__System.registerDynamic("65", [], true, function(require, exports, module) {
   var global = this,
       __define = global.define;
   global.define = undefined;
+  var isArray = Array.isArray;
+  var str = Object.prototype.toString;
+  module.exports = isArray || function(val) {
+    return !!val && '[object Array]' == str.call(val);
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+$__System.registerDynamic("66", [], true, function(require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
   exports.read = function(buffer, offset, isLE, mLen, nBytes) {
     var e,
         m;
@@ -5001,20 +5015,6 @@ $__System.registerDynamic("65", [], true, function(require, exports, module) {
     eLen += mLen;
     for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
     buffer[offset + i - d] |= s * 128;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-$__System.registerDynamic("66", [], true, function(require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var isArray = Array.isArray;
-  var str = Object.prototype.toString;
-  module.exports = isArray || function(val) {
-    return !!val && '[object Array]' == str.call(val);
   };
   global.define = __define;
   return module.exports;
@@ -5678,7 +5678,8 @@ $__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'a'], func
           /** @type {boolean} */
           this.cacheRanges = cacheRanges;
 
-          this._params = new _Map();
+          /** @type {Map} */
+          this.parameters = new _Map();
           var _iteratorNormalCompletion3 = true;
           var _didIteratorError3 = false;
           var _iteratorError3 = undefined;
@@ -5688,8 +5689,10 @@ $__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'a'], func
               var key = _step3.value;
 
               transformParameter(covjson.parameters, key);
-              this._params.set(key, covjson.parameters[key]);
+              this.parameters.set(key, covjson.parameters[key]);
             }
+
+            /** @type {string} */
           } catch (err) {
             _didIteratorError3 = true;
             _iteratorError3 = err;
@@ -5704,18 +5707,29 @@ $__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'a'], func
               }
             }
           }
+
+          this.type = PREFIX + this._covjson.type;
+
+          // we extract the domain type from the coverage type
+          // this is possible with CoverageJSON since there is a 1:1 relationship
+          var withoutSuffix = this._covjson.type.substr(0, this._covjson.type.length - 'Coverage'.length);
+          /** @type {string} */
+          this.domainType = PREFIX + withoutSuffix;
+
+          /**
+           * A bounding box array with elements [westLon, southLat, eastLon, northLat].
+           * 
+           * @type {Array|undefined}
+           */
+          this.bbox = this._covjson.bbox;
         }
 
         /**
-         * @type {string}
+         * @return {Promise}
          */
 
         _createClass(Coverage, [{
           key: 'loadDomain',
-
-          /**
-           * @return {Promise}
-           */
           value: function loadDomain() {
             var _this = this;
 
@@ -5818,55 +5832,6 @@ $__System.register('0', ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'a'], func
               }
               return map;
             });
-          }
-        }, {
-          key: 'type',
-          get: function get() {
-            return PREFIX + this._covjson.type;
-          }
-
-          /**
-           * @type {string}
-           */
-        }, {
-          key: 'domainType',
-          get: function get() {
-            // we extract the domain type from the coverage type
-            // this is possible with CoverageJSON since there is a 1:1 relationship
-            var withoutSuffix = this._covjson.type.substr(0, this._covjson.type.length - 'Coverage'.length);
-            return PREFIX + withoutSuffix;
-          }
-
-          /**
-           * A bounding box array with elements [westLon, southLat, eastLon, northLat].
-           * 
-           * @type {Array|undefined}
-           */
-        }, {
-          key: 'bbox',
-          get: function get() {
-            return this._covjson.bbox;
-          }
-        }, {
-          key: 'timeExtent',
-          get: function get() {
-            // TODO not done in CovJSON spec yet
-            return null;
-          }
-        }, {
-          key: 'verticalExtent',
-          get: function get() {
-            // TODO not done in CovJSON spec yet
-            return null;
-          }
-
-          /**
-           * @type {Map}
-           */
-        }, {
-          key: 'parameters',
-          get: function get() {
-            return this._params;
           }
         }]);
 

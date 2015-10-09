@@ -2,50 +2,55 @@ var remap_function = function () {
     window.alert('You need to set the behaviour after remapping')
 };
 
-$(document).ready(function () {
-    $('<div id="remapper" style="display:none"><div id="remap-froms"></div><div id="remap-tos"></div><div id="centrecontent"></div><div id="buttonholder"><button id="remap-button">Apply mapping</button></div></div>').appendTo(document.body);
-});
 
 $(window).resize(function () {
     jsPlumb.repaintEverything();
 });
 
-function set_remap_function(f) {
-    remap_function = f;
+var remapperInitialised = false;
+
+function init() {
+    if (!remapperInitialised) {
+        $('<div id="remapper" style="display:none"><div id="remap-froms"></div><div id="remap-tos"></div><div id="centrecontent"></div><div id="buttonholder"><button id="remap-button">Apply mapping</button></div></div>').appendTo(document.body);
+        remapperInitialised = true;
+
+        $('#remap-button').click(function () {
+            var mapping = {};
+            var connections = jsPlumb.select();
+            connections.each(function (conn) {
+                var fromValue = $(conn.endpoints[0].element).attr('value');
+                var toValue = $(conn.endpoints[1].element).attr('value');
+                mapping[fromValue] = parseInt(toValue);
+            });
+
+            $('#remapper')[0].style.display = 'none';
+            remap_function(mapping);
+        });
+    }
 }
 
 function remap(f) {
+    remap_function = f;
     $('#remapper')[0].style.display = 'block';
     jsPlumb.repaintEverything();
-    $('#remap-button').click(function () {
-        var mapping = {};
-        var connections = jsPlumb.select();
-        connections.each(function (conn) {
-            var fromValue = $(conn.endpoints[0].element).attr('value');
-            var toColor = $(conn.endpoints[1].element).attr('color');
-            mapping[fromValue] = toColor;
-        });
-
-        $('#remapper')[0].style.display = 'none';
-        f(mapping);
-    });
 }
 
 function populateFroms(fromCategories) {
+    init();
     var i, id;
-    // Empty the div ready to be populated
     $('#remap-froms').empty();
-
+    $('#remapper')[0].style.display = 'block';
     for (i = 0; i < fromCategories.length; i++) {
         id = 'from:' + fromCategories[i].value;
         // Add a new div for each from category
         $('#remap-froms').append('<div id="' + id + '" class="map-from" ' +
             ' color="' + fromCategories[i].color + '" ' +
             'value="' + fromCategories[i].value + '" ' +
-            '>' + fromCategories[i].name + '</div>');
+            '>' + fromCategories[i].label.get("en") + '</div>');
 
         // Now add the jsPlumb endpoint
         jsPlumb.addEndpoint(id, {
+            container: $('#remapper'),
             uuid: id,
             isSource: true,
             isTarget: false,
@@ -69,28 +74,28 @@ function populateFroms(fromCategories) {
                 }]]
         });
     }
+    $('#remapper')[0].style.display = 'none';
 
     // Clicking the arrow should remove the mapping
     jsPlumb.bind("click", function (conn) {
         jsPlumb.detach(conn);
     });
-
-    jsPlumb.repaintEverything();
 }
 
 function populateTos(toCategories) {
+    init();
     var i, id;
-    // Empty the div ready to be populated
     $('#remap-tos').empty();
-
+    $('#remapper')[0].style.display = 'block';
     for (i = 0; i < toCategories.length; i++) {
         // Repeat the procedure for the to categories
         id = 'to:' + toCategories[i].value;
         $('#remap-tos').append('<div id="' + id + '" class="map-to"' +
             ' color="' + toCategories[i].color + '" ' +
             'value="' + toCategories[i].value + '" ' +
-            '> ' + toCategories[i].name + ' </div>');
+            '> ' + toCategories[i].label.get("en") + ' </div>');
         jsPlumb.addEndpoint(id, {
+            container: $('#remapper'),
             uuid: id,
             isSource: false,
             isTarget: true,
@@ -104,13 +109,5 @@ function populateTos(toCategories) {
             maxConnections: $('.map-from').length
         });
     }
-
-    // Start by mapping top to bottom.  This may want to be removed later
-    //    var nConnections = Math.min(toCategories.length, $('.map-from').length);
-    //    for(i = 0; i < nConnections; i++) {
-    //        jsPlumb.connect({
-    //            uuids: [$('.map-from')[i].id,
-    //                    'to:' + toCategories[i].value]
-    //        });
-    //    }
+    $('#remapper')[0].style.display = 'none';
 }

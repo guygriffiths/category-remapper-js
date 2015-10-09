@@ -1,89 +1,90 @@
 {
+    "id": "modis",
     "categories": [
         {
-            "name": "Water",
+            "label": "Water",
             "value": 0,
             "color": "#000080"
         },
         {
-            "name": "Evergreen Needleleaf Forest",
+            "label": "Evergreen Needleleaf Forest",
             "value": 1,
             "color": "#008000"
         },
         {
-            "name": "Evergreen Broadleaf Forest",
+            "label": "Evergreen Broadleaf Forest",
             "value": 2,
             "color": "#00FF00"
         },
         {
-            "name": "Decvalueuous Needleleaf Forest",
-
+            "label": "Deciduous Needleleaf Forest",
             "value": 3,
             "color": "#99CC00"
         },
         {
-            "name": "Decvalueuous Broadleaf Forest",
+            "label": "Deciduous Broadleaf Forest",
             "value": 4,
             "color": "#99FF99"
         },
         {
-            "name": "Mixed Forest",
+            "label": "Mixed Forest",
             "value": 5,
             "color": "#339966"
         },
         {
-            "name": "Closed Shrubland",
+            "label": "Closed Shrubland",
             "value": 6,
             "color": "#993366"
         },
         {
-            "name": "Open Shrubland",
+            "label": "Open Shrubland",
             "value": 7,
             "color": "#FFCC99"
         },
         {
-            "name": "Woody Savannas",
+            "label": "Woody Savannas",
             "value": 8,
             "color": "#CCFFCC"
         },
         {
-            "name": "Savannas",
+            "label": "Savannas",
             "value": 9,
             "color": "#FFCC00"
         },
         {
-            "name": "Grasslands",
+            "label": "Grasslands",
             "value": 10,
             "color": "#FF9900"
         },
         {
-            "name": "Permanent Wetlands",
+            "label": "Permanent Wetlands",
             "value": 11,
             "color": "#006699"
         },
         {
-            "name": "Croplands",
+            "label": "Croplands",
             "value": 12,
             "color": "#FFFF00"
         },
         {
-            "name": "Urban and Built-Up",
+            "label": "Urban and Built-Up",
             "value": 13,
             "color": "#FF0000"
         },
         {
-            "name": "Cropland/Natural Vegetation Mosaic",
+            "label": "Cropland/Natural Vegetation Mosaic",
             "value": 14,
             "color": "#999966"
         },
         {
-            "name": "Snow and Ice",
+            "label": "Snow and Ice",
             "value": 15,
             "color": "#FFFFFF"
         },
         {
-            "name": "Barren or Sparsely Vegetated",
+            "label": "Barren or Sparsely Vegetated",
             "value": 16,
             "color": "#808080"
-        }]
+        }
+    ]
 }

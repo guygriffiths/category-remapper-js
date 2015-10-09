@@ -1,8 +1,11 @@
-var lcLayer, remapped_layer, coverage;
-var dataset, variable, catData;
-var populated = false;
+var variable;
+var coverage;
+var fromCats, toCats;
+var map2, remappedLayer;
 
 $(document).ready(function () {
+    //    $('<div id="remapper" style="display:none"><div id="remap-froms"></div><div id="remap-tos"></div><div id="centrecontent"></div><div id="buttonholder"><button id="remap-button">Apply mapping</button></div></div>').appendTo(document.body);
+    init();
     // Set up maps
     var layer1 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>',
@@ -19,7 +22,7 @@ $(document).ready(function () {
         zoom: 6
     });
 
-    var map2 = L.map('map2', {
+    map2 = L.map('map2', {
         layers: [layer2],
         center: [55, -3.5],
         zoom: 6,
@@ -29,122 +32,110 @@ $(document).ready(function () {
     map.sync(map2);
     map2.sync(map);
 
-    dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
+    var dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
     //    dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
     variable = 'land_cover';
     //    var categories = 'modis-categories.json';
-    var categories = 'melodies-categories.json';
+    var fromCategoriesUrl = 'melodies-categories.json';
+    var toCategoriesUrl = 'modis-categories.json';
 
-    var lcData, catMapping;
+
+    var lcData;
     $.when(
         $.getJSON(dataset, function (data) {
             lcData = data;
         }),
-        $.getJSON(categories, function (data) {
-            catData = data;
-            catMapping = extractCategoryMapping(data);
+        $.getJSON(fromCategoriesUrl, function (data) {
+            fromCats = getCoverageCategories(data.categories);
+            populateFroms(fromCats);
+        }),
+        $.getJSON(toCategoriesUrl, function (data) {
+            console.log(data, data.categories);
+            toCats = getCoverageCategories(data.categories);
+            populateTos(toCats);
         })
     ).then(function () {
         CovJSON.read(lcData).then(function (cov) {
-            cov.parameters.get('land_cover').categories = getLegendCategories(catData);
-            cov.parameters.get('land_cover').observedProperty = {
+            var LayerFactory = L.coverage.LayerFactory()
+            coverage = cov;
+
+            coverage.parameters.get('land_cover').categories = fromCats;
+            coverage.parameters.get('land_cover').observedProperty = {
                 label: new Map([["en", "Land Cover"]])
             };
-            coverage = cov;
-            var LayerFactory = L.coverage.LayerFactory()
-            var pal = getPaletteFromCategoryMapping(catMapping);
+
             lcLayer = LayerFactory(cov, {
                 keys: [variable],
-                palette: pal
+                palette: getPaletteFromCategories(fromCats)
             });
             lcLayer.addTo(map);
-            console.log(catData);
 
             var legend = new L.coverage.control.DiscreteLegend(lcLayer, {
-                position: 'bottomright'
+                position: 'topright'
             }).addTo(map);
-
-            remapped_layer = LayerFactory(cov, {
-                keys: [variable],
-                palette: pal,
-                parameter: {
-                    observedProperty: {
-                        label: new Map([["en", "Landcover"]])
-                    },
-                    categories: [{
-                        label: new Map([["en", "Grass"]])
-                    }, {
-                        label: new Map([["en", "Rocks"]])
-                    }]
-                }
-            });
-            remapped_layer.addTo(map2);
         });
     });
 });
 
-function getLegendCategories(catData, palette) {
+function getCoverageCategories(catData) {
     var categories = [];
     var i;
-    for (i = 0; i < catData.categories.length; i++) {
+    for (i = 0; i < catData.length; i++) {
         categories.push({
-            label: new Map([["en", catData.categories[i].name]]),
-            value: catData.categories[i].value
+            label: new Map([["en", catData[i].label]]),
+            value: catData[i].value,
+            color: catData[i].color
         });
     }
     return categories;
 }
 
-function extractCategoryMapping(catData) {
+function getPaletteFromCategories(cats) {
     var i;
-    var val2color = {};
-    var cats = catData.categories;
-
-    // Build a map of value to colour
-    for (i = 0; i < cats.length; i++) {
-        val2color[cats[i].value] = cats[i].color;
-    }
-
-    return val2color;
-}
-
-function getPaletteFromCategoryMapping(catMapping) {
-    var i;
-    var min = Number.MAX_VALUE;
-    var max = -Number.MAX_VALUE;
-
-    // Find range of data
-    for (key in catMapping) {
-        min = Math.min(min, key);
-        max = Math.max(max, key);
-    }
-
-    // Now create an array of all values from min to max of the mapped values
     var paletteArray = [];
-    for (i = min; i <= max; i++) {
-        if (i in catMapping) {
-            paletteArray.push(catMapping[i]);
-        } else {
-            paletteArray.push('rgba(0,0,0,0)');
-        }
+    for (i = 0; i < cats.length; i++) {
+        paletteArray.push(cats[i].color);
     }
     return L.coverage.palette.directPalette(paletteArray);
 }
 
 function show_remapper() {
     remap(function (mapping) {
-        var newCatMapping = $.extend(true, {}, extractCategoryMapping(catData));
-        var changedVal;
-        for (changedVal in mapping) {
-            newCatMapping[changedVal] = mapping[changedVal];
+        if (remappedLayer) {
+            map2.removeLayer(remappedLayer);
         }
-        remapped_layer.palette = getPaletteFromCategoryMapping(newCatMapping);
+
+        var i;
+        var tos2froms = {};
+        var change;
+        for (change in mapping) {
+            if (!tos2froms[mapping[change]]) {
+                tos2froms[mapping[change]] = [];
+            }
+            tos2froms[mapping[change]].push(parseInt(change));
+        }
+
+        var categories = [];
+        for (i = 0; i < toCats.length; i++) {
+            if (tos2froms[toCats[i].value]) {
+                categories.push({
+                    label: toCats[i].label,
+                    values: tos2froms[i],
+                    color: toCats[i].color
+                });
+            }
+        }
+
+        var LayerFactory = L.coverage.LayerFactory()
+        var remappedCov = L.coverage.transform.withCategories(coverage, variable, categories);
+        remappedLayer = LayerFactory(remappedCov, {
+            keys: [variable],
+            palette: getPaletteFromCategories(categories)
+        });
+        remappedLayer.addTo(map2);
+
+        var legend = new L.coverage.control.DiscreteLegend(remappedLayer, {
+            position: 'topright'
+        }).addTo(map2);
     });
-    if (!populated) {
-        populated = true;
-        $.getJSON('modis-categories.json', function (data) {
-            populateFroms(catData.categories);
-            populateTos(data.categories);
-        })
-    }
 };
