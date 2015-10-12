@@ -111,3 +111,14 @@ function populateTos(toCategories) {
     }
     $('#remapper')[0].style.display = 'none';
 }
+
+function linkCategories(mapping) {
+    var tovals, i;
+    $('#remapper')[0].style.display = 'block';
+    for (fromVal in mapping) {
+        jsPlumb.connect({
+            uuids: ['from:' + fromVal, 'to:' + mapping[fromVal]]
+        });
+    }
+    $('#remapper')[0].style.display = 'none';
+}

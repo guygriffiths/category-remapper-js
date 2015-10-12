@@ -39,19 +39,19 @@ $(document).ready(function () {
     var fromCategoriesUrl = 'melodies-categories.json';
     var toCategoriesUrl = 'modis-categories.json';
 
-
-    var lcData;
+    var lcData, fromId, toId;
     $.when(
         $.getJSON(dataset, function (data) {
             lcData = data;
         }),
         $.getJSON(fromCategoriesUrl, function (data) {
             fromCats = getCoverageCategories(data.categories);
+            fromId = data.id;
             populateFroms(fromCats);
         }),
         $.getJSON(toCategoriesUrl, function (data) {
-            console.log(data, data.categories);
             toCats = getCoverageCategories(data.categories);
+            toId = data.id;
             populateTos(toCats);
         })
     ).then(function () {
@@ -74,6 +74,14 @@ $(document).ready(function () {
                 position: 'topright'
             }).addTo(map);
         });
+
+        // Try and get a JSON mapping from one category to the other.
+        // If it doesn't exist, this will silently fail
+        var mapping = fromId + '-' + toId + '-mapping.json';
+        $.getJSON(mapping, function (mapping) {
+            linkCategories(mapping);
+            $('#show_remapper').click(show_remapper);
+        })
     });
 });
 
