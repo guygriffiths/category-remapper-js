@@ -22,3 +22,11 @@ body {
 .popuptext {
     color: aqua
 }
+
+.legend {
+    background-color: aliceblue;
+}
+
+.discrete-legend-palette i {
+    opacity: 1.0;
+}

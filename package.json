@@ -1,0 +1,14 @@
+{
+    "name": "category-remapper",
+    "version": "0.9",
+    "description": "A JavaScript library for remapping categories onto other categories",
+    "author": {
+        "name": "Guy Griffiths",
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/guygriffiths/melodies-lc-remapper"
+    },
+    "main": "remapper.js",
+    "license": "BSD-3-Clause"
+}

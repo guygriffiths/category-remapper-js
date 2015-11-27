@@ -10,14 +10,6 @@
     z-index: 9060;
 }
 
-.legend {
-    background-color: aliceblue;
-}
-
-.discrete-legend-palette i {
-    opacity: 1.0;
-}
-
 #remapper {
     position: fixed;
     width: 100%;

@@ -2,117 +2,117 @@
     "id": "melodies",
     "categories": [
         {
-            "label": "Broadleaf Woodland",
+            "label": [["en", "Broadleaf Woodland"]],
             "value": 1,
             "color": "#FF0000"
         },
         {
-            "label": "Coniferous Woodland",
+            "label": [["en", "Coniferous Woodland"]],
             "value": 2,
             "color": "#006600"
         },
         {
-            "label": "Arable and Horticulture",
+            "label": [["en", "Arable and Horticulture"]],
             "value": 3,
             "color": "#732600"
         },
         {
-            "label": "Improved Grassland",
+            "label": [["en", "Improved Grassland"]],
             "value": 4,
             "color": "#00FF00"
         },
         {
-            "label": "Rough Grassland",
+            "label": [["en", "Rough Grassland"]],
             "value": 5,
             "color": "#FAAA00"
         },
         {
-            "label": "Neutral Grassland",
+            "label": [["en", "Neutral Grassland"]],
             "value": 6,
             "color": "#7FE57F"
         },
         {
-            "label": "Calcareous Grassland",
+            "label": [["en", "Calcareous Grassland"]],
             "value": 7,
             "color": "#70A800"
         },
         {
-            "label": "Acid Grassland",
+            "label": [["en", "Acid Grassland"]],
             "value": 8,
             "color": "#998100"
         },
         {
-            "label": "Fen, Marsh and Swamp",
+            "label": [["en", "Fen, Marsh and Swamp"]],
             "value": 9,
             "color": "#FFFF00"
         },
         {
-            "label": "Heather",
+            "label": [["en", "Heather"]],
             "value": 10,
             "color": "#801A80"
         },
         {
-            "label": "Heather Grassland",
+            "label": [["en", "Heather Grassland"]],
             "value": 11,
             "color": "#E68CA6"
         },
         {
-            "label": "Bog",
+            "label": [["en", "Bog"]],
             "value": 12,
             "color": "#008073"
         },
         {
-            "label": "Montane Habitats",
+            "label": [["en", "Montane Habitats"]],
             "value": 13,
             "color": "#00FFFF"
         },
         {
-            "label": "Inland Rock",
+            "label": [["en", "Inland Rock"]],
             "value": 14,
             "color": "#D2D2FF"
         },
         {
-            "label": "Saltwater",
+            "label": [["en", "Saltwater"]],
             "value": 15,
             "color": "#000080"
         },
         {
-            "label": "Freshwater",
+            "label": [["en", "Freshwater"]],
             "value": 16,
             "color": "#0000FF"
         },
         {
-            "label": "Supra-littoral Rock",
+            "label": [["en", "Supra-littoral Rock"]],
             "value": 17,
             "color": "#CCB300"
         },
         {
-            "label": "Supra-littoral Sediment",
+            "label": [["en", "Supra-littoral Sediment"]],
             "value": 18,
             "color": "#CCB300"
         },
         {
-            "label": "Littoral Rock",
+            "label": [["en", "Littoral Rock"]],
             "value": 19,
             "color": "#FFFF80"
         },
         {
-            "label": "Littoral Sediment",
+            "label": [["en", "Littoral Sediment"]],
             "value": 20,
             "color": "#FFFF80"
         },
         {
-            "label": "Saltmarsh",
+            "label": [["en", "Saltmarsh"]],
             "value": 21,
             "color": "#8080FF"
         },
         {
-            "label": "Urban",
+            "label": [["en", "Urban"]],
             "value": 22,
             "color": "#000000"
         },
         {
-            "label": "Suburban",
+            "label": [["en", "Suburban"]],
             "value": 23,
             "color": "#808080"
         }

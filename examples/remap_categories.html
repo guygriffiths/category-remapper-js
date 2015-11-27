@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Land use category remapper</title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/remapper.css">
+    <link rel="stylesheet" href="css/remap_categories.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+
+</head>
+
+
+
+
+<body>
+    <!-- remapper.js related parts -->
+    <script src="../js/jsPlumb-1.7.10.js"></script>
+    <script src="../js/minified.js"></script>
+    <script src="../js/remapper.js"></script>
+
+    <!-- CovJSON / leaflet maps related parts -->
+    <script src="js/leaflet.js"></script>
+    <script src="js/c3.min.js"></script>
+    <script src="js/L.Map.Sync.js"></script>
+    <script src="js/leaflet-coverage.src.js"></script>
+    <script src="js/covjson-reader.src.js"></script>
+    <script src="js/remap_categories.js"></script>
+
+    <!-- Now we define the maps and the remap button -->
+    <div id="map"></div>
+    <div id="map2"></div>
+    <button id="show_remapper" disabled="true">
+        Remap Categories</button>
+    <!-- Required for remapper.js.  Needs to be at the end... -->
+    <!-- If we put it above the maps, the legends get drawn on top of it -->
+    <div id="remapper"></div>
+</body>
+
+</html>
+
+
+</html>

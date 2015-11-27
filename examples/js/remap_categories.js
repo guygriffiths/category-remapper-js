@@ -1,11 +1,16 @@
+var MINI = require('minified');
+var _ = MINI._,
+    $ = MINI.$,
+    $$ = MINI.$$,
+    EE = MINI.EE,
+    HTML = MINI.HTML;
+
 var variable;
 var coverage;
 var fromCats, toCats;
 var map2, remappedLayer;
 
-$(document).ready(function () {
-    //    $('<div id="remapper" style="display:none"><div id="remap-froms"></div><div id="remap-tos"></div><div id="centrecontent"></div><div id="buttonholder"><button id="remap-button">Apply mapping</button></div></div>').appendTo(document.body);
-    init();
+document.addEventListener('DOMContentLoaded', function () {
     // Set up maps
     var layer1 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>',
@@ -33,28 +38,33 @@ $(document).ready(function () {
     map2.sync(map);
 
     var dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
-    //    dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
+    //    var dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
     variable = 'land_cover';
-    //    var categories = 'modis-categories.json';
     var fromCategoriesUrl = 'melodies-categories.json';
     var toCategoriesUrl = 'modis-categories.json';
 
     var lcData, fromId, toId;
-    $.when(
-        $.getJSON(dataset, function (data) {
-            lcData = data;
-        }),
-        $.getJSON(fromCategoriesUrl, function (data) {
-            fromCats = getCoverageCategories(data.categories);
-            fromId = data.id;
-            populateFroms(fromCats);
-        }),
-        $.getJSON(toCategoriesUrl, function (data) {
-            toCats = getCoverageCategories(data.categories);
-            toId = data.id;
-            populateTos(toCats);
-        })
-    ).then(function () {
+
+    var requests = [];
+    requests.push($.request('get', dataset).then(function (data) {
+        lcData = $.parseJSON(data);
+    }));
+
+    requests.push($.request('get', fromCategoriesUrl).then(function (data) {
+        data = $.parseJSON(data);
+        fromCats = extractCoverageCategories(data);
+        fromId = data.id;
+    }));
+
+    requests.push($.request('get', toCategoriesUrl).then(function (data) {
+        data = $.parseJSON(data);
+        toCats = extractCoverageCategories(data);
+        toId = data.id;
+    }));
+
+    Promise.all(requests).then(function () {
+        populateFroms(fromCats);
+        populateTos(toCats);
         CovJSON.read(lcData).then(function (cov) {
             var LayerFactory = L.coverage.LayerFactory()
             coverage = cov;
@@ -75,28 +85,17 @@ $(document).ready(function () {
             }).addTo(map);
         });
 
+        $$('#show_remapper').disabled = false;
+        $$('#show_remapper').addEventListener('click', show_remapper);
         // Try and get a JSON mapping from one category to the other.
         // If it doesn't exist, this will silently fail
         var mapping = fromId + '-' + toId + '-mapping.json';
-        $.getJSON(mapping, function (mapping) {
-            linkCategories(mapping);
-            $('#show_remapper').click(show_remapper);
-        })
-    });
-});
-
-function getCoverageCategories(catData) {
-    var categories = [];
-    var i;
-    for (i = 0; i < catData.length; i++) {
-        categories.push({
-            label: new Map([["en", catData[i].label]]),
-            value: catData[i].value,
-            color: catData[i].color
+        $.request('get', mapping).then(function (data) {
+            linkCategories($.parseJSON(data));
         });
-    }
-    return categories;
-}
+    });
+
+});
 
 function getPaletteFromCategories(cats) {
     var i;
