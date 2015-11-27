@@ -7,7 +7,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/guygriffiths/melodies-lc-remapper"
+        "url": "https://github.com/guygriffiths/category-remapper-js"
     },
     "main": "remapper.js",
     "license": "BSD-3-Clause"
