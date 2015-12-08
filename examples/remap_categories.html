@@ -22,8 +22,12 @@
 
     <!-- CovJSON / leaflet maps related parts -->
     <script src="js/leaflet.js"></script>
-    <script src="js/c3.min.js"></script>
     <script src="js/L.Map.Sync.js"></script>
+    <script>
+    // work-around for leaflet-coverage's pseudo-optional dependencies (to be fixed)
+    c3 = {}
+    d3 = {}
+    </script>
     <script src="js/leaflet-coverage.src.js"></script>
     <script src="js/covjson-reader.src.js"></script>
     <script src="js/remap_categories.js"></script>
@@ -31,7 +35,7 @@
     <!-- Now we define the maps and the remap button -->
     <div id="map"></div>
     <div id="map2"></div>
-    <button id="show_remapper" disabled="true">
+    <button id="show_remapper" disabled="disabled">
         Remap Categories</button>
     <!-- Required for remapper.js.  Needs to be at the end... -->
     <!-- If we put it above the maps, the legends get drawn on top of it -->
