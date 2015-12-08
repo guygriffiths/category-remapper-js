@@ -10,7 +10,7 @@
     z-index: 9060;
 }
 
-#remapper {
+.main-remapper {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -19,8 +19,8 @@
     z-index: 1000;
 }
 
-#remap-froms,
-#remap-tos {
+.remap-froms,
+.remap-tos {
     position: absolute;
     top: 0;
     left: 0;
@@ -32,7 +32,7 @@
     text-align: right;
 }
 
-#remap-tos {
+.remap-tos {
     left: auto;
     right: 0;
     /*Width of right frame div*/
@@ -42,7 +42,7 @@
     text-align: left;
 }
 
-#centrecontent {
+.centrecontent {
     position: absolute;
     opacity: 0.8;
     bottom: 0;
@@ -56,7 +56,7 @@
     vertical-align: bottom;
 }
 
-#buttonholder {
+.buttonholder {
     position: absolute;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -67,7 +67,7 @@
     text-align: center;
 }
 
-#remap-button {
+.remap-button {
     font-size: 20pt;
     padding: 20px;
     margin: 20px;

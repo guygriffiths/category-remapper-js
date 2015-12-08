@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function () {
     map.sync(map2);
     map2.sync(map);
 
-    var dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
-    //    var dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
+    //    var dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
+    var dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
     variable = 'land_cover';
     var fromCategoriesUrl = 'melodies-categories.json';
     var toCategoriesUrl = 'modis-categories.json';
 
-    var lcData, fromId, toId;
+    var lcData;
 
     var requests = [];
     requests.push($.request('get', dataset).then(function (data) {
@@ -51,20 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }));
 
     requests.push($.request('get', fromCategoriesUrl).then(function (data) {
-        data = $.parseJSON(data);
-        fromCats = extractCoverageCategories(data);
-        fromId = data.id;
+        fromCats = $.parseJSON(data);
     }));
 
     requests.push($.request('get', toCategoriesUrl).then(function (data) {
-        data = $.parseJSON(data);
-        toCats = extractCoverageCategories(data);
-        toId = data.id;
+        toCats = $.parseJSON(data);
     }));
 
+    var remap = new Remapper('remapper');
+
     Promise.all(requests).then(function () {
-        populateFroms(fromCats);
-        populateTos(toCats);
+        remap.populateFroms(fromCats);
+        remap.populateTos(toCats);
         CovJSON.read(lcData).then(function (cov) {
             var LayerFactory = L.coverage.LayerFactory()
             coverage = cov;
@@ -86,28 +84,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         $$('#show_remapper').disabled = false;
-        $$('#show_remapper').addEventListener('click', show_remapper);
+        $$('#show_remapper').addEventListener('click', function () {
+            remap.show.bind(remap)();
+        });
         // Try and get a JSON mapping from one category to the other.
         // If it doesn't exist, this will silently fail
-        var mapping = fromId + '-' + toId + '-mapping.json';
+        var mapping = 'melodies-modis-mapping.json';
         $.request('get', mapping).then(function (data) {
-            linkCategories($.parseJSON(data));
+            remap.linkCategories($.parseJSON(data));
         });
     });
 
-});
-
-function getPaletteFromCategories(cats) {
-    var i;
-    var paletteArray = [];
-    for (i = 0; i < cats.length; i++) {
-        paletteArray.push(cats[i].color);
-    }
-    return L.coverage.palette.directPalette(paletteArray);
-}
-
-function show_remapper() {
-    remap(function (mapping) {
+    remap.on('apply', function (data) {
+        var mapping = data.mapping;
+        console.log(mapping);
         if (remappedLayer) {
             map2.removeLayer(remappedLayer);
         }
@@ -119,12 +109,12 @@ function show_remapper() {
             if (!tos2froms[mapping[change]]) {
                 tos2froms[mapping[change]] = [];
             }
-            tos2froms[mapping[change]].push(parseInt(change));
+            tos2froms[mapping[change]].push(change);
         }
 
         var categories = [];
         for (i = 0; i < toCats.length; i++) {
-            if (tos2froms[toCats[i].value]) {
+            if (tos2froms[toCats[i].id]) {
                 categories.push({
                     label: toCats[i].label,
                     values: tos2froms[i],
@@ -145,4 +135,14 @@ function show_remapper() {
             position: 'topright'
         }).addTo(map2);
     });
-};
+
+});
+
+function getPaletteFromCategories(cats) {
+    var i;
+    var paletteArray = [];
+    for (i = 0; i < cats.length; i++) {
+        paletteArray.push(cats[i].color);
+    }
+    return L.coverage.palette.directPalette(paletteArray);
+}

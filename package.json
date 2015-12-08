@@ -1,14 +1,26 @@
 {
     "name": "category-remapper",
-    "version": "0.9",
+    "version": "0.9.0",
     "description": "A JavaScript library for remapping categories onto other categories",
     "author": {
-        "name": "Guy Griffiths",
+        "name": "Guy Griffiths"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/guygriffiths/category-remapper-js"
     },
     "main": "remapper.js",
+    "browserify": "remapper.js",
+    "dependencies": {
+        "minified": "^1.0.1",
+        "jsplumb": "^2.0.3"
+    },
+    "devDependencies": {
+        "browserify": "^11.0.1"
+    },
+    "scripts": {
+        "build": "browserify -r ./remapper.js:REMAPPERMODULE  -o remapper-bundle.js",
+        "prepublish": "npm run build"
+    },
     "license": "BSD-3-Clause"
 }
