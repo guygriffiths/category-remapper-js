@@ -66,12 +66,12 @@ Remapper.prototype._init = function (buttonLabel) {
         $$('.remap-button', '#' + self.id).addEventListener('click', function () {
             // Once the "Apply mapping" button is clicked, we retrieve the current state 
             // of the mapping, store it in an object and pass it to the remap_function
-            var mapping = {};
+            var mapping = new Map();
             var connections = self.jsPlumb.select();
             connections.each(function (conn) {
                 var fromValue = $$(conn.endpoints[0].element).getAttribute('data-categoryId');
                 var toValue = $$(conn.endpoints[1].element).getAttribute('data-categoryId');
-                mapping[fromValue] = toValue;
+                mapping.set(fromValue, toValue);
             });
 
             $$('#' + self.id).style.display = 'none';
@@ -219,14 +219,14 @@ Remapper.prototype.populateTos = function (toCategories) {
 
 /**
  * Applys a mapping from one set of categories to another
- * @param {object} mapping An object whose keys are the integer categories to map from 
- *                         and whose values are the integer categories to map to.
+ * @param {Map} mapping A Map object where each key is a category ID to map from 
+ *                         and each value a category ID to map to.
  */
 Remapper.prototype.linkCategories = function (mapping) {
     var tovals, i;
-    for (fromVal in mapping) {
+    mapping.forEach(function(to, from) {
         this.jsPlumb.connect({
-            uuids: ['from:' + fromVal, 'to:' + mapping[fromVal]]
+            uuids: ['from:' + from, 'to:' + to]
         });
     }
 }
