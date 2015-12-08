@@ -25,21 +25,19 @@ function Remapper(id, buttonLabel) {
 
 Remapper.prototype.on = function (name, fn) {
     if (!this.listeners.has(name)) {
-        this.listeners[name] = [];
+        this.listeners[name] = new Set();
     }
-    this.listeners[name].push(fn);
+    this.listeners[name].add(fn);
 }
 
 Remapper.prototype.off = function (name, fn) {
-    var i = this.listeners[name].indexOf(fn);
-    this.listeners[name].deleteAtIndex(i);
+    this.listeners[name].delete(fn);
 }
 
 Remapper.prototype.fire = function (name, obj) {
-    var listeners = this.listeners[name];
-    for (var i = 0; i < listeners.length; i++) {
-        listeners[i](obj);
-    }
+    this.listeners[name].forEach(function (fn) {
+      fn(obj);
+    })
 }
 
 
