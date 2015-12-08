@@ -14,9 +14,9 @@
  */
 function $$ (selector, parent) {
   if (typeof parent === 'string') {
-    parent = $$(selector);
+    parent = $$(parent);
   }
-  parent ||= document;
+  parent = parent || document;
   return parent.querySelector(selector);
 }
 
