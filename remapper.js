@@ -1,7 +1,16 @@
-var MINI = require('minified');
-var $ = MINI.$,
-    $$ = MINI.$$;
 //var jsPlumb = require('jsplumb');
+
+/**
+ * Returns the first child element of parent (fall-back to document if not given)
+ * matching the given selector.
+ */
+function $$ (selector, parent) {
+  if (typeof parent === 'string') {
+    parent = $$(selector);
+  }
+  parent ||= document;
+  return parent.querySelector(selector);
+}
 
 function Remapper(id, buttonLabel) {
     if (!buttonLabel) {
@@ -196,8 +205,7 @@ Remapper.prototype.populateTos = function (toCategories) {
                 outlineColor: 'black',
                 outlineWidth: 1
             },
-            anchor: 'Left',
-            maxConnections: $('.map-from').length
+            anchor: 'Left'
         });
     }
     $$('#' + self.id).style.display = 'none';
