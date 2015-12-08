@@ -1,4 +1,12 @@
-//var jsPlumb = require('jsplumb');
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jsPlumb'], factory);
+    } else {
+        // Browser globals
+        root.Remapper = factory(root.jsPlumb);
+    }
+}(this, function (jsPlumb) {
 
 /**
  * Returns the first child element of parent (fall-back to document if not given)
@@ -223,4 +231,5 @@ Remapper.prototype.linkCategories = function (mapping) {
     }
 }
 
-//module.exports = Remapper;
+return Remapper;
+}));

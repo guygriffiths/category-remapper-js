@@ -1,0 +1,17 @@
+{
+  "name": "category-remapper",
+  "version": "0.8.0",
+  "main": [
+    "remapper.js",
+    "css/remapper.css"
+  ],
+  "homepage": "https://github.com/guygriffiths/category-remapper-js",
+  "authors": [
+    "Guy Griffiths"
+  ],
+  "description": "A JavaScript library for remapping categories onto other categories",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "jsPlumb": "~1.7.10"
+  }
+}
