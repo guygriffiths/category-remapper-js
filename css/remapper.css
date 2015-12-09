@@ -1,12 +1,12 @@
-.jsPlumb_connector {
+.jsplumb-connector {
     z-index: 9040;
 }
 
-.jsPlumb_endpoint {
+.jsplumb-endpoint {
     z-index: 9050;
 }
 
-.jsPlumb_overlay {
+.jsplumb-overlay {
     z-index: 9060;
 }
 
