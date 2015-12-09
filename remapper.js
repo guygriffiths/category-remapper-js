@@ -66,7 +66,7 @@ Remapper.prototype._init = function (buttonLabel) {
     if (!$$('#' + self.id).innerHTML) {
         $$('#' + self.id).innerHTML = '<div class="remap-froms"></div><div class="remap-tos"></div><div class="centrecontent"></div><div class="buttonholder"><button class="remap-button">' + buttonLabel + '</button></div>';
         $$('#' + self.id).style.display = 'none';
-        $$('#' + self.id).className += 'main-remapper';
+        $$('#' + self.id).classList.add('main-remapper');
 
         $$('.remap-button', '#' + self.id).addEventListener('click', function () {
             // Once the "Apply mapping" button is clicked, we retrieve the current state 
@@ -95,6 +95,7 @@ Remapper.prototype._init = function (buttonLabel) {
 Remapper.prototype.remove = function () {
     this.jsPlumb.cleanupListeners();
     window.removeEventListener('resize', this._resize);
+    $$('#' + this.id).classList.remove('main-remapper');
     $$('#' + this.id).innerHTML = '';
 }
 
