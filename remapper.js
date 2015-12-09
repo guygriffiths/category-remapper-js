@@ -1,7 +1,7 @@
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jsPlumb'], factory);
+        define(['jsplumb'], factory);
     } else {
         // Browser globals
         root.Remapper = factory(root.jsPlumb);
