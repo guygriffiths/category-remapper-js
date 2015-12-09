@@ -228,7 +228,7 @@ Remapper.prototype.linkCategories = function (mapping) {
         this.jsPlumb.connect({
             uuids: ['from:' + from, 'to:' + to]
         });
-    }
+    })
 }
 
 return Remapper;
