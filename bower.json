@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "jsPlumb": "~1.7.10"
-  }
+  },
   "homepage": "https://github.com/guygriffiths/category-remapper-js",
   "authors": [
     "Guy Griffiths"
