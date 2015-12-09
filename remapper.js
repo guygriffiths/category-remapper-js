@@ -74,8 +74,8 @@ Remapper.prototype._init = function (buttonLabel) {
             var mapping = new Map();
             var connections = self.jsPlumb.select();
             connections.each(function (conn) {
-                var fromValue = $$(conn.endpoints[0].element).getAttribute('data-categoryId');
-                var toValue = $$(conn.endpoints[1].element).getAttribute('data-categoryId');
+                var fromValue = conn.endpoints[0].element.dataset.categoryId;
+                var toValue = conn.endpoints[1].element.dataset.categoryId;
                 mapping.set(fromValue, toValue);
             });
 
@@ -129,7 +129,7 @@ Remapper.prototype.populateFroms = function (fromCategories) {
         // Add a new div for each from category
         $$('.remap-froms', '#' + self.id).innerHTML += '<div id="' + id + '" class="map-from" ' +
             ' color="' + fromCategories[i].color + '" ' +
-            'data-categoryId="' + fromCategories[i].id + '" ' +
+            'data-category-id="' + fromCategories[i].id + '" ' +
             '>' + fromCategories[i].label + '</div>';
     }
 
@@ -195,7 +195,7 @@ Remapper.prototype.populateTos = function (toCategories) {
         id = 'to:' + toCategories[i].id;
         $$('.remap-tos', '#' + this.id).innerHTML += '<div id="' + id + '" class="map-to"' +
             ' color="' + toCategories[i].color + '" ' +
-            'data-categoryId="' + toCategories[i].id + '" ' +
+            'data-category-id="' + toCategories[i].id + '" ' +
             '> ' + toCategories[i].label + ' </div>';
     }
 
@@ -216,7 +216,8 @@ Remapper.prototype.populateTos = function (toCategories) {
                 outlineColor: 'black',
                 outlineWidth: 1
             },
-            anchor: 'Left'
+            anchor: 'Left',
+            maxConnections: -1
         });
     }
     $$('#' + self.id).style.display = 'none';
