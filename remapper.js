@@ -93,8 +93,9 @@ Remapper.prototype._init = function (buttonLabel) {
 }
 
 Remapper.prototype.remove = function () {
+    this.jsPlumb.cleanupListeners();
     window.removeEventListener('resize', this._resize);
-    document.removeChild($$('#' + self.id));
+    $$('#' + this.id).innerHTML = '';
 }
 
 
