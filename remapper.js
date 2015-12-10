@@ -190,7 +190,6 @@ Remapper.prototype.populateTos = function (toCategories) {
     var i, id;
     var self = this;
     $$('.remap-tos', '#' + this.id).innerHTML = '';
-    $$('#' + self.id).style.display = 'block';
     for (i = 0; i < toCategories.length; i++) {
         // Repeat the procedure for the to categories
         id = 'to:' + toCategories[i].id;
@@ -219,7 +218,6 @@ Remapper.prototype.populateTos = function (toCategories) {
             maxConnections: -1
         });
     }
-    $$('#' + self.id).style.display = 'none';
 }
 
 /**
