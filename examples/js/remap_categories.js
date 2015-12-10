@@ -38,31 +38,32 @@ document.addEventListener('DOMContentLoaded', function () {
     map2.sync(map);
 
     //    var dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
-    var dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
+    var dataset = 'http://localhost:8081/datasets/melodies_lc-latlon.nc/coverages/land_cover?subsetTimeStart=2003-01-01T00:00:00Z&subsetTimeEnd=2003-01-01T00:00:00Z';
     variable = 'land_cover';
     var toCategoriesUrl = 'modis-categories.json';
 
     var lcData;
 
     var requests = [];
-    requests.push($.request('get', dataset).then(function (data) {
-        lcData = $.parseJSON(data);
-    }));
-
     requests.push($.request('get', toCategoriesUrl).then(function (data) {
         toCats = $.parseJSON(data);
     }));
     
-    requests.push(CovJSON.read(lcData)).then(function (data) {
-      coverage = cov;
-    })
+    requests.push(CovJSON.read(dataset).then(function (data) {
+      coverage = data;
+    }));
 
     var remap = new Remapper('remapper');
 
-    Promise.all(requests).then(function () {        
+    Promise.all(requests).then(function () {
+        remap.populateTos(toCats);
+  
+        $$('#show_remapper').disabled = false;
+        $$('#show_remapper').addEventListener('click', remap.show.bind(remap));
+      
         var LayerFactory = L.coverage.LayerFactory()
 
-        lcLayer = LayerFactory(cov, {
+        lcLayer = LayerFactory(coverage, {
             keys: [variable]
         });
         lcLayer.addTo(map);
@@ -81,24 +82,26 @@ document.addEventListener('DOMContentLoaded', function () {
             var category = categories[i];
             fromCats.push({
               id: category.id,
-              label: category.get('en'),
+              label: category.label.get('en'),
               color: 'rgb(' + palette.red[i] + ',' + palette.green[i] + ',' + palette.blue[i] + ')'
             })
           }
           
           remap.populateFroms(fromCats);
+          
+          // Get a JSON mapping from one category to the other.
+          var mapping = 'melodies-modis-mapping.json';
+          $.request('get', mapping).then(function (data) {
+              var json = $.parseJSON(data)
+              var map = new Map();
+              for (var key in json) {
+                map.set(key, json[key])
+              }
+              remap.linkCategories(map);
+          });
         });
         
-        remap.populateTos(toCats);
 
-        $$('#show_remapper').disabled = false;
-        $$('#show_remapper').addEventListener('click', remap.show.bind(remap));
-        
-        // Get a JSON mapping from one category to the other.
-        var mapping = 'melodies-modis-mapping.json';
-        $.request('get', mapping).then(function (data) {
-            remap.linkCategories($.parseJSON(data));
-        });
     });
 
     remap.on('apply', function (data) {

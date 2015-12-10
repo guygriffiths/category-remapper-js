@@ -130,7 +130,6 @@ Remapper.prototype.populateFroms = function (fromCategories) {
         id = 'from:' + fromCategories[i].id;
         // Add a new div for each from category
         $$('.remap-froms', '#' + self.id).innerHTML += '<div id="' + id + '" class="map-from" ' +
-            ' color="' + fromCategories[i].color + '" ' +
             'data-category-id="' + fromCategories[i].id + '" ' +
             '>' + fromCategories[i].label + '</div>';
     }
@@ -195,8 +194,7 @@ Remapper.prototype.populateTos = function (toCategories) {
     for (i = 0; i < toCategories.length; i++) {
         // Repeat the procedure for the to categories
         id = 'to:' + toCategories[i].id;
-        $$('.remap-tos', '#' + this.id).innerHTML += '<div id="' + id + '" class="map-to"' +
-            ' color="' + toCategories[i].color + '" ' +
+        $$('.remap-tos', '#' + this.id).innerHTML += '<div id="' + id + '" class="map-to" ' +
             'data-category-id="' + toCategories[i].id + '" ' +
             '> ' + toCategories[i].label + ' </div>';
     }
@@ -208,7 +206,6 @@ Remapper.prototype.populateTos = function (toCategories) {
     for (i = 0; i < toCategories.length; i++) {
         id = 'to:' + toCategories[i].id;
         this.jsPlumb.addEndpoint(id, {
-            container: $$('#' + self.id),
             uuid: id,
             isSource: false,
             isTarget: true,
