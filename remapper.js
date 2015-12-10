@@ -229,8 +229,9 @@ Remapper.prototype.populateTos = function (toCategories) {
  */
 Remapper.prototype.linkCategories = function (mapping) {
     var tovals, i;
+    var self = this;
     mapping.forEach(function(to, from) {
-        this.jsPlumb.connect({
+        self.jsPlumb.connect({
             uuids: ['from:' + from, 'to:' + to]
         });
     })

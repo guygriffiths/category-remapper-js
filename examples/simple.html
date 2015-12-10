@@ -31,6 +31,7 @@
       label: "Orange",
       color: "orange"
     }])
+    remapper.linkCategories(new Map([["green", "blue"]]))
     remapper.on('apply', function(data) {
       console.log(Array.from(data.mapping));
     });
