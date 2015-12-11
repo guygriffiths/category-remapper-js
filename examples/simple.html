@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/remapper.css">
+    
+    <script src="js/jsPlumb-2.0.4.js"></script>
+    <script src="../remapper.js"></script>
+</head>
+
+<body>
+    <div id="remapper"></div>
+    
+    <script>
+    var remapper = new Remapper('remapper');
+    remapper.populateFroms([{
+      id: "green",
+      label: "Green",
+      color: "green"
+    }, {
+      id: "red",
+      label: "Red",
+      color: "red"
+    }])
+    remapper.populateTos([{
+      id: "blue",
+      label: "Blue",
+      color: "blue"
+    }, {
+      id: "orange",
+      label: "Orange",
+      color: "orange"
+    }])
+    remapper.linkCategories(new Map([["green", "blue"]]))
+    remapper.on('apply', function(data) {
+      console.log(Array.from(data.mapping));
+    });
+    remapper.show();
+    </script>
+</body>
+
+</html>

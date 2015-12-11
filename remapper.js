@@ -1,7 +1,29 @@
-var MINI = require('minified');
-var $ = MINI.$,
-    $$ = MINI.$$;
-//var jsPlumb = require('jsplumb');
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jsplumb'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory(require('jsplumb').jsPlumb);
+    } else {
+        // Browser globals (root is window)
+        root.Remapper = factory(root.jsPlumb);
+    }
+}(this, function (jsPlumb) {
+
+/**
+ * Returns the first child element of parent (fall-back to document if not given)
+ * matching the given selector.
+ */
+function $$ (selector, parent) {
+  if (typeof parent === 'string') {
+    parent = $$(parent);
+  }
+  parent = parent || document;
+  return parent.querySelector(selector);
+}
 
 function Remapper(id, buttonLabel) {
     if (!buttonLabel) {
@@ -16,21 +38,19 @@ function Remapper(id, buttonLabel) {
 
 Remapper.prototype.on = function (name, fn) {
     if (!this.listeners.has(name)) {
-        this.listeners[name] = [];
+        this.listeners[name] = new Set();
     }
-    this.listeners[name].push(fn);
+    this.listeners[name].add(fn);
 }
 
 Remapper.prototype.off = function (name, fn) {
-    var i = this.listeners[name].indexOf(fn);
-    this.listeners[name].deleteAtIndex(i);
+    this.listeners[name].delete(fn);
 }
 
 Remapper.prototype.fire = function (name, obj) {
-    var listeners = this.listeners[name];
-    for (var i = 0; i < listeners.length; i++) {
-        listeners[i](obj);
-    }
+    this.listeners[name].forEach(function (fn) {
+      fn(obj);
+    })
 }
 
 
@@ -46,17 +66,17 @@ Remapper.prototype._init = function (buttonLabel) {
     if (!$$('#' + self.id).innerHTML) {
         $$('#' + self.id).innerHTML = '<div class="remap-froms"></div><div class="remap-tos"></div><div class="centrecontent"></div><div class="buttonholder"><button class="remap-button">' + buttonLabel + '</button></div>';
         $$('#' + self.id).style.display = 'none';
-        $$('#' + self.id).className += 'main-remapper';
+        $$('#' + self.id).classList.add('main-remapper');
 
         $$('.remap-button', '#' + self.id).addEventListener('click', function () {
             // Once the "Apply mapping" button is clicked, we retrieve the current state 
             // of the mapping, store it in an object and pass it to the remap_function
-            var mapping = {};
+            var mapping = new Map();
             var connections = self.jsPlumb.select();
             connections.each(function (conn) {
-                var fromValue = $$(conn.endpoints[0].element).getAttribute('data-categoryId');
-                var toValue = $$(conn.endpoints[1].element).getAttribute('data-categoryId');
-                mapping[fromValue] = toValue;
+                var fromValue = conn.endpoints[0].element.dataset.categoryId;
+                var toValue = conn.endpoints[1].element.dataset.categoryId;
+                mapping.set(fromValue, toValue);
             });
 
             $$('#' + self.id).style.display = 'none';
@@ -73,8 +93,10 @@ Remapper.prototype._init = function (buttonLabel) {
 }
 
 Remapper.prototype.remove = function () {
+    this.jsPlumb.cleanupListeners();
     window.removeEventListener('resize', this._resize);
-    document.removeChild($$('#' + self.id));
+    $$('#' + this.id).classList.remove('main-remapper');
+    $$('#' + this.id).innerHTML = '';
 }
 
 
@@ -108,8 +130,7 @@ Remapper.prototype.populateFroms = function (fromCategories) {
         id = 'from:' + fromCategories[i].id;
         // Add a new div for each from category
         $$('.remap-froms', '#' + self.id).innerHTML += '<div id="' + id + '" class="map-from" ' +
-            ' color="' + fromCategories[i].color + '" ' +
-            'data-categoryId="' + fromCategories[i].id + '" ' +
+            'data-category-id="' + fromCategories[i].id + '" ' +
             '>' + fromCategories[i].label + '</div>';
     }
 
@@ -169,13 +190,11 @@ Remapper.prototype.populateTos = function (toCategories) {
     var i, id;
     var self = this;
     $$('.remap-tos', '#' + this.id).innerHTML = '';
-    $$('#' + self.id).style.display = 'block';
     for (i = 0; i < toCategories.length; i++) {
         // Repeat the procedure for the to categories
         id = 'to:' + toCategories[i].id;
-        $$('.remap-tos', '#' + this.id).innerHTML += '<div id="' + id + '" class="map-to"' +
-            ' color="' + toCategories[i].color + '" ' +
-            'data-categoryId="' + toCategories[i].id + '" ' +
+        $$('.remap-tos', '#' + this.id).innerHTML += '<div id="' + id + '" class="map-to" ' +
+            'data-category-id="' + toCategories[i].id + '" ' +
             '> ' + toCategories[i].label + ' </div>';
     }
 
@@ -186,7 +205,6 @@ Remapper.prototype.populateTos = function (toCategories) {
     for (i = 0; i < toCategories.length; i++) {
         id = 'to:' + toCategories[i].id;
         this.jsPlumb.addEndpoint(id, {
-            container: $$('#' + self.id),
             uuid: id,
             isSource: false,
             isTarget: true,
@@ -197,24 +215,25 @@ Remapper.prototype.populateTos = function (toCategories) {
                 outlineWidth: 1
             },
             anchor: 'Left',
-            maxConnections: $('.map-from').length
+            maxConnections: -1
         });
     }
-    $$('#' + self.id).style.display = 'none';
 }
 
 /**
  * Applys a mapping from one set of categories to another
- * @param {object} mapping An object whose keys are the integer categories to map from 
- *                         and whose values are the integer categories to map to.
+ * @param {Map} mapping A Map object where each key is a category ID to map from 
+ *                         and each value a category ID to map to.
  */
 Remapper.prototype.linkCategories = function (mapping) {
     var tovals, i;
-    for (fromVal in mapping) {
-        this.jsPlumb.connect({
-            uuids: ['from:' + fromVal, 'to:' + mapping[fromVal]]
+    var self = this;
+    mapping.forEach(function(to, from) {
+        self.jsPlumb.connect({
+            uuids: ['from:' + from, 'to:' + to]
         });
-    }
+    })
 }
 
-//module.exports = Remapper;
+return Remapper;
+}));

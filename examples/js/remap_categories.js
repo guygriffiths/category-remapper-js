@@ -7,7 +7,7 @@ var _ = MINI._,
 
 var variable;
 var coverage;
-var fromCats, toCats;
+var toCats;
 var map2, remappedLayer;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -38,61 +38,70 @@ document.addEventListener('DOMContentLoaded', function () {
     map2.sync(map);
 
     //    var dataset = 'http://lovejoy.nerc-essc.ac.uk:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
-    var dataset = 'http://localhost:8080/edal-json/api/datasets/MLC.nc/features/land_cover?details=domain,range,rangeMetadata';
+    var dataset = 'http://localhost:8081/datasets/melodies_lc-latlon.nc/coverages/land_cover?subsetTimeStart=2003-01-01T00:00:00Z&subsetTimeEnd=2003-01-01T00:00:00Z';
     variable = 'land_cover';
-    var fromCategoriesUrl = 'melodies-categories.json';
     var toCategoriesUrl = 'modis-categories.json';
 
     var lcData;
 
     var requests = [];
-    requests.push($.request('get', dataset).then(function (data) {
-        lcData = $.parseJSON(data);
-    }));
-
-    requests.push($.request('get', fromCategoriesUrl).then(function (data) {
-        fromCats = $.parseJSON(data);
-    }));
-
     requests.push($.request('get', toCategoriesUrl).then(function (data) {
         toCats = $.parseJSON(data);
+    }));
+    
+    requests.push(CovJSON.read(dataset).then(function (data) {
+      coverage = data;
     }));
 
     var remap = new Remapper('remapper');
 
     Promise.all(requests).then(function () {
-        remap.populateFroms(fromCats);
         remap.populateTos(toCats);
-        CovJSON.read(lcData).then(function (cov) {
-            var LayerFactory = L.coverage.LayerFactory()
-            coverage = cov;
-
-            coverage.parameters.get('land_cover').categories = fromCats;
-            coverage.parameters.get('land_cover').observedProperty = {
-                label: new Map([["en", "Land Cover"]])
-            };
-
-            lcLayer = LayerFactory(cov, {
-                keys: [variable],
-                palette: getPaletteFromCategories(fromCats)
-            });
-            lcLayer.addTo(map);
-
-            var legend = new L.coverage.control.DiscreteLegend(lcLayer, {
-                position: 'topright'
-            }).addTo(map);
-        });
-
+  
         $$('#show_remapper').disabled = false;
-        $$('#show_remapper').addEventListener('click', function () {
-            remap.show.bind(remap)();
+        $$('#show_remapper').addEventListener('click', remap.show.bind(remap));
+      
+        var LayerFactory = L.coverage.LayerFactory()
+
+        lcLayer = LayerFactory(coverage, {
+            keys: [variable]
         });
-        // Try and get a JSON mapping from one category to the other.
-        // If it doesn't exist, this will silently fail
-        var mapping = 'melodies-modis-mapping.json';
-        $.request('get', mapping).then(function (data) {
-            remap.linkCategories($.parseJSON(data));
+        lcLayer.addTo(map);
+        lcLayer.on('add', function () {
+          var legend = new L.coverage.control.DiscreteLegend(lcLayer, {
+            position: 'topright'
+          }).addTo(map);
+          
+          var palette = lcLayer.palette;
+          
+          // we extract category colors from the palette leaflet-coverage generated
+          // (leaflet-coverage reads preferred category colors from the coverage parameters)
+          var categories = lcLayer.parameter.observedProperty.categories;
+          var fromCats = [];
+          for (var i=0; i < categories.length; i++) {
+            var category = categories[i];
+            fromCats.push({
+              id: category.id,
+              label: category.label.get('en'),
+              color: 'rgb(' + palette.red[i] + ',' + palette.green[i] + ',' + palette.blue[i] + ')'
+            })
+          }
+          
+          remap.populateFroms(fromCats);
+          
+          // Get a JSON mapping from one category to the other.
+          var mapping = 'melodies-modis-mapping.json';
+          $.request('get', mapping).then(function (data) {
+              var json = $.parseJSON(data)
+              var map = new Map();
+              for (var key in json) {
+                map.set(key, json[key])
+              }
+              remap.linkCategories(map);
+          });
         });
+        
+
     });
 
     remap.on('apply', function (data) {
@@ -116,17 +125,19 @@ document.addEventListener('DOMContentLoaded', function () {
         for (i = 0; i < toCats.length; i++) {
             if (tos2froms[toCats[i].id]) {
                 categories.push({
-                    label: toCats[i].label,
-                    values: tos2froms[i],
-                    color: toCats[i].color
+                    id: toCats[i].id,
+                    preferredColor: toCats[i].color,
+                    label: new Map([['en', toCats[i].label]])
                 });
             }
         }
 
-        var LayerFactory = L.coverage.LayerFactory()
-        var remappedCov = L.coverage.transform.withCategories(coverage, variable, categories);
+        var LayerFactory = L.coverage.LayerFactory();
+        var remappedCov = L.coverage.transform.withCategories(coverage, variable, categories, mapping);
         remappedLayer = LayerFactory(remappedCov, {
             keys: [variable],
+            // We explicitly force a palette as the "preferredColor" field
+            // of the categories is just a preference and may be ignored.
             palette: getPaletteFromCategories(categories)
         });
         remappedLayer.addTo(map2);
@@ -142,7 +153,7 @@ function getPaletteFromCategories(cats) {
     var i;
     var paletteArray = [];
     for (i = 0; i < cats.length; i++) {
-        paletteArray.push(cats[i].color);
+        paletteArray.push(cats[i].preferredColor);
     }
     return L.coverage.palette.directPalette(paletteArray);
 }

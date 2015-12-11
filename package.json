@@ -10,17 +10,11 @@
         "url": "https://github.com/guygriffiths/category-remapper-js"
     },
     "main": "remapper.js",
-    "browserify": "remapper.js",
     "dependencies": {
-        "minified": "^1.0.1",
         "jsplumb": "^2.0.3"
     },
-    "devDependencies": {
-        "browserify": "^11.0.1"
-    },
-    "scripts": {
-        "build": "browserify -r ./remapper.js:REMAPPERMODULE  -o remapper-bundle.js",
-        "prepublish": "npm run build"
+    "jspm": {
+      "registry": "npm"
     },
     "license": "BSD-3-Clause"
 }
