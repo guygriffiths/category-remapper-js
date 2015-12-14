@@ -64,7 +64,7 @@ Remapper.prototype._init = function (buttonLabel) {
 
     var self = this;
     if (!$$('#' + self.id).innerHTML) {
-        $$('#' + self.id).innerHTML = '<div class="remap-froms"></div><div class="remap-tos"></div><div class="centrecontent"></div><div class="buttonholder"><button class="remap-button">' + buttonLabel + '</button></div>';
+        $$('#' + self.id).innerHTML = '<div class="remap-froms"></div><div class="remap-tos"></div><div class="centrecontent"></div><div class="buttonholder"><button class="remap-button">' + buttonLabel + '</button><button class="cancel-remap-button">Cancel</button></div>';
         $$('#' + self.id).style.display = 'none';
         $$('#' + self.id).classList.add('main-remapper');
 
@@ -83,6 +83,11 @@ Remapper.prototype._init = function (buttonLabel) {
             self.fire('apply', {
                 mapping: mapping
             });
+        });
+        
+        $$('.cancel-remap-button', '#' + self.id).addEventListener('click', function () {
+            $$('#' + self.id).style.display = 'none';
+            self.fire('cancel');
         });
     }
 

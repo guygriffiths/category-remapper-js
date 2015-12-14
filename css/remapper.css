@@ -67,7 +67,7 @@
     text-align: center;
 }
 
-.remap-button {
+.remap-button, .cancel-remap-button {
     font-size: 20pt;
     padding: 20px;
     margin: 20px;

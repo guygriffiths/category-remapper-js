@@ -35,6 +35,9 @@
     remapper.on('apply', function(data) {
       console.log(Array.from(data.mapping));
     });
+    remapper.on('cancel', function(data) {
+      console.log('Remapping cancelled');
+    });
     remapper.show();
     </script>
 </body>
