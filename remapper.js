@@ -29,26 +29,27 @@ function Remapper(id, buttonLabel) {
     if (!buttonLabel) {
         buttonLabel = "Apply mapping";
     }
-
+  
     this.id = id;
     this._init(buttonLabel);
-
+  
     this.listeners = new Map();
 }
 
 Remapper.prototype.on = function (name, fn) {
     if (!this.listeners.has(name)) {
-        this.listeners[name] = new Set();
+        this.listeners.set(name, new Set());
     }
-    this.listeners[name].add(fn);
+    this.listeners.get(name).add(fn);
 }
 
 Remapper.prototype.off = function (name, fn) {
-    this.listeners[name].delete(fn);
+    this.listeners.get(name).delete(fn);
 }
 
 Remapper.prototype.fire = function (name, obj) {
-    this.listeners[name].forEach(function (fn) {
+    if (!this.listeners.has(name)) return
+    this.listeners.get(name).forEach(function (fn) {
       fn(obj);
     })
 }
